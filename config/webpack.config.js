@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const { srcPath, indexJsPath, indexHtmlPath  } = require('./webpack/file.path.js')
-
+var path = require('path');
 // 生成HTML文件
 const generateIndex = new HtmlWebpackPlugin({
     inject: 'body',
@@ -40,6 +40,42 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 use: 'babel-loader'
+            }, {
+                test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']
+            }, {
+                test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader']
+            }, {
+                test: /\.css$/, use: ['style-loader', 'css-loader']
+            }, {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':data-src']
+                    }
+                },
+            },   {
+                test: /\.jsx?$/,
+                use: ['babel-loader'],
+                include: path.join(process.cwd(), 'src')
+            }, {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                }
+            }, {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                }
+            }, {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                }
             }
         ]
     },
@@ -52,3 +88,11 @@ module.exports = {
         new webpack.NamedModulesPlugin()
     ]
 }
+
+// "sass-loader": "^7.0.1",
+//     "style-loader": "^0.21.0",
+//     "css-loader": "^0.28.11",
+//     "less-loader": "^5.0.0",
+//     "node-sass": "^4.9.0",
+//     "url-loader": "^1.0.1",
+//html-loader
