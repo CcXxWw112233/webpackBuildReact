@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+// import { hot  } from 'react-hot-loader/root'
+import App from './app.js'
 
-const render = () => {
+const render = Component => {
     ReactDOM.render(
-        <h1>Hello Davidsss</h1>,
-        document.getElementById('app_container')
+        <App />,
+        document.getElementById('root'),
     )
 }
 
