@@ -43,7 +43,19 @@ module.exports = {
             }, {
                 test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']
             }, {
-                test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader']
+                test: /\.less$/,
+                use: ['style-loader',
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true
+                        }
+                    },  {
+                        loader: 'less-loader',
+                        options: {
+                            modules: true
+                        }
+                    }]
             }, {
                 test: /\.css$/, use: ['style-loader', 'css-loader']
             }, {
@@ -88,11 +100,3 @@ module.exports = {
         new webpack.NamedModulesPlugin()
     ]
 }
-
-// "sass-loader": "^7.0.1",
-//     "style-loader": "^0.21.0",
-//     "css-loader": "^0.28.11",
-//     "less-loader": "^5.0.0",
-//     "node-sass": "^4.9.0",
-//     "url-loader": "^1.0.1",
-//html-loader
