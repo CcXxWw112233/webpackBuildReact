@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import { hot  } from 'react-hot-loader/root'
 import App from './app.js'
+import { Provider } from 'react-redux'
+import store from './store/store'
 
 const render = Component => {
     ReactDOM.render(
-        <App />,
+        <Provider store={store}>
+            <App />
+        </Provider>,
         document.getElementById('root'),
     )
 }

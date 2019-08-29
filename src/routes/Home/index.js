@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
 import styles from './index.less'
-const Home = () => {
+import { connect } from 'react-redux'
+const Home = (options) => {
+    const { userInfo: { name } } = options
+    console.log('ssss', {options})
     return (
         <div className={styles.aa}>
             Home
-            <div className={styles.bb}>hh</div>
+            <div className={styles.bb}>
+                {name}
+            </div>
         </div>
     );
 }
-export default Home
+const mapStateToProps = ({ userInfo }) => {
+    return {
+        userInfo
+    }
+}
+
+const mapDispatchTopProps = {}
+// 使用connect 关联redux
+export default connect(mapStateToProps)(Home)

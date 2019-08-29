@@ -5,8 +5,8 @@ import Home from '../routes/Home'
 import About from '../routes/About'
 import Topics from '../routes/Topics'
 
-// BrowserRouter 下只能有一个子元素
 class App extends Component {
+
     render() {
         return (
             <BrowserRouter>
