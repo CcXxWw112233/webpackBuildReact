@@ -214,20 +214,20 @@ export default class Area extends Component {
     //未展开更多列表的文字内容
     renderMoreSimple() {
         return (
-            <>
+            <React.Fragment>
                 <span onClick={ () => { this.handleClickMore() } }>展开城市列表</span>
                 <div className={`${globalStyles.authTheme} ${areaStyles.down}`}>&#xe7ee;</div>
-            </>
+            </React.Fragment>
         )
     }
 
     // 展开更多城市列表，需要收起
     renderMoreBack() {
         return (
-            <>
+            <React.Fragment>
                 <span onClick={ () => { this.handleClickMore() } }>收起城市列表</span>
                 <div className={`${globalStyles.authTheme} ${areaStyles.down}`}>&#xe7ed;</div>
-            </>
+            </React.Fragment>
         )
     }
 

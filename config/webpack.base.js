@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const { srcPath, indexJsPath, indexHtmlPath  } = require('./webpack/file.path.js')
+const { resolve } = require('path')
+
 var path = require('path');
 // 生成HTML文件
 const generateIndex = new HtmlWebpackPlugin({
@@ -18,13 +20,19 @@ module.exports = {
         'react-hot-loader/patch',
         indexJsPath
     ],
-
+    resolve:{
+        //配置别名，在项目中可缩减引用路径
+        alias: {
+            '@': resolve('src'),
+        }
+    },
     // 模块配置
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                use: 'babel-loader'
+                test: /(\.jsx|\.js)/,
+                use: 'babel-loader',
+                exclude: /node_modules/
             }, {
                 test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']
             }, {
@@ -82,6 +90,6 @@ module.exports = {
         // 开启全局的模块热替换(HMR)
         new webpack.HotModuleReplacementPlugin(),
         // 热加载中可以输入更加友好的模块名
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
     ]
 }

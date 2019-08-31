@@ -547,7 +547,7 @@ class InviteOthers extends Component {
     const { step, projectList, isInSelectedList } = this.state
     const { groupList } = this.props
     const selectHome = () => (
-      <>
+      <React.Fragment>
         <div
           key="group"
           className={styles.invite__select_list_item}
@@ -568,10 +568,10 @@ class InviteOthers extends Component {
           </span>
           <span className={styles.invite__select_list_item_icon} />
         </div>
-      </>
+      </React.Fragment>
     )
     const selectGroupList = () => (
-      <>
+      <React.Fragment>
         {groupList.map((item, index) => (
           <div
             key={item.id ? item.id : index}
@@ -584,10 +584,10 @@ class InviteOthers extends Component {
             <span className={styles.invite__select_list_item_icon} />
           </div>
         ))}
-      </>
+      </React.Fragment>
     )
     const selectProjectList = () => (
-      <>
+      <React.Fragment>
         {projectList.map(item => (
           <div
             key={item.board_id}
@@ -602,7 +602,7 @@ class InviteOthers extends Component {
             <span className={styles.invite__select_list_item_icon} />
           </div>
         ))}
-      </>
+      </React.Fragment>
     )
     const condition = {
       home: selectHome,

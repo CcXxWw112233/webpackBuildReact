@@ -6,7 +6,10 @@ import About from '../page/About'
 import Topics from '../page/Topics'
 
 class App extends Component {
-
+    aa = () => {
+        const a = [1, 2, 3]
+        return [...a]
+    }
     render() {
         return (
             <BrowserRouter>

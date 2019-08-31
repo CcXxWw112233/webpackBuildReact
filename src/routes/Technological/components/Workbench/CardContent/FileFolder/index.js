@@ -148,7 +148,7 @@ class FileFolder extends Component {
   };
   renderFolderList = () => {
     const { currentFolderList } = this.state;
-    return <>{currentFolderList.map(this.renderFolderItem)}</>;
+    return <React.Fragment>{currentFolderList.map(this.renderFolderItem)}</React.Fragment>;
   };
   renderFileItem = item => {
     const { shouldFileItemSetPreviewFileModalVisibile } = this.props;
@@ -166,7 +166,7 @@ class FileFolder extends Component {
   };
   renderFileList = () => {
     const { currentFileList } = this.state;
-    return <>{currentFileList.map(this.renderFileItem)}</>;
+    return <React.Fragment>{currentFileList.map(this.renderFileItem)}</React.Fragment>;
   };
   isTheSameArr = (arr1 = [], arr2 = []) => {
     if(!(Array.isArray(arr1) && Array.isArray(arr2))) {

@@ -78,7 +78,7 @@ export default class index extends Component {
         const { visible, title} =this.state;
         const { rela_type, rela_id, user_remind_info, workbenchExecutors = [], projectExecutors = [], processEditDatas = [], milestonePrincipals = [] } = this.props
         return (
-            <>
+            <React.Fragment>
                 {/* 通知提醒的小图标 */}
                 <Tooltip placement="top" title="通知提醒" arrowPointAtCenter>
                     <span 
@@ -103,7 +103,7 @@ export default class index extends Component {
                         overInner={<DrawerInformContent milestonePrincipals={milestonePrincipals} processEditDatas={processEditDatas} projectExecutors={projectExecutors} workbenchExecutors={workbenchExecutors} rela_type={rela_type} rela_id={rela_id} user_remind_info={user_remind_info} />}
                     />
                 </div>
-            </>
+            </React.Fragment>
         )
     }
 }

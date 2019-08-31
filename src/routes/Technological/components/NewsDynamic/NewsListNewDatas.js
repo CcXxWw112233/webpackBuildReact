@@ -1074,7 +1074,7 @@ export default class NewsListNewDatas extends React.Component {
      */
     const CommonCommentNews = (action, common_data = {}, common_id, comment_id) => {
       return (
-        <>
+        <React.Fragment>
           <div className={NewsListStyle.top}>
             <div className={NewsListStyle.left}>
               <div className={NewsListStyle.l_l}>
@@ -1160,7 +1160,7 @@ export default class NewsListNewDatas extends React.Component {
               </div>
             </div>
           </div>
-        </>
+        </React.Fragment>
 
       )
     }
@@ -1327,7 +1327,7 @@ export default class NewsListNewDatas extends React.Component {
               <div className={NewsListStyle.l_r}>
                 {
                   board_name ? (
-                    <>
+                    <React.Fragment>
                       <div>{filterTitleContain(action, value).contain}</div>
                       <div>
                         {
@@ -1342,7 +1342,7 @@ export default class NewsListNewDatas extends React.Component {
                         {/* {currentNounPlanFilterName(PROJECTS)}： {board_name} */}
                         {board_name}
                       </div>
-                    </>
+                    </React.Fragment>
                   ) : (
                       <div style={{ lineHeight: '36px' }}>{filterTitleContain(action, value).contain}</div>
                     )

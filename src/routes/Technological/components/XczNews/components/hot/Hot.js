@@ -69,7 +69,7 @@ export default class Hot extends Component {
                                 {
                                     hotTabs.map((item, index) => {
                                         return index == 10 ? (
-                                            <>
+                                            <React.Fragment>
                                                 <Radio.Button
                                                     // className={`${item.id == selected_tab_id || selected_tab_id == index  ? mainStyles.current : ''}`}
                                                     value={item.id}
@@ -83,7 +83,7 @@ export default class Hot extends Component {
                                                     更多
                                                     <Icon type="down" />
                                                 </Radio.Button>
-                                            </>
+                                            </React.Fragment>
                                         ) : (
                                             <Radio.Button
                                                 // className={`${item.id == selected_tab_id || selected_tab_id == index  ? mainStyles.current : ''}`}

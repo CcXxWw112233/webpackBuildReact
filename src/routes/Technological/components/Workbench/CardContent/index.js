@@ -414,7 +414,7 @@ class CardContent extends React.Component {
       return '';
     }
     return (
-      <>
+      <React.Fragment>
         <div className={indexstyles.operatorBar}>
           {/* <Tooltip title={prompt}> */}
           <p onClick={() => this.handleAddTask(type)}>
@@ -422,18 +422,18 @@ class CardContent extends React.Component {
           </p>
           {/* </Tooltip> */}
         </div>
-      </>
+      </React.Fragment>
     );
   };
   noContent = (prompt = '添加任务', type = 'RESPONSIBLE_TASK') => {
     return (
-      <>
+      <React.Fragment>
         <div className={indexstyles.noContentWrapper}>
           <p className={indexstyles.noContentImg} />
           <p className={indexstyles.noContentHint}>暂无数据</p>
         </div>
         {type !== 'EXAMINE_PROGRESS' && this.noContentTooltip(prompt, type)}
-      </>
+      </React.Fragment>
     );
   };
   getCurrentBoxScreenListAllSelectedItemIdStr = (arr = [], currentItem) => {
@@ -547,7 +547,7 @@ class CardContent extends React.Component {
             </div>
           ) : (
             // <div style={{marginTop: 12}}>暂无数据</div>
-            <>{this.noContent('添加任务', 'RESPONSIBLE_TASK')}</>
+            <React.Fragment>{this.noContent('添加任务', 'RESPONSIBLE_TASK')}</React.Fragment>
           );
           break;
         //审核
@@ -570,10 +570,10 @@ class CardContent extends React.Component {
               {/* {this.noContentTooltip("发起流程", "EXAMINE_PROGRESS")} */}
             </div>
           ) : (
-            <>
+            <React.Fragment>
               {/* <div style={{marginTop: 12}}>暂无数据</div> */}
               {this.noContent('发起流程', 'EXAMINE_PROGRESS')}
-            </>
+            </React.Fragment>
           );
           break;
         //我参与的会议
@@ -598,7 +598,7 @@ class CardContent extends React.Component {
               {this.noContentTooltip('添加日程', 'MEETIMG_ARRANGEMENT')}
             </div>
           ) : (
-            <>{this.noContent('添加日程', 'MEETIMG_ARRANGEMENT')}</>
+            <React.Fragment>{this.noContent('添加日程', 'MEETIMG_ARRANGEMENT')}</React.Fragment>
             // <div style={{marginTop: 12}}>暂无数据</div>
           );
           break;
@@ -624,7 +624,7 @@ class CardContent extends React.Component {
             </div>
           ) : (
             // <div style={{marginTop: 12}}>暂无数据</div>
-            <>{this.noContent('上传文档', 'MY_DOCUMENT')}</>
+            <React.Fragment>{this.noContent('上传文档', 'MY_DOCUMENT')}</React.Fragment>
           );
           break;
         case 'joinedFlows': //参与的流程

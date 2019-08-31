@@ -98,7 +98,7 @@ class DropdownSelectWithSearch extends Component {
     const { current_org: { identity_type } = {} } = this.getUerInfoFromCookie();
     const isVisitor = this.isVisitor(identity_type);
     return (
-      <>
+      <React.Fragment>
         {!isVisitor && checkIsHasPermission(ORG_TEAM_BOARD_CREATE) && (
           <div className={styles.addNewProject__wrapper}>
             <div className={styles.addNewProject__content}>
@@ -115,7 +115,7 @@ class DropdownSelectWithSearch extends Component {
             </div>
           </div>
         )}
-      </>
+      </React.Fragment>
     );
   };
   showModal = () => {
@@ -184,9 +184,9 @@ class DropdownSelectWithSearch extends Component {
       return (<div></div>)
     }
     if (!list || !list.length) {
-      return <>
+      return <React.Fragment>
       {this.renderNoContent()}
-      </>;
+      </React.Fragment>;
     }
     return (
       <div>

@@ -1804,7 +1804,7 @@ class ZoomPicture extends Component {
       return [...acc, curr];
     }, []);
     return (
-      <>
+      <React.Fragment>
         {commentBlockList.map(
           ({ flag, id, coordinates: { x, y, width, height } = {} }) => {
             const {
@@ -1867,7 +1867,7 @@ class ZoomPicture extends Component {
             );
           }
         )}
-      </>
+      </React.Fragment>
     );
   };
   renderImg = () => {
@@ -1894,7 +1894,7 @@ class ZoomPicture extends Component {
       content_img_cursor_grab: isLongClick ? true : false
     });
     return (
-      <>
+      <React.Fragment>
         <img
           draggable={false}
           onMouseDown={e => this.handleImgOnMouseDown(e)}
@@ -1907,7 +1907,7 @@ class ZoomPicture extends Component {
           alt=""
           ref={this.imgRef}
         />
-      </>
+      </React.Fragment>
     );
   };
 
@@ -1986,7 +1986,7 @@ class ZoomPicture extends Component {
           </div>
           {isShowCommitBlock && this.renderCommitBlock()}
         </div>
-        <>{this.renderOperatorBar()}</>
+        <React.Fragment>{this.renderOperatorBar()}</React.Fragment>
         {/* 有时间可以实现一个全局模式 */}
         {/* {isFullScreenMode && (
           <Modal zIndex={9999999999} style={{top: 0, left: 0, height: bodyClientHeight - 300 + 'px'}} footer={null} title={null} width={bodyClientWidth} visible={isFullScreenMode} onCancel={() => this.setState({isFullScreenMode: false})}>
@@ -2002,7 +2002,7 @@ class ZoomPicture extends Component {
             </div>
             {isShowCommitBlock && this.renderCommitBlock()}
           </div>
-          <>{this.renderOperatorBar()}</>
+          <React.Fragment>{this.renderOperatorBar()}</React.Fragment>
         </div>
           </Modal>
         )} */}

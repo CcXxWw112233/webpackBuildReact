@@ -8,7 +8,6 @@ import {
   checkIsHasPermission, checkIsHasPermissionInBoard, getSubfixName,
   openPDF, setBoardIdStorage, getOrgNameWithOrgIdFilter
 } from "../../../../../utils/businessFunction";
-import { height } from 'window-size';
 import BoarderfilesHeader from '@/routes/Technological/components/ProjectDetail/BoarderfilesHeader'
 
 const { Option } = Select;

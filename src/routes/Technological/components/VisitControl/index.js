@@ -513,12 +513,12 @@ class VisitControl extends Component {
       <div className={styles.content__wrapper}>
         <div className={styles.content__list_wrapper}>
           {this.isCurrentHasNoMember() ? (
-            <>{this.renderPopoverContentNoContent()}</>
+            <React.Fragment>{this.renderPopoverContentNoContent()}</React.Fragment>
           ) : (
-            <>
+            <React.Fragment>
               {!notShowPrincipal && this.renderPopoverContentPrincipalList()}
               {this.renderPopoverContentOthersPersonList()}
-            </>
+            </React.Fragment>
           )}
         </div>
         {this.renderPopoverContentAddMemberBtn()}

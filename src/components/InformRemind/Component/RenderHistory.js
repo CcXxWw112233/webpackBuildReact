@@ -267,7 +267,7 @@ export default class RenderHistory extends Component {
     // console.log(remind_trigger, 'sss')
 
     return (
-      <>
+      <React.Fragment>
         <div className={infoRemindStyle.slip}
         >
           <div className={infoRemindStyle.select}>
@@ -403,7 +403,7 @@ export default class RenderHistory extends Component {
               )
           }
         </div>
-      </>
+      </React.Fragment>
     )
   }
 }

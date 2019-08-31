@@ -2,7 +2,6 @@
 import React from 'react'
 import { Breadcrumb, Icon } from 'antd'
 import indexStyles from './index.less'
-import { height } from 'window-size';
 
 export default class BreadCrumbFileNav extends React.Component {
   fileNavClick(data) {

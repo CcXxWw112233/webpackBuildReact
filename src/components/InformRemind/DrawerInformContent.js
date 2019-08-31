@@ -103,7 +103,7 @@ class DrawerInformContent extends Component {
         const { rela_id, user_remind_info, rela_type, workbenchExecutors = [], projectExecutors =[], processEditDatas=[], milestonePrincipals = [] } = this.props;
         const { new_user_info_list = [] } = this.state
         return (
-            <>
+            <React.Fragment>
                 <div className={infoRemindStyle.add_header}
                     onClick={() => { this.addInformRemind() }}
                 >
@@ -111,7 +111,7 @@ class DrawerInformContent extends Component {
                     <span className={infoRemindStyle.text}>添加提醒</span>
                 </div>
                 <RenderContent workbenchExecutors={workbenchExecutors} projectExecutors={projectExecutors} processEditDatas={processEditDatas} milestonePrincipals={milestonePrincipals} rela_id={rela_id} rela_type={rela_type} user_remind_info={new_user_info_list} />
-            </>
+            </React.Fragment>
         )
     }
 }

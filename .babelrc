@@ -3,7 +3,20 @@
     ["env", {
       "modules": false
     }],
-    "react"
+    "es2015",
+    "react",
+    "stage-0"
   ],
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": [
+    "react-hot-loader/babel",
+    ["import",
+      {    //使用antd配置
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css" // `style: true` 会加载 less 文件
+      }
+    ],
+    "transform-decorators-legacy",
+    "transform-runtime"
+  ]
 }

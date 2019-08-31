@@ -701,7 +701,7 @@ class BoardCommunication extends Component {
             )
         }
         return (
-            <>
+            <React.Fragment>
                 <div style={{ backgroundColor: '#FFFFFF' }} className={`${globalStyles.page_card_Normal} ${indexStyles.directoryTreeWapper}`}>
                     <Tree
                         blockNode={true}
@@ -713,7 +713,7 @@ class BoardCommunication extends Component {
                         {this.renderTreeNodes(boardTreeData)}
                     </Tree>
                 </div>
-            </>
+            </React.Fragment>
         );
     }
 
@@ -736,7 +736,7 @@ class BoardCommunication extends Component {
             )
         }
         return (
-            <>
+            <React.Fragment>
                 <div style={{ backgroundColor: '#FFFFFF' }} className={`${globalStyles.page_card_Normal} ${indexStyles.directoryTreeWapper}`}>
                     {
                         is_selectFolder ? (
@@ -750,7 +750,7 @@ class BoardCommunication extends Component {
                             )}
 
                 </div>
-            </>
+            </React.Fragment>
         );
     }
 
@@ -828,7 +828,7 @@ class BoardCommunication extends Component {
                                             <span className={indexStyles.iconDescription}>松开鼠标左键即可上传文件</span>
                                         </div>
                                     ) : (
-                                            <>
+                                            <React.Fragment>
                                                 <div className={indexStyles.icon}>
                                                     <img src={coverIconSrc} style={{ width: '80px', height: '84px' }} />
                                                 </div>
@@ -836,7 +836,7 @@ class BoardCommunication extends Component {
                                                     <div className={indexStyles.linkTitle}>选择 <a className={indexStyles.alink} onClick={this.selectBoardFile}>项目文件</a> 或 <a className={indexStyles.alink}>点击上传</a> 文件</div>
                                                     <div className={indexStyles.detailDescription}>选择或上传图片格式文件、PDF格式文件即可开启圈点交流</div>
                                                 </div>
-                                            </>
+                                            </React.Fragment>
                                         )}
 
                             </div>
