@@ -1,0 +1,72 @@
+.wrapperInfo {
+  position: relative;
+  z-index: 1100;
+}
+.add_header {
+  width: 76px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.add_header .icon {
+  font-size: 14px;
+  color: #1890FF;
+}
+.add_header .text {
+  font-size: 14px;
+  color: #1890FF;
+  margin-left: 4px;
+}
+.content {
+  position: relative;
+  cursor: pointer;
+}
+.content .slip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 48px;
+  position: relative;
+  cursor: pointer;
+}
+.content .slip:hover .slip_hover {
+  display: block;
+}
+.content .slip:hover .overdue {
+  display: none;
+}
+.content .slip:hover .checked {
+  display: none;
+}
+.content .slip .slip_hover {
+  display: none;
+}
+.content .slip .user_info {
+  position: absolute;
+  right: 85px;
+  top: 12px;
+}
+.content .slip .user_info .plus {
+  font-size: 20px;
+  line-height: 28px;
+}
+.content .del {
+  cursor: pointer;
+}
+.content .del:hover {
+  color: #1890FF;
+}
+.content .overdue {
+  top: 16px;
+  color: #FAAD14;
+  cursor: pointer;
+}
+.content .checked {
+  top: 16px;
+  color: #52C41A;
+  cursor: pointer;
+}
+.content .icon {
+  position: absolute;
+  right: 0;
+  flex-shrink: 0;
+}

@@ -1,0 +1,85 @@
+.board_file_area_item {
+    margin-top: 24px;
+    cursor: pointer;
+    position: relative;
+    .drag_out {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius:4px;
+        .drag_inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .upload_logo{
+                color: #1890FF;
+                font-size: 22px;
+                margin-right: 8px;
+            }
+            .upload_des {
+                color: #1890FF;
+                font-size: 16px;
+            }
+        }
+        
+    }
+
+    .folder_list {
+        display: flex;
+        flex-wrap: wrap;
+        .folder_item {
+            margin-top: 12px;
+            margin-right: 24px;
+            width: 208px;
+            height: 40px;
+            background:rgba(255,255,255,1);
+            box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.04);
+            padding: 0 10px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            .file_logo{
+                color: rgba(24,205,255,1);
+                margin-right: 6px;
+            }
+            .file_name{
+                flex: 1;
+                color: rgba(0,0,0,.65);
+            }  
+            .operator {
+                width:14px;
+                height:14px;
+                line-height: 14px;
+                border-radius: 14px;
+                color: #ffffff;
+                background:rgba(0,0,0,0.15);
+                display: none;
+            }   
+            .operator:hover {
+               background: #40A9FF;
+            }
+        }
+        .folder_item:hover {
+            .operator {
+                display: block;
+            }
+        }        
+        .add_item {
+            color: rgba(24,205,255,1);
+            justify-content: center;
+            padding: 0;
+        }
+    }
+}
+
+:global {
+    .ant-upload-drag {
+        background:rgba(230,247,255,0.8) !important;
+    }
+    // .ant-upload-drag .ant-upload{
+    //     padding: 0px!important;
+    // }
+}

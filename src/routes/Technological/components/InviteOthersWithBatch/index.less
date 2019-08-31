@@ -1,0 +1,168 @@
+.wrapper {
+  background: white;
+  border-radius: 5px;
+  margin: 20px auto;
+  margin-bottom: 0px;
+  width: 100%;
+  .invite__multiple_wrapper {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 344px;
+    height: 146px;
+    .invite__multiple_textarea {
+      height: 100%;
+    }
+    .invite__multiple_textarea::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .invite__multiple_textarea::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 5px #bfbfbf;
+      background: #bfbfbf;
+    }
+    .invite__multiple_textarea::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px #e8e8e8;
+      border-radius: 8px;
+      background: #e8e8e8;
+    }
+  }
+  .invite__single_wrapper {
+    height: 146px;
+    width: 344px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    .invite__input {
+      margin: 0 auto;
+      margin-bottom: 36px;
+      margin-top: 30px;
+    }
+    .invite__result_wrapper {
+      height: 90px;
+      width: 362px;
+      margin: 0 auto;
+      .invite__result_list {
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: wrap;
+        .invite__result_list_item {
+          margin-right: 8px;
+          margin-bottom: 8px;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          .invite__result_list_item_placeholder {
+            background: rgba(0, 0, 0, 0.04);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+          }
+          .invite__result_list_item_img_wrapper {
+            position: relative;
+            width: 36px;
+            height: 36px;
+            .invite__result_list_item_img {
+              border-radius: 50%;
+            }
+            .invite__result_list_icon {
+              cursor: pointer;
+              position: absolute;
+              display: none;
+            }
+            .invite__result_list_icon:hover {
+              cursor: pointer;
+              background: url(./../../../../assets/invite/close-circle-active@2x.png)
+                center center no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+        .invite__result_list_item_img_wrapper:hover .invite__result_list_icon {
+          cursor: pointer;
+          display: inline-block;
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          z-index: 11;
+          top: 0px;
+          right: -3px;
+          background: url(./../../../../assets/invite/close-circle-default@2x.png)
+            center center no-repeat;
+          background-size: contain;
+        }
+      }
+      .invite__result_list::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      .invite__result_list::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px #bfbfbf;
+        background: #bfbfbf;
+      }
+      .invite__result_list::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px #e8e8e8;
+        border-radius: 8px;
+        background: #e8e8e8;
+      }
+    }
+  }
+
+  .invite__submit_wrapper,
+  .invite__batch_wrapper {
+    text-align: center;
+  }
+  .invite__submit_wrapper {
+    .invite__submit_text {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+      line-height: 24px;
+    }
+  }
+  .invite__batch_wrapper {
+    margin-top: 12px;
+    .invite__batch_btn {
+      user-select: none;
+      height: 22px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(24, 144, 255, 1);
+      line-height: 22px;
+    }
+  }
+}
+
+.input__select_wrapper {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-left: -10px;
+  .input__select_avatar {
+    display: inline-block;
+    border-radius: 50%;
+    .input__select_avatar_img {
+      border-radius: 50%;
+    }
+  }
+  .input__select_user {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(89, 89, 89, 1);
+    line-height: 20px;
+    margin-right: 5px;
+  }
+  .input__select_name {
+  }
+}

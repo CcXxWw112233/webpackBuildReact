@@ -1,0 +1,262 @@
+{
+  "code": "0",
+  "message": "success",
+  "data": {
+    "current_scheme": "通用方案",
+    "scheme_data": [
+      {
+      "name": "字段",
+      "field_value": [{
+        "update_time": "1542614779",
+        "create_time": "1542614777",
+        "field_code": "Organization",
+        "id": "1064449938211082240",
+        "field_name": "Organization",
+        "status": "1"
+       }, {
+          "update_time": "1542614801",
+          "create_time": "1542614799",
+          "field_code": "Members",
+          "id": "1064450030108282880",
+          "field_name": "Members",
+          "status": "1"
+        },
+        {
+          "update_time": "1542614827",
+          "create_time": "1542614825",
+          "field_code": "Catch_Up",
+          "id": "1064450113558155264",
+          "field_name": "Catch Up",
+          "status": "1"
+        },
+        {
+          "update_time": "1542614847",
+          "create_time": "1542614844",
+          "field_code": "Dashboard",
+          "id": "1064450185104592896",
+          "field_name": "Dashboard",
+          "status": "1"
+        },
+        {
+          "update_time": "1542614879",
+          "create_time": "1542614878",
+          "field_code": "Projects",
+          "id": "1064450250779004928",
+          "field_name": "Projects",
+          "status": "1"
+        },
+        {
+          "update_time": "1542614893",
+          "create_time": "1542614891",
+          "field_code": "Flows",
+          "id": "1064450321880846336",
+          "field_name": "Flows",
+          "status": "1"
+        },
+        {
+          "update_time": "1542614908",
+          "create_time": "1542614906",
+          "field_code": "Tasks",
+          "id": "1064450372833251328",
+          "field_name": "Tasks",
+          "status": "1"
+        },
+        {
+          "update_time": "1542614920",
+          "create_time": "1542614919",
+          "field_code": "Files",
+          "id": "1064450452244008960",
+          "field_name": "Files",
+          "status": "1"
+        }
+      ]
+    },
+      {
+        "name": "通用方案",
+        "id": "1064448671292198912",
+        "field_value": [{
+          "field_id": "1064449938211082240",
+          "update_time": "1542614955",
+          "create_time": "1542614954",
+          "scheme_id": "1064448671292198912",
+          "field_value": "组织"
+        },
+          {
+            "field_id": "1064450030108282880",
+            "update_time": "1542614971",
+            "create_time": "1542614970",
+            "scheme_id": "1064448671292198912",
+            "field_value": "成员"
+          },
+          {
+            "field_id": "1064450113558155264",
+            "update_time": "1542614983",
+            "create_time": "1542614982",
+            "scheme_id": "1064448671292198912",
+            "field_value": "动态"
+          },
+          {
+            "field_id": "1064450185104592896",
+            "update_time": "1542614994",
+            "create_time": "1542614993",
+            "scheme_id": "1064448671292198912",
+            "field_value": "与我相关"
+          },
+          {
+            "field_id": "1064450250779004928",
+            "update_time": "1542615007",
+            "create_time": "1542615005",
+            "scheme_id": "1064448671292198912",
+            "field_value": "看板"
+          },
+          {
+            "field_id": "1064450321880846336",
+            "update_time": "1542615020",
+            "create_time": "1542615018",
+            "scheme_id": "1064448671292198912",
+            "field_value": "流程"
+          },
+          {
+            "field_id": "1064450372833251328",
+            "update_time": "1542615032",
+            "create_time": "1542615030",
+            "scheme_id": "1064448671292198912",
+            "field_value": "卡片"
+          },
+          {
+            "field_id": "1064450452244008960",
+            "update_time": "1542615042",
+            "create_time": "1542615040",
+            "scheme_id": "1064448671292198912",
+            "field_value": "文件"
+          }
+        ]
+      },
+      {
+        "name": "公司方案",
+        "id": "1064448923466338304",
+        "field_value": [{
+          "field_id": "1064449938211082240",
+          "update_time": "1542615058",
+          "create_time": "1542615057",
+          "scheme_id": "1064448923466338304",
+          "field_value": "企业"
+        },
+          {
+            "field_id": "1064450030108282880",
+            "update_time": "1542615082",
+            "create_time": "1542615080",
+            "scheme_id": "1064448923466338304",
+            "field_value": "团队"
+          },
+          {
+            "field_id": "1064450113558155264",
+            "update_time": "1542615093",
+            "create_time": "1542615091",
+            "scheme_id": "1064448923466338304",
+            "field_value": "动态"
+          },
+          {
+            "field_id": "1064450185104592896",
+            "update_time": "1542615107",
+            "create_time": "1542615105",
+            "scheme_id": "1064448923466338304",
+            "field_value": "工作台"
+          },
+          {
+            "field_id": "1064450250779004928",
+            "update_time": "1542615123",
+            "create_time": "1542615121",
+            "scheme_id": "1064448923466338304",
+            "field_value": "项目"
+          },
+          {
+            "field_id": "1064450321880846336",
+            "update_time": "1542615135",
+            "create_time": "1542615133",
+            "scheme_id": "1064448923466338304",
+            "field_value": "流程"
+          },
+          {
+            "field_id": "1064450372833251328",
+            "update_time": "1542615144",
+            "create_time": "1542615143",
+            "scheme_id": "1064448923466338304",
+            "field_value": "任务"
+          },
+          {
+            "field_id": "1064450452244008960",
+            "update_time": "1542615155",
+            "create_time": "1542615153",
+            "scheme_id": "1064448923466338304",
+            "field_value": "文件"
+          }
+        ]
+      },
+      {
+        "name": "院校方案",
+        "id": "1064449081260249088",
+        "field_value": [{
+          "field_id": "1064449938211082240",
+          "update_time": "1542615288",
+          "create_time": "1542615286",
+          "scheme_id": "1064449081260249088",
+          "field_value": "组织"
+        },
+          {
+            "field_id": "1064450030108282880",
+            "update_time": "1542615301",
+            "create_time": "1542615299",
+            "scheme_id": "1064449081260249088",
+            "field_value": "学员"
+          },
+          {
+            "field_id": "1064450113558155264",
+            "update_time": "1542615310",
+            "create_time": "1542615309",
+            "scheme_id": "1064449081260249088",
+            "field_value": "通知"
+          },
+          {
+            "field_id": "1064450185104592896",
+            "update_time": "1542615321",
+            "create_time": "1542615320",
+            "scheme_id": "1064449081260249088",
+            "field_value": "我的教学"
+          },
+          {
+            "field_id": "1064450250779004928",
+            "update_time": "1542615332",
+            "create_time": "1542615331",
+            "scheme_id": "1064449081260249088",
+            "field_value": "课程"
+          },
+          {
+            "field_id": "1064450321880846336",
+            "update_time": "1542615351",
+            "create_time": "1542615349",
+            "scheme_id": "1064449081260249088",
+            "field_value": "进度"
+          },
+          {
+            "field_id": "1064450372833251328",
+            "update_time": "1542615366",
+            "create_time": "1542615364",
+            "scheme_id": "1064449081260249088",
+            "field_value": "课时"
+          },
+          {
+            "field_id": "1064450452244008960",
+            "update_time": "1542615379",
+            "create_time": "1542615377",
+            "scheme_id": "1064449081260249088",
+            "field_value": "课件"
+          }
+        ]
+      },
+      {
+        "name": "自定义"
+      }
+    ]
+  }
+}

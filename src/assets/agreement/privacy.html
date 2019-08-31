@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title></title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans Regular'),url('file:///Users/zhangrenliu/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Open Sans Italic'),url('file:///Users/zhangrenliu/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Open Sans Bold'),url('file:///Users/zhangrenliu/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Open Sans Bold Italic'),url('file:///Users/zhangrenliu/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff');
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    /*background: url("file:///Users/zhangrenliu/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 4px 2px 4px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0.2em 1em;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><p>​<span>										</span><strong>灵犀隐私协议</strong></p><p>【合创廸安（深圳）科技有限公司】（以下简称“我们”）深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则，保护您的个人信息：权责一致原则、目的明确原则、选择同意原则、最少够用原则、确保安全原则、主体参与原则、公开透明原则等。同时，我们承诺，我们将按业界成熟的安全标准，采取相应的安全保护措施来保护您的个人信息。</p><p>我们非常乐意告知您我们是如何收集、使用您的相关信息。请您在使用我们的产品以及服务之前仔细阅读以下协议。</p><p>本文旨在帮助您了解如下内容：</p><ul><li>我们收集哪些信息；</li><li>我们将如何使用收集到的信息；</li><li>我们如何共享收集到的信息；</li><li>我们如何存储收集到的信息并如何保障其安全性；</li><li>有害信息的过滤和删除；</li><li>您的权利；</li><li>我们收集到的信息是如何跨境传输的；</li><li>业务转让；</li><li>其他重要的隐私策略；</li><li>我们对待儿童的隐私政策；</li><li>联系我们；</li><li>隐私政策的变更。</li></ul><p>本隐私协议在您使用灵犀产品、相关系列产品（如 投资地图）和服务或者在您以其他方式调用灵犀时全程有效（除其他单独的隐私协议注释外）。此政策还阐述了您有权决定是否允许我们收集您的行为数据。如果您不同意此政策，请勿访问或使用我们的产品或服务或者与我们业务的任何其他方面进行互动。当本政策中提及“灵犀”或“我们”时，指的是合创廸安（深圳）科技有限公司，灵犀在您使用服务时收集的信息由其进行控制。灵犀以包括网站、移动产品在内的产品为您提供了协作工具，帮助您进行团队合作和与人沟通。我们还拥有并运营着多个其他网站并提供相关服务。本政策中的“服务”指的是上述所有产品及服务。</p><p>二、我们收集哪些信息</p><p>我们将收集您提供给我们的信息，包括您在使用我们的产品或服务时产生的信息以及其他信息来源向我们提供的信息，具体类别如下所述：</p><p>您提供给我们的信息</p><p>我们将收集您在我们网站或服务中直接输入或提交的数据。</p><p>1. 账户信息和个人资料信息：我们将在您注册账户、创建或修改个人资料、设置偏好、登入、通过我们的服务进行购买或为购买而进行登记时收集您的有关信息，例如：您在注册服务时提供的联系信息以及某些情况下的帐单信息将会被我们收集。您还可以选择将个人照片、简历及其他详细信息添加到您的个人资料中，以显示于我们的服务系统之上。在您选择或修改个人偏好时，我们也将持续获取和追踪您的偏好信息。</p><p>2. 您通过我们的产品所提供的内容：我们将通过您使用的灵犀网页和移动产品来收集和存储您发布、发送、接收和分享的内容，此内容包括您的任何信息或者您选择包含的信息，还包括您上传到服务系统中的文件和链接。我们收集和存储的内容包括：您附加于任何任务上的文件、任务列表、项目、列表或企业的名称或者对任务的描述，您在任务、分享、文件中的评论，您上传的图片、表情以及文件等。</p><p>3. 您通过我们的网站所提供的信息：我们也通过所拥有、运营的网站和社交媒体来收集您所提交的信息。例如，当您提供反馈或参与任何互动功能调查、促销活动、抽奖活动或其他活动时，您向我们提供内容都会被我们收集。</p><p>4. 您通过我们的支持渠道所提供的信息：我们还将收集您通过我们的客户支持服务或者其他支持服务所提交的问题与信息。当您打开我们的客户支持聊天窗口或是邮件时，系统会要求您提供联系信息、您所遇到的问题或截图以及任何其他有助于解决问题的文档、截屏等信息。</p><p>5. 支付信息：当您使用某些付费服务时，我们会收集某些付款和账单信息。例如：在您为我们的产品付费时，我们要求您提交的姓名和联系信息等；您也可能会提供付款账号信息，如银行卡卡号等。</p><p>您使用服务时自动收集的信息</p><p>当您浏览和使用我们的服务时（如浏览网站或者在网页中进行相应的操作），我们将自动收集您的一些相关信息。</p><p>1. 您在我们的产品中的使用行为：当您访问我们的任何服务并与之互动时，我们会跟踪您的某些信息。这些信息包括您正在使用的功能，如：点击任务、选择团队或者点击其他链接；同时包括了您上传到服务中的附件及其类型、大小和文件名称；也包括您所经常使用的搜索词以及您在产品中是如何与他人互动的等等。我们还收集了您合作的团队和人员的信息以及您与他们的互动方式，例如与您最频繁合作和沟通的人员。</p><p>2. 设备与连接信息：在您使用我们的服务时，我们收集了有关您的计算机、手机、平板电脑或您用于访问服务的其他设备的信息。此设备信息包括您在安装、访问、更新或使用我们的服务时的连接类型和设置。我们还通过您的设备收集关于您的操作系统、浏览器类型、IP地址、分享/退出页面的URL、设备标识符以及应用于软件崩溃相关数据的信息。我们也将使用您的IP地址、国家或地区偏好来估算您的位置，以提供更好的服务体验。我们所收集的信息数量取决于您用于访问服务的设备类型和设置。</p><p>3. Cookies和其他跟踪技术：灵犀及我们的第三方合作伙伴（如我们的分析合作伙伴）可能会使用Cookie和其他跟踪技术（如网页打点等）来识别您的身份。Cookie是仅限文本的信息字符串，网站会将这些字符串传输到计算机硬盘的浏览器 Cookie 文件中，以便网站能够记住您的身份信息以及其他详细信息。Cookie可能由网站设置或来源自第三方，如广告商。Cookie本身不用于或意图用于从用户计算机读取任何信息（Cookie本身的内容除外）。Cookie只是网站所使用的最初将其放置在您硬盘上的标识符。同一台服务器可以检索到 Cookie 信息的实际内容，从而标识计算机，并进而根据主服务器上存储的信息来自定义、跟踪或控制站点的使用情况。我们会通过这些追踪手段来帮助您更好地使用灵犀，也帮助我们更好地改善对应功能。您可以通过修改浏览器设置来选择接受或者拒绝Cookie。但是如果您禁用了Cookie，您将不能使用灵犀的各项交互功能。</p><p>我们从其他来源渠道收集到的信息</p><p>我们会从服务中的其他用户、其他第三方服务和相关公司以及我们的业务和渠道合作伙伴那里收集到有关您的信息。</p><p>1. 服务中的其他用户：我们服务的其他用户可能会在服务提交内容时提供有关您的信息。例如：在任务备注中写入您的名字，或者在聊天中提及您的信息。我们也会收集到来自其他服务用户的您的电子邮箱地址，以便邀请您加入服务。同样，您的企业管理员也可能会指定您为项目管理员或者团队管理员（通过登录您的邮箱或者电话），以便您的团队成员在需要时联系您。</p><p>2. 您关联到账户的其他服务：当您启用Github、微信等第三方应用或将第三方服务与我们的服务关联时，我们会收集到有关您的信息。例如：如果您使用微信凭据创建账户或登录服务，我们会根据您的微信个人资料设置的许可收到您的姓名等信息，以便对您进行身份验证。您或您的管理员可能还会将我们的服务与您使用的其他服务相联合，如允许您通过我们的服务访问、存储、共享和编辑来自第三方的某些内容。例如：您可以授权我们的服务在服务界面中使用第三方线上会议系统（如 Zoom）。又或者，您可以授权我们的服务同步联系人列表或地址簿，以便您可以轻松地与服务中的联系人进行联系，或者邀请他们与我们在服务上协作。在将我们的服务与第三方服务链接或联合时，我们收集到的信息取决于该第三方服务所控制的设置、权限和隐私政策。因此您应该始终关注并了解这些第三方服务中的隐私设置和通知，以了解可能向我们透露或与我们的服务共享的数据。</p><p>3. 灵犀的合作伙伴：我们与各大合作伙伴开展合作，将会围绕我们的产品与合作伙伴的产品进行单点登录、数据打通、培训和开展其他服务。其中一些合作伙伴还帮助我们推广产品，为我们带来销售线索并转售我们的产品。我们会收到来自这些合作伙伴的信息，如账单信息、技术联系信息、公司名称、您所感兴趣的产品等。</p><p>三、我们将如何使用收集到的信息</p><p>我们如何使用收集到的信息部分取决于您所使用的服务、如何使用它们以及您所设置的偏好。以下是我们使用所收集的、关于您的信息的具体目的：</p><p>1. 为您提供更好的服务与个性化体验：我们使用关于您的信息向您提供服务，包括识别您在什么地点登陆、应该提供什么样的用户支持以及如何运营和维护整体服务。例如：我们使用您在账户中提供的名称和图片（如头像）来向其他服务用户标识您。我们的服务还包括个性化您的体验与定制功能，提高您使用 灵犀的效率，并通过自动化的分析与计算，提高他人与您沟通协作的能力与效率，更好地帮助您和您的团队构建稳固与准确的关联关系。我们可能会使用您的电子邮件域来推断您与特定组织或行业的联系，以个性化您在我们网站上收到的内容和体验。</p><p>2. 用于研究与开发迭代：我们一直在寻找方法使我们的服务以更智能、更快速、更安全、更综合、更有效的方式来帮助您获得更好的使用体验。我们通过集体学习，了解人们如何使用我们的服务，并不断收集用户直接向我们提供的反馈，以帮助我们排查问题并确定产品趋势、用法、活动模式以及服务整合和改进的方式。例如：我们在每次迭代与更新时，会记录新功能的使用量以及用户的使用链路，从而设计更好、更人性化的功能。在某些情况下，我们会将这部分的调查数据与研究数据提供给对应的研究机构以进行更深层的产品研究与学术研究。</p><p>3. 用于改善与用户的沟通交流：我们将使用您的联系信息，通过电子邮件和服务内容发送交易邮件，包括确认您的购买、提醒您订阅到期、回应您的意见问题与需求、提供客户支持以及向您发送更新、通知、警告等。根据您的设置，当您或其他人在服务中进行互动时，我们会向您发送电子邮件通知，例如：当您在任务中被人提及或将您添加到任务时。</p><p>4. 用于技术服务：我们使用您的信息来解决您遇到的技术问题、响应您的协助请求、分析崩溃信息并进行修复和改进服务。如果您允许我们这样做，我们会与 灵犀的技术专家分享您的信息，以回应与支持相关请求。</p><p>5. 用于加强安全保护与鉴权：我们使用有关您和您的服务使用情况信息来验证账户和活动、监控可疑或欺诈活动并确定上述行为是否违反服务政策。</p><p>6. 用于保护我们合法的商业利益和其他合法权益：在法律要求或我们认为有必要保护我们的合法权利、利益和他人利益的情况下，我们会使用有关您的信息来处理法律诉讼、合规、监管和审计相关事务，以及与收购、合并或出售业务相关的信息披露。</p><p>7. 数据处理的合法性：如果您是欧盟区的用户，我们只会根据适用的欧盟法律来合法地收集和处理您的相关信息，合法性取决于您使用的服务以及您如何使用这些服务。这意味着我们仅在以下情形收集和使用您的信息：我们需要处理数据以为您提供服务，包括运营服务、提供客户支持、个性化功能以及保护服务的安全性；处理数据是为实现合法利益所需（您所享有的数据保护利益优先于该种利益的情况除外），如用于研究和开发、营销和推广服务以及保护我们的合法权益；您同意为特定目的而处理数据；我们需要处理您的数据以履行法律义务。</p><p>如果您已经同意我们出于特定目的使用您的信息，您也拥有随时改变主意的权利，但这不会影响任何已经发生了的处理。当我们或第三方（如您的雇主）合法使用您的信息时，您有权反对。但是在某些情况下，这可能意味着您不再使用服务。</p><p>四、我们如何共享收集到的信息</p><p>我们开发和提供协作工具，并希望它们能更好地帮助您的工作。这也意味着我们将通过服务或者第三方的形式共享收集到的信息。我们将以下述方式分享我们收集的有关您的信息，包括与可能的业务转移相关的信息，但我们承诺绝不向广告客户或其他第三方出售您的信息。</p><p>与服务中的其他用户共享</p><p>1. 用于协作、合作：您可以创建包含您的信息的任务或其他内容，并添加授予其他人的访问权限或者授予他人共享、编辑、复制和下载的权限。当您共享或与特定内容进行互动时，服务的某些协作功能会向其他服务用户显示部分或全部的个人资料信息。例如：当您评论任务时，我们会在您的评论旁边显示您的个人头像和名称，以便其他有权访问此任务的用户了解是谁发表了评论；同样，当您加入团队或组织时，您的姓名、个人资料图片和联系信息将显示在其他团队成员的列表中，以便他们可以查找到您并与您互动。请注意，有些任务或者项目可以设置为公开，这意味着发布在该项目上的任何内容（包括关于您的信息）都可以被公开查看。您可以随时查看您的项目设置，以确认某个特定的项目是否是公开的。</p><p>2. 论坛社区：我们的网站提供可公开访问的博客、论坛和错误跟踪器。您在这些网站上提供的任何信息，包括用于发布信息的账号相关个人信息资料，可能被任何访问网站的公众所阅读、收集和使用。即使您终止了您的账户，您的帖子和某些配置文件信息也可能会被保留。我们建议您在输入这些信息时考虑其安全性与隐私性。</p><p>与第三方合作伙伴共享</p><p>我们与第三方分享信息，以帮助我们运营、提供、改进、整合、定制、支持和销售我们的服务。</p><p>1. 第三方应用：您或者您的管理员或其他服务用户可以选择添加新功能，或者通过在服务中启用应用中心的方式来进行工作。上述操作可能会让第三方应用程序访问您的账户和您的信息（如您的姓名和电子邮箱地址），以及您选择与这些应用程序相关的任何内容。第三方应用程序的政策和程序不受我们控制，本隐私政策不包括第三方应用程序如何使用您的信息。您应该始终关注并了解这些第三方服务中的隐私设置和通知，以了解有关其隐私和信息处理的更多信息。如果您反对与这些第三方分享您的信息，请停用这些第三方应用。</p><p>2. 指向第三方网站的链接：服务可能包含指向您的其他网站或服务的链接，这些网站或服务的隐私惯例可能与我们的不同。您需要注意的是，您使用以及您提交给任何第三方网站的信息均受其隐私政策的约束，而不是受本服务隐私政策的约束。</p><p>3. 我们将以弹窗的方式单独告知接收个人信息的第三方身份或类型、向第三方分享数据的目的及数据范围，并征得您的同意。</p><p>与关联公司分享</p><p>在某些情况下，我们会与关联公司分享我们收集的信息。关联公司是我们拥有或经营的公司。我们与关联公司分享您的信息，以运营和改善产品和服务并提供其他相关服务给您。本隐私政策适用于我们在这些情况下分享的信息。</p><p>五、我们如何存储收集到的信息并如何保障其安全性</p><p>信息的存储和安全：我们使用阿里云提供的云服务托管我们收集的信息，并使用技术措施来保护您的数据。尽管我们极尽可能地保护您的信息安全，但由于互联网的固有特性，没有任何系统是绝对安全的，我们无法保证数据在通过互联网传输过程中和存储在我们系统时的绝对安全。我们会尽一切可能防止安全入侵事件的发生。但如果发生该类事件，我们将在合理期限内第一时间告知您。</p><p>信息将被存储多久</p><p>信息将被存储多久是由该信息的种类所决定的，我们在下文中将详细描述。当信息达到一定存储期限后，我们会删除您的信息或做匿名处理。但当删除操作无法进行的时候（如信息已存储在备份存档中），我们将安全地存储您的信息，并将其隔离，直至删除成为可能。</p><p>1. 账号信息：我们将保留您的账户信息，直到您删除您的账户。我们还将保留一些必要的信息，以履行法律义务、解决争议、履行协议、支持业务运营并继续开发和改进我们的服务。如果我们将要保留这些信息以用于服务改进和产品迭代，我们会将数据脱敏，并且我们只会利用这些信息进行集体性分析而不会针对您的个人数据做专门分析。</p><p>2. 您在我们服务中所分享的信息：如果您的账户已停用或被停用，您的部分信息和您提供的内容将被保留，以便您的团队成员或其他用户充分使用服务。例如：我们会继续显示您提供给项目或任务中的评论和内容。</p><p>3. 市场偏好信息：如果您选择接收我们的营销电子邮件，我们会保留有关您的营销偏好信息，除非您明确要求我们删除此类信息。我们将保留自创建日期起的合理时间段内从 Cookie 和其他跟踪技术中所获得的信息。</p><p>六、有害信息的过滤和删除</p><p>根据相关法律的规定，灵犀禁止用户创建和储存一切有害信息，包括：</p><ul><li>（1）违反中国宪法确定的基本原则的；</li><li>（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</li><li>（3）宣扬恐怖主义、极端主义、民族仇恨、民族歧视的；</li><li>（4）破坏国家、地区间友好关系的；</li><li>（5）破坏国家宗教政策，宣扬邪教和封建迷信的；</li><li>（6）散布谣言或不实消息，扰乱社会秩序，破坏社会稳定的；</li><li>（7）煽动、组织、教唆恐怖活动、非法集会、结社、游行、示威、聚众扰乱社会秩序的；</li><li>（8）散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；</li><li>（9）侵犯他人名誉、隐私、著作权、信息网络传播权等合法权益的；</li><li>（10）含有法律、行政法规禁止的其他内容的。</li></ul><p>灵犀将针对以上信息制定过滤和屏蔽机制。如用户创建项目或储存文件时不能履行和遵守本政策中的规定，灵犀有权对违反本政策的用户做出关闭账户的处理，同时保留依法追究当事人法律责任的权利。此外，灵犀在采取移除等相应措施后，不为此向原发布人承担违约责任或其他法律责任。</p><p>七、您的权利</p><p>1. 您可以在使用我们服务的过程中，访问、修改、撤回和删除您提供的注册信息和其他个人信息，也可按照通知指引与我们联系。您访问、修改和删除个人信息的范围和方式将取决于您使用的具体服务。</p><p>2. 每个业务功能可能需要某些基本的个人信息才能得以完成。对于额外收集的个人信息的收集和使用，您可以随时给予或撤回您的授权同意。当您撤回同意后，我们将不再处理相应的个人信息。但您撤回同意的决定，不会影响此前基于您的授权而开展的个人信息处理。</p><p>3. 您有权获取您的个人信息副本。在技术可行的前提下，例如数据接口匹配，我们还可按您的要求，直接将您的个人信息副本传输给您指定的第三方。我们将以弹窗方式单独告知接收个人信息的第三方身份或类型、向第三方分享数据的目的及数据的范围并征得您的同意。</p><p>4. 在某些业务功能中，我们可能仅依据信息系统、算法等非人工自动决策机制对您的个人信息做出处理。如果这些决定将显著影响您的合法权益，您有权要求我们做出解释，我们也将对此提供适当的救济方式。</p><p>5. 您有权要求限制对您个人数据的处理。在下列情形中，您有权限制我们处理数据：当您对个人数据的准确性有争议，并允许我们在一定的期限内核实其准确性时；当数据处理是非法的，且您反对删除个人数据而是要求限制使用该个人数据时；当我们不再需要个人数据以实现处理目的，但您为了提起、行使或抗辩法律诉求而需要该个人数据时；当您基于反对权需要核实我们的法律依据是否优先于您的法律依据时。</p><p>6. 您有权选择退出促销。您可以选择不接收我们的促销信息，为此目的，您可以直接联系我们从促销邮件列表或注册数据库中中删除您的联系信息。</p><p>7. 为保障安全，您可能需要以提供书面材料或其他方式证明您的身份。我们可能会先要求您验证自己的身份，然后再处理您的请求。对于您的合理请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将视情况收取一定的成本费用。对于那些无端重复、需要过多技术手段（例如：需要开发新系统或从根本上改变现行惯例）、给他人合法权益带来风险或者非常不切实际（例如：涉及备份磁带上存放的信息）的请求，我们可能会予以拒绝。</p><p>在以下情形中，按照法律法规要求，我们将无法响应您的请求：</p><ul><li>与国家安全、国防安全直接相关的；</li><li>与公共安全、公共卫生、重大公共利益直接相关的；</li><li>与犯罪侦查、起诉、审判和判决执行等直接相关的；</li><li>有充分证据表明您存在主观恶意或滥用权利的；</li><li>响应您的请求将导致您或其他个人、组织的合法权益受到严重损害的；</li><li>涉及商业秘密的。</li></ul><p>八、我们收集到的信息是如何跨境传输的</p><p>灵犀 提供了中国区域与海外区域的服务，为确保用户可以使用同一个账号登陆任意服务区域的服务器，我们将您的个人账户基础信息数据（包括账号、密码、用户个人信息及设备信息）进行中国区域与海外区域的互通，以帮助提供更好的使用体验。就欧盟区域的用户而言，如果您的个人信息需要传输到第三国，我们会告知您该第三国是否通过了欧盟关于信息保护的“充分性”标准。如该第三国没有通过该标准，我们将会告知您我们采取了何种个人信息保护措施。</p><p>九、业务转让</p><p>灵犀收集的信息将被视作一项资产，如果存在下列情况之一，此类信息可能成为被转让的资产之一：灵犀、任何关联公司或部门与其他企业或部门进行合并、被收购，或者进行破产、解散、重组，或者出售部分或全部灵犀的资产或股票，或者进行融资、公开发行证券，或者被收购全部或部分业务，或者进入其他类似交易或程序，或者为此类活动进行的其他程序和步骤（例如尽职调查）。</p><p>当上述交易完成后，若存在转让灵犀收集的信息的情况，我们会以邮件和/或其他方式通知您。收购方或者其他与收购方具有类似地位的权利义务承继者，只能按照此隐私策略（或者向您收集信息时任何有效的后续策略）来使用您的信息。请注意，转让后提交或收集的信息可能根据收购方的要求在法律允许的范围内进行修改，隐私政策也将据此进行更新。</p><p>十、其他重要的隐私策略</p><p>我们的产品适用于个人使用和组织使用，在通过组织（例如您的雇主）向您提供服务的情况下，该组织是服务的管理员，并且对其拥有控制权的最终用户和服务站点负责。如果是此种情况，请将您的数据隐私需求提交给管理员，因为您对服务的使用受制于该组织的政策。我们不对管理员组织的隐私或安全做法负责，这些做法可能与本政策有所出入。即使服务目前没有由组织管理，如果您是由组织管理的团队的成员，或者如果您使用组织提供的电子邮箱地址（例如您的工作电子邮箱地址）访问服务，那么该团队的管理员或您的组织电子邮箱地址相关联的域的所有者（例如您的雇主）可能会对您的账户进行管理、控制，并在这之后使用我们的服务。如果发生此类情况，您会收到通知。任务拥有者、项目管理员、企业管理员能够限制您对任务、项目、企业的访问与权限。</p><p>在某些情况下，企业管理员还可以：</p><ul><li>要求您重置您的账号密码；</li><li>限制、暂停或终止您访问服务或您的账户；</li><li>控制您编辑、限制、修改或删除账户信息的能力；</li><li>更改您的账户信息，包括个人资料信息或与您账户相关的电子邮箱地址；</li><li>访问您账户中的信息；</li><li>开启或关闭第三方应用；</li></ul><p>如果您不希望管理员能够控制您的账户或使用服务，您可以退出企业、项目、任务，并从您的账户中删除任何包含管理员拥有或控制的域的电子邮件。一旦管理员声明对您的账户或使用服务具有控制权，您可能无法在未经管理员批准的情况下更改与您的账户相关联的电子邮箱地址。</p><p>请联系您的组织或您的管理员，以获取组织政策和了解更多信息。</p><p>十一、我们对待儿童的隐私政策</p><p>我们的服务不针对16岁以下的个人，我们也不会故意收集16岁以下儿童的个人信息。如果发现16岁以下的儿童向我们提供了个人信息，我们将采取措施删除此类信息。如果您发现存在上述儿童向我们提供个人信息的情况，请您通过我们的客户支持服务联系我们。</p><p>十二、联系我们</p><p>本隐私政策的订立、履行和解释均适用中国法律。如果您对本隐私政策有任何疑问、意见或建议，请通过以下方式与我们联系：</p><p>邮箱：<a href='mailto:hechuangdi@new-di.com' target='_blank' class='url'>hechuangdi@new-di.com</a></p><p>地址：</p><p>邮编：</p><p>客服电话：</p><p>一般情况下，我们将在三十天内回复。</p><p>当您使用我们的服务，即意味着您已经同意本隐私政策所示之法律管辖及争议解决方式的有关约定。</p><p>十三、隐私政策的变更</p><p>我们可能会不时更改此隐私政策。隐私政策的任何更改都会在此页面上发布。如果更改的内容十分重要，我们将通过在服务主页或登录屏幕上添加通知或者向您发送电子邮件的方式通知您。我们也会将此隐私政策的先前版本保留在档案中供您查看。我们鼓励您在使用服务时了解我们的隐私政策，随时了解我们的信息能够帮助您更好地保护隐私。如果您不同意本隐私政策的任何更改，您需要停止使用服务并停用您的账户。</p></div>
+</body>
+</html>

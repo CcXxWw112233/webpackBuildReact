@@ -1,0 +1,196 @@
+.edit_cardd_dropdown {
+  width: 670px;
+  height: auto;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //column-count:2;
+  .card_set_item{
+    //break-inside: avoid;
+    max-height: 170px;
+    overflow: hidden;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 320px;
+    border: 1px solid rgba(217,217,217,1);
+    border-radius: 4px;
+    padding: 10px;
+    .card_set_item_top {
+      display: flex;
+      .check{
+
+      }
+      .name{
+        flex: 1;
+        margin: 0 12px;
+      }
+      .turn{
+        cursor: pointer;
+      }
+    }
+    .card_set_item_bott {
+      background: #FFFFFF;
+      //border: 0.6px solid rgba(217,217,217,1);
+      //box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15);
+      //width: 303px;
+      max-height: 120px;
+      overflow: hidden;
+      margin-top: 6px;
+      img{
+
+      }
+    }
+  }
+}
+
+.cardItem{
+  height: auto;
+  //column-count: 2;  //flex 和 column切换应对需求
+  column-gap: 30px;
+  margin-top: 30px;
+  display: flex;
+  .cardItem_left{
+    height: 250px;
+    width: 600px;
+    border-radius: 4px;
+  }
+  .cardItem_right{
+    margin-left: 24px;
+    height: 250px;
+    width: 600px;
+    border-radius: 4px;
+  }
+}
+.cardDetail{
+  break-inside:avoid;
+  width: 396px;
+  //margin-bottom: 10px;
+  //max-height: 380px;
+  color: #595959 ;
+  background: #FFFFFF;
+  border: 1px solid rgba(217,217,217,1);
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+  transform: scale(0.75);
+  transform-origin:0 0;
+  max-height: 160px;
+  overflow: hidden;
+
+  .contentTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 46px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px 4px 0 0;
+    padding: 0 12px;
+    >div{
+      line-height: 46px;
+    }
+    >div:nth-child(2) {
+      cursor: pointer;
+    }
+  }
+  .contentBody::-webkit-scrollbar {display:none}
+  .contentBody{
+    box-sizing: border-box;
+    //flex: 1;
+    padding: 12px;
+    max-height: 116px;
+    padding-top: 0;
+    overflow-y: hidden;
+  }
+}
+
+
+
+//箭头
+@keyframes spinup {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes spindown {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hideBott {
+  from {
+    height: 140px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes showBott {
+  from {
+    height: 0;
+  }
+  to {
+    height: 140px;
+  }
+}
+
+@keyframes hideBott2 {
+  from {
+    height: 190px;
+  }
+  to {
+    height: 40px;
+  }
+}
+@keyframes showBott2 {
+  from {
+    height: 40px;
+  }
+  to {
+    height: 190px;
+  }
+}
+
+.upDown_up {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  animation: spinup 500ms ease;
+}
+.upDown_down {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  animation: spindown 500ms ease;
+}
+.showBott{
+  height: 140px;
+  animation: showBott 500ms ease;
+}
+.hideBott{
+  height: 0px;
+  overflow: hidden;
+  animation: hideBott 500ms ease;
+}
+.showBott2{
+  height: 190px;
+  animation: showBott2 500ms ease;
+}
+.hideBott2{
+  height: 40px;
+  overflow: hidden;
+  animation: hideBott2 500ms ease;
+}
+.hideinit{
+  height: 40px;
+}
+.noDoc{
+  display: none;
+}

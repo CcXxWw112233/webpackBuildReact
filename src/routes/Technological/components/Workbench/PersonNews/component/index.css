@@ -1,0 +1,14 @@
+.fileName {
+  cursor: pointer;
+  color: 'red';
+}
+
+.hideFileName{
+  display: none;
+}
+
+.showFileName{
+  display: block;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { hot } from 'react-hot-loader/root';
-import Home from '../routes/Home'
-import About from '../routes/About'
-import Topics from '../routes/Topics'
+import Home from '../page/Home'
+import About from '../page/About'
+import Topics from '../page/Topics'
 
 class App extends Component {
 

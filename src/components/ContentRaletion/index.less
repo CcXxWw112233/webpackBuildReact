@@ -1,0 +1,136 @@
+.relaData{
+  margin-top: 6px;
+  font-size: 14px;
+  color: #595959;
+  line-height: 22px;
+  .relaData_item{
+    width: auto;
+    cursor: pointer;
+    margin-top: 2px;
+    position: relative;
+  }
+  .relaData_item:hover {
+    background-color: #e5e5e5;
+    border-radius: 4px;
+  }
+}
+
+.contain_6{
+  margin-top: 20px;
+  font-size: 14px;
+  color: #d9d9d9;
+  display: flex;
+  .contain_6_add{
+    height: 32px;
+    width: 100px;
+    padding: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .contain_6_add:hover {
+    border: 1px dashed rgba(217,217,217,1);;
+    text-align: center;
+    border-radius: 2px;
+  }
+  .contain_6_add_2{
+    cursor: pointer;
+    color: rgba(0,0,0,.45);
+    width:306px;
+    height:32px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 8px 0px rgba(0,0,0,0.15);
+    border-radius:4px;
+    border:1px solid rgba(217,217,217,1);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    .iconMargin{
+      margin: 0 4px;
+    }
+    .contain_6_add_2_middle{
+      height: 16px;
+      width: 1px;
+      margin: 0 10px;
+      background-color: rgba(0,0,0,.09);
+    }
+  }
+}
+
+.contain_6_2{
+  width: auto;
+  .contain_6_add{
+
+  }
+  .contain_6_add_2{
+    display: none;
+  }
+}
+
+.contain_6_2:hover{
+  .contain_6_add{
+    display: none;
+  }
+  .contain_6_add_2{
+    display: flex;
+  }
+}
+
+.search_item{
+  display: flex;
+  cursor: pointer;
+  .search_item_left{
+    width: 20px;
+    height: 20px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    margin-right: 4px;
+  }
+  .search_item_right {
+    color: #595959;
+    .description{
+      font-size: 12px;
+      position: relative;
+      line-height: 20px;
+      max-height: 40px;
+      overflow: hidden;
+    }
+    .description::after{content: "..."; position: absolute; bottom: 0; right: 0; padding-left: 40px;
+      background: -webkit-linear-gradient(left, transparent, #fff 55%);
+      background: -o-linear-gradient(right, transparent, #fff 55%);
+      background: -moz-linear-gradient(right, transparent, #fff 55%);
+      background: linear-gradient(to right, transparent, #fff 55%);
+    }
+
+    .title{
+      font-size: 14px;
+      max-width: 254px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.relaData_item_delete_icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 3px;
+  display: none;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.relaData_item_delete_icon:hover {
+  color: #3FA8FE;
+}
+
+.relaData_item:hover .relaData_item_delete_icon {
+  display: inline-block;
+  opacity: 1;
+  transition: all .5s;
+}

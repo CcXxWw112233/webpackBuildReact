@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caasDrag</title>
+</head>
+<body>
+<div style="height: 100px"></div>
+<div style="display: flex; background-color: yellow;padding: 0;padding-top: 60px;">
+  <div style="width: 30px;background-color: #000000;height: 300px"></div>
+  <canvas id="canvas" width="400" height="300" style="border: 1px solid red">
+  </canvas>
+</div>
+
+</body>
+<script type="text/javascript">
+  window.onload = function() {
+    var SelectedRect = {};
+    var x1;
+    var y1;
+    var right=false;
+    var isDragging = false;
+
+    // canvas 矩形框集合
+    var rects=[];
+    function rectar(x,y,width,height){
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.isSelected = false;
+    }
+
+    function drawRect() {
+      // 清除画布，准备绘制
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 遍历所有矩形框
+      if(rects.length) {
+        for(var i=0; i<rects.length; i++) {
+          var rect = rects[i];
+          // 绘制矩形
+          context.strokeStyle="rgba(24,144,255,.5)";
+          context.fillStyle = 'rgba(24,144,255,.2)'
+          context.lineWidth = 1
+          context.fillRect(rect.x1,rect.y1,rect.width,rect.height);
+          context.strokeRect(rect.x1,rect.y1,rect.width,rect.height);
+        }
+      }
+
+      context.strokeStyle="rgba(24,144,255,.5)";
+      context.fillStyle = 'rgba(24,144,255,.2)'
+      context.lineWidth = 1
+      context.fillRect(x1,y1,SelectedRect.x,SelectedRect.y);
+      context.strokeRect(x1,y1,SelectedRect.x,SelectedRect.y);
+
+    }
+
+    //是否为对象
+    function isObj(obj) {
+      if(!obj || typeof obj !='object') {
+        return false
+      } else {
+        return true
+      }
+    }
+
+    function canvasClick(e) {
+      // 取得画布上被单击的点
+      // console.log( e.pageX, e.pageY, canvas.offsetLeft, canvas.offsetTop)
+      x1 = e.pageX - canvas.offsetLeft;
+      y1 = e.pageY - canvas.offsetTop;
+      isDragging = true
+      SelectedRect = {}
+    }
+
+    function dragRect(e) {
+      // 判断矩形是否开始拖拽
+      if (isDragging == true) {
+        // 判断拖拽对象是否存在
+        if (isObj(SelectedRect)) {
+          // 取得鼠标位置
+          var x = e.pageX - canvas.offsetLeft;
+          var y = e.pageY - canvas.offsetTop;
+          // 将圆圈移动到鼠标位置
+          SelectedRect.x= x-x1;
+          SelectedRect.y= y-y1;
+          // 更新画布
+          drawRect();
+        }
+      }
+    };
+
+    function stopDragging() {
+      isDragging = false;
+      right=false;
+    }
+
+    function onmouseout() {
+      stopDragging()
+    }
+
+    function onmouseup() {
+      rects.push({
+        x1: x1,
+        y1: y1,
+        width: SelectedRect.x,
+        height: SelectedRect.y,
+      })
+      stopDragging()
+    }
+
+    canvas = document.getElementById("canvas");
+    context = canvas.getContext("2d");
+    canvas.onmousedown = canvasClick;
+    canvas.onmouseup = onmouseup;
+    canvas.onmouseout = onmouseout;
+    canvas.onmousemove =dragRect
+; };
+
+</script>
+</html>

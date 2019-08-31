@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" method="post" action="./a.json"   enctype="multipart/form-data" role="form">
+  <input type="file" name="file">
+  <button type="submit" >提交</button>
+  <p>要使用的图像：</p>
+  <img id="tulip" src="./yay.jpg" alt="The Tulip" />
+
+  <p>画布：</p>
+  <canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;background:#ffffff;">
+    Your browser does not support the HTML5 canvas tag.
+  </canvas>
+  <div id="sss">
+    <div>asdasd</div>
+    <p>123123</p>
+  </div>
+</form>
+</body>
+<script type="text/javascript">
+  window.onload = function () {
+
+    document.getElementById('sss').document.getElementsByTagName('div').click = function () {
+      alert(1)
+    }
+
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    var img=document.getElementById("tulip");
+    ctx.drawImage(img,10,10);
+
+    const testData = [{
+      folder_id: '111',
+      folder_name: '一级',
+      parent_id: '0',
+      child_data: [
+        {
+          folder_id: '222-1',
+          folder_name: '二级-1',
+          parent_id: '111',
+          child_data: [
+            {
+              folder_id: '333-1',
+              folder_name: '三级-1',
+              parent_id: '222-1',
+              child_data: []
+            },
+          ]
+        },
+        {
+          folder_id: '222-2',
+          folder_name: '二级-2',
+          parent_id: '111',
+          child_data: [
+          ]
+        },
+      ]
+    }]
+    //寻找folder_id = 222-2的链条, 根parrentid为0，
+    const newArry = []
+    function findChildrenParent(arr, childDataKey, key, value, callback) {
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i][key] == value) {
+          callback(arr[i])
+          findChildrenParent(testData, 'child_data','folder_id', arr[i]['parent_id'], function (data) {
+            data['type'] = '1'
+            data['file_name'] = data['folder_name']
+            data['file_id'] = data['folder_id']
+            newArry.unshift(data)
+          });
+          break
+        } else {
+          findChildrenParent(arr[i][childDataKey], childDataKey, key, value, callback);
+        }
+      }
+    }
+    findChildrenParent(testData, 'child_data','folder_id', '333-1', function (data) {
+      data['type'] = '1'
+      data['file_name'] = data['folder_name']
+      data['file_id'] = data['folder_id']
+      newArry.unshift(data)
+    });
+
+    // console.log(newArry)
+    const a = [1]
+    a.splice(0, a.length - 1)
+    // console.log(a)
+  }
+</script>
+</html>

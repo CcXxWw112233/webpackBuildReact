@@ -1,0 +1,94 @@
+.addTaskModalContent {
+  .addTaskModalSelectProject {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    .addTaskModalSelectProject_and_groupList {
+      display: flex;
+      flex-wrap: wrap;
+      .groupList__wrapper {
+        margin-left: 16px;
+      }
+    }
+    .addTaskModalSelectFileFolder {
+      margin-right: auto;
+      margin-top: -5px;
+      margin-left: 10px;
+      span {
+        display: inline-block;
+        input {
+          display: inline-block;
+          border: none !important;
+          box-shadow: none !important;
+          outline: none !important;
+        }
+        input::-webkit-input-placeholder {
+          color: #595959;
+        }
+        input:-moz-input-placeholder {
+          color: #595959;
+        }
+        input:-ms-input-placeholder {
+          color: #595959;
+        }
+        i {
+          display: inline-block;
+          color: #595959;
+          width: 26px;
+          height: 16px;
+          right: 36px;
+          transform: scaleX(1.7) scaleY(1.2) translateY(2px) translateX(25px);
+        }
+      }
+      span:hover i {
+        display: inline-block;
+          color: #595959;
+          width: 26px;
+          height: 16px;
+          right: 36px;
+          transform: scaleX(1.5) scaleY(1.5) translateY(2px) translateX(25px);
+      }
+      .ant-input:hover {
+        border: none !important;
+      }
+    }
+  }
+  .addTaskModalTaskTitle {
+    margin-bottom: 8px;
+  }
+  .addTaskModalFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .addTaskModalOperator {
+      max-width: 80%;
+    }
+    .confirmBtn {
+    }
+    .confirmBtnRight {
+      margin-left: auto;
+    }
+  }
+}
+
+.org_selected_out {
+  display: flex;
+  height: 32px;
+  line-height: 26px;
+  font-size: 14px;
+  color: #595959;
+  margin-right: 16px;
+  cursor: pointer;
+  .type_logo {
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: 2px;
+  }
+  .down_logo {
+    font-size: 16px;
+    margin-left: 2px;
+  }
+}
+.org_selected_out:hover{
+  color: #40A9FF
+}

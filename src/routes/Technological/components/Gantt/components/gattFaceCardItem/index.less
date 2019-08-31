@@ -1,0 +1,72 @@
+.drop_card {
+    width     : 248px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    padding   : 12px;
+    margin-top: 8px;
+
+    .specific_example_content {
+        overflow           : hidden;
+        background-color   : #ffffff;
+        // padding         : 0 8px;
+        width              : 100%;
+        display            : flex;
+        justify-content    : space-between;
+
+        // align-items     : center;
+        .card_item_name {
+            flex: 1;
+        }
+    }
+
+    .time_area {
+        width        : auto;
+        border-radius: 4px;
+        line-height  : 22px;
+        padding      : 4px;
+        color        : #ffffff;
+        margin-top   : 12px;
+    }
+}
+
+//三角形
+.triangle {
+    border-left  : 8px solid transparent;
+    border-right : 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+    position     : absolute;
+    top          : 0px;
+    left         : 119px;
+}
+
+.triangle:after {
+    content      : '';
+    position     : absolute;
+    top          : 0;
+    left         : 0;
+    border-left  : 10px solid transparent;
+    border-right : 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, .3);
+    position     : absolute;
+    margin-left  : -10px;
+    z-index      : -1;
+    filter       : blur(1px);
+}
+
+.card_button {
+    height       : 32px;
+    background   : rgba(255, 255, 255, 0.5);
+    box-shadow   : 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 0 16px;
+    position     : absolute;
+    right         : 30px;
+    bottom       : 32px;
+    line-height: 32px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+}
+.card_button:hover {
+    color: #40A9FF
+}

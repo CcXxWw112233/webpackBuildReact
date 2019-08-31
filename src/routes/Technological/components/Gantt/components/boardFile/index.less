@@ -1,0 +1,121 @@
+.show_file_button {
+    width        : 100px;
+    height       : 32px;
+    background   : rgba(255, 255, 255, 0.8);
+    box-shadow   : 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    position     : absolute;
+    left         : 270px;
+    bottom       : 32px;
+    color        : rgba(0, 0, 0, .45);
+    text-align   : center;
+    line-height  : 32px;
+    cursor       : pointer;
+    z-index      : 2;
+}
+.show_file_button_show {
+    animation: button_show 300ms ease;
+    bottom: 304px;
+}
+
+.show_file_button_hide {
+    animation: button_hide 300ms ease;
+    bottom: 32px;
+}
+
+.boards_files_area {
+    height       : 0;
+    background   : rgba(255, 255, 255, 1);
+    box-shadow   : 0px -1px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position     : absolute;
+    z-index      : 2;
+    width        : 100%;
+    bottom       : 0;
+    overflow     : hidden;
+    box-sizing: border-box;
+    padding: 0 18px 0 18px;
+}
+
+
+.boards_files_area_show {
+    animation: animate_show 300ms ease;
+    overflow : auto;
+    height   : 272px;
+}
+
+.boards_files_area_hide {
+    animation: animate_hide 300ms ease;
+    height   : 0;
+    overflow : hidden;
+}
+
+@keyframes button_show {
+    0% {
+        bottom: 32px;
+    }
+
+    100% {
+        bottom: 304px;
+    }
+}
+
+@keyframes button_hide {
+    0% {
+        bottom: 304px;
+    }
+
+    100% {
+        bottom: 32px;
+    }
+}
+
+@keyframes animate_show {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 272px;
+    }
+}
+
+@keyframes animate_hide {
+    0% {
+        height: 272px;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes spin_show {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes spin_hide {
+    from {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+.spin_show {
+    animation: spin_show 300ms ease;
+    transform: rotate(180deg);
+}
+
+.spin_hide {
+    animation: spin_hide 300ms ease;
+    transform: rotate(0deg);
+}
