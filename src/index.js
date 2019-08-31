@@ -1,15 +1,19 @@
 import '@babel/polyfill'
 import 'raf/polyfill';
-// import 'react-dom'
+import 'react-dom'
+import React from 'react'
 import dva from 'dva';
 import './index.css';
 import { Modal } from 'antd'
+import { createBrowserHistory as createHistory } from 'history';
+// var React = require('react')
+
 //兼容ie10及以下
 Object.setPrototypeOf = require('setprototypeof');
 
 // 1. Initialize
 const app = dva({
-  // history: createHistory(), //参考自https://www.jianshu.com/p/2e9e45e9a880
+  history: createHistory(), //参考自https://www.jianshu.com/p/2e9e45e9a880
   // onError(e, dispatch) {
   //   console.log(e.message);
   // },

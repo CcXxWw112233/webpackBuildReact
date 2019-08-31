@@ -11,6 +11,7 @@ import 'moment/locale/zh-cn';
 import SiderLeft from './Sider/SiderLeft'
 import SiderRight from './Sider/SiderRight'
 import GlobalSearch from './GlobalSearch'
+import { createBrowserHistory as createHistory } from 'history';
 
 const { Header, Sider, Content } = Layout;
 
@@ -23,10 +24,10 @@ export default class Technological extends React.Component {
 
   render() {
 
-    
-
     const { page_load_type } = this.props;
-    const app = dva();
+    const app = dva({
+        history: createHistory()
+    });
     const routes = [
       {
         path: '/technological/accoutSet',
