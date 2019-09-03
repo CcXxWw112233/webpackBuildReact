@@ -82,6 +82,10 @@ module.exports = {
         // 开启全局的模块热替换(HMR)
         new webpack.HotModuleReplacementPlugin(),
         // 热加载中可以输入更加友好的模块名
-        new webpack.NamedModulesPlugin()
+        new webpack.NamedModulesPlugin(),
+        //解决函数组件没 import React from 'react'报错
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }) 
     ]
 }
