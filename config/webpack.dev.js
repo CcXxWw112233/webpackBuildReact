@@ -8,7 +8,7 @@ module.exports = merge(base, {
         publicPath: '/'// 配置该项热重载react-hot-loader才会生效
     },
     devServer: {
-        port: 9000,
+        port: 8000,
         host:'localhost',
         overlay:{
             errors:true, //编译过程中如果有任何错误，都会显示到页面上
