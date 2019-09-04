@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --config config/webpack.dev.js",
+    "dev": "webpack-dev-server --mode=development --config config/webpack.dev.js",
     "start": "webpack-dev-server --config config/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config config/webpack.prod.js"
+    "build": "webpack --mode=production --config config/webpack.prod.js"
   },
   "author": "",
   "license": "ISC",

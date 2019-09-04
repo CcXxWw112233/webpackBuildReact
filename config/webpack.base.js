@@ -21,7 +21,7 @@ module.exports = {
     resolve:{
         //配置别名，在项目中可缩减引用路径
         alias: {
-            '@': resolve('src'),
+            '@': path.resolve('src'),
         }
     },
     // 模块配置
