@@ -18,7 +18,12 @@ module.exports = {
         'react-hot-loader/patch',
         indexJsPath
     ],
-
+    resolve:{
+        //配置别名，在项目中可缩减引用路径
+        alias: {
+            '@': resolve('src'),
+        }
+    },
     // 模块配置
     module: {
         rules: [
