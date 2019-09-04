@@ -92,8 +92,8 @@ module.exports = {
         // 热加载中可以输入更加友好的模块名
         new webpack.NamedModulesPlugin(),
         // // 解决无需 import React from 'react' 便可以创建函数组件
-        // new webpack.ProvidePlugin({
-        //   'React': 'react'
-        // }),
+        new webpack.ProvidePlugin({
+          'React': 'react'
+        }),
     ]
 }
