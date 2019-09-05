@@ -27,10 +27,23 @@ module.exports = {
     // 模块配置
     module: {
         rules: [
-            {
+             {
                 test: /\.jsx?$/,
-                use: 'babel-loader'
-            }, {
+                exclude:  /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            },
+            {
+                test: /\.js?$/,
+                exclude:  /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            },
+            {
                 test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']
             }, {
                 test: /\.less$/,
@@ -56,11 +69,7 @@ module.exports = {
                         attrs: [':data-src']
                     }
                 },
-            },   {
-                test: /\.jsx?$/,
-                use: ['babel-loader'],
-                include: path.join(process.cwd(), 'src')
-            }, {
+            },  {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
