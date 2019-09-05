@@ -5,7 +5,7 @@ import AboutChild from './AboutChild'
 const About = () => (
     <div>
         about
-        {/* <>ss</> */}
+        <React.Fragment>ss</React.Fragment>
         <ul>
             <li><Link to="/about/detail">去看看详情吧</Link></li>
         </ul>
