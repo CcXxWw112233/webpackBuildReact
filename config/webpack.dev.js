@@ -9,12 +9,12 @@ module.exports = merge(base, {
     },
     devServer: {
         port: 8000,
-        host:'localhost',
-        overlay:{
-            errors:true, //编译过程中如果有任何错误，都会显示到页面上
+        host: 'localhost',
+        overlay: {
+            errors: true, //编译过程中如果有任何错误，都会显示到页面上
         },
-        open:false,// 自动帮你打开浏览器
-        hot:true, // 热重载
+        open: true,// 自动帮你打开浏览器
+        hot: true, // 热重载
         historyApiFallback: true, //BrowserRouter模式下刷新报错
     },
 })

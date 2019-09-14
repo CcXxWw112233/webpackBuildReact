@@ -26,7 +26,7 @@ export default class Technological extends React.Component {
 
     const { page_load_type } = this.props;
     const app = dva({
-        history: createHistory()
+        // history: createHistory()
     });
     const routes = [
       {
