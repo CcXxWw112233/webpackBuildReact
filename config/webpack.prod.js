@@ -1,11 +1,10 @@
 const merge = require('webpack-merge');
 const base = require('./webpack.base.js');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack')
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(base, {
     mode: 'production',
@@ -18,27 +17,17 @@ module.exports = merge(base, {
 
     },
     optimization: {
-        // minimizer: [
-        //     new UglifyJsPlugin({
-        //         parallel: true,
-        //         uglifyOptions: {
-        //             warnings: false
-        //         },
-        //     })
-        // ],
+        minimize: true,
+        minimizer: [
+            new TerserPlugin()
+        ],
     },
     plugins: [
         new ExtractTextPlugin({ //css打包单独立一个文件，而不是在js中生成
             filename: 'style.[hash].css'
         }),
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin('dist'),
         new webpack.HashedModuleIdsPlugin(),
-        // new CopyWebpackPlugin([
-        //     {
-        //         from: path.resolve(__dirname, '../static'),
-        //         to: 'static',
-        //         ignore: ['.*']
-        //     }
-        // ]),
+
     ]
 })
