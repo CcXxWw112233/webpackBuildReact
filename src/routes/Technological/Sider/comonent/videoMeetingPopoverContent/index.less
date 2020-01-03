@@ -1,0 +1,222 @@
+.videoMeeting__icon {
+    cursor: pointer;
+    //position: absolute;
+    //bottom: 23px;
+    //left: 12px;
+    width: 25px;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: url(./../../../../../assets/sider_right/video.png) center center
+      no-repeat;
+    background-size: contain;
+  }
+  
+  .videoMeeting__wrapper {
+    width: 368px;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(89, 89, 89, 1);
+    line-height: 20px;
+    .videoMeeting__topic {
+      margin-bottom: 16px;
+      .videoMeeting__topic_title {
+        margin-bottom: 8px;
+      }
+      .videoMeeting__topic_content {
+        // display: flex;
+        .videoMeeting__topic_content_save {
+          margin-right: 5px;
+        }
+        .videoMeeting__topic_content_title {
+          width: 100%;
+        }
+      }
+    }
+    .videoMeeting__memberNote {
+      margin-bottom: 8px;
+      .videoMeeting__memberNote_title {
+        margin-bottom: 8px;
+      }
+      .videoMeeting__memberNote_content {
+        .videoMeeting__memberNote_content_mention {
+          margin-bottom: 8px;
+        }
+        .videoMeeting__memberNote_content_textarea {
+        }
+      }
+    }
+    .videoMeeting__prompt {
+      margin-bottom: 0px;
+      height: 17px;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(140, 140, 140, 1);
+      line-height: 17px;
+    }
+    .videoMeeting__submitBtn {
+      // text-align: right;
+    }
+  }
+
+  .videoMeeting__wrapper {
+    width: 400px;
+    // height: 587px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(89, 89, 89, 1);
+    line-height: 20px;
+    .videoMeeting__topic {
+      margin-bottom: 24px;
+    }
+    .videoMeeting__topic_content {
+      display: block;
+      .videoMeeting__topic_content_save, .videoMeeting__topic_content_title, .videoMeeting__topic_content_time {
+        margin-bottom: 24px;
+        display: block;
+      }
+      .videoMeeting__topic_content_time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .videoMeeting__topic_content_datePicker {
+        margin-right: 16px;
+      }
+      .videoMeeting__topic_content_rightnow {
+        position: absolute;
+        right: 12px;
+        color: #1890FF;
+        cursor: pointer;
+      }
+    }
+    .videoMeeting__submitBtn {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+    .videoMeeting__remarks {
+      text-align: center;
+      color: rgba(0,0,0,0.45);
+      span {
+        display: block;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .videoMeeting__header {
+    width:376px;
+    min-height:137px;
+    background:rgba(255,255,255,1);
+    border-radius:4px 4px 0px 0px;
+    .videoMeeting__mark {
+      font-size: 40px;
+      color: #40A9FF;
+    }
+    .videoMeeting__title {
+      font-size:24px;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:500;
+      color:rgba(0,0,0,0.85);
+      line-height:33px;
+      margin-top: 24px;
+    }
+  }
+
+  .select_overlay {
+    overflow-y: auto;
+    max-height: 200px;
+    :global {
+      .ant-select-dropdown-menu {
+        overflow: inherit;
+        max-height: inherit;
+      }
+    }
+  }
+
+/* 添加执行人下拉样式 S */
+.overlay_pricipal {
+  left: 0px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+  top: 0px !important;
+  :global {
+    li {
+      line-height: 40px !important;
+      height     : 40px !important;
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+      }
+
+      .ant-menu-item-selected {
+        background   : rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.45);
+      }
+
+      .anticon {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.noticeUsersWrapper {
+  margin: 12px 2px;
+
+  // 每一个用户的样式
+  .user_item {
+    padding   : 2px 8px;
+    box-sizing: border-box;
+    cursor    : pointer;
+
+    // &:hover {
+    //   border: 1px solid #b1b1b1;
+    // }
+    .img_hover, .default_user_hover {
+      &:hover {
+        border: 1px solid #b1b1b1;
+      }
+    }
+
+    .userItemDeleBtn {
+      display          : none;
+      width            : 14px;
+      height           : 14px;
+      border-radius    : 4px;
+      position         : absolute;
+      background       : url(../../../../../assets/workbench/close-circle@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+      transition       : all 0.3s;
+    }
+
+    .userItemDeleBtn:hover {
+      background       : url(../../../../../assets/workbench/close-circle-active@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+    }
+  }
+
+  .user_item:hover .userItemDeleBtn {
+    display   : inline-block;
+    top       : -2px;
+    right     : 8px;
+    transition: all 0.3s;
+  }
+}
+
+  

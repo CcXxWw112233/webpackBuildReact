@@ -1,0 +1,130 @@
+@import '../../common/common.less';
+
+.city_list {
+    width: 740px;
+    margin: 16px auto;
+    background:rgba(255,255,255,1);
+    padding: 24px;
+    // max-height: 292px;
+    // margin-bottom: 16px;
+    // background: pink;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        .position {
+            width:15px;
+            height:20px;
+            margin-left: 8px;
+            font-size: 20px;
+            color: rgba(0,0,0,0.45);
+            cursor: pointer;
+        }
+        .search {
+            position: absolute;
+            right: 18px;
+            top: 7px;
+            color: rgba(0,0,0,0.25);
+            cursor: pointer;
+        }
+    }
+    .areas {
+        // max-height: 292px;
+        // background: salmon;
+        .ul {
+            .li {
+                list-style: none;
+                min-height: 36px;
+                line-height: 36px;
+                border-bottom: 1px solid rgba(0,0,0,0.09);
+                position: relative;
+                margin-bottom: 12px;
+                &:last-child {
+                    border: 0 none;
+                }
+                .province {
+                    display: inline-block;
+                    width: 48px;
+                    height: 42px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    .a {
+                        font-size:16px;
+                        font-family:'PingFangSC-Medium';
+                        font-weight:600;
+                        color:rgba(0,0,0,0.65);
+                        line-height:24px;
+                        cursor: pointer;
+                        &:hover {
+                            color: #1890FF;
+                        }
+                    }
+                    .active {
+                        color: #1890FF;
+                    }
+                }
+                .downtown {
+                    width: 644px;
+                    display: inline-block;
+                    margin-left: 72px;
+                    .a {
+                        display: inline-block;
+                        min-width: 64px;
+                        font-size:14px;
+                        font-family:PingFangSC-Regular;
+                        font-weight:400;
+                        color:rgba(0,0,0,0.65);
+                        line-height:22px;
+                        cursor: pointer;
+                        &:hover {
+                            color: #1890FF;
+                        }
+                        &:focus {
+                            color: #1890FF;
+                        }
+                    }
+                    .active {
+                        color: #1890FF;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    .mask {
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        // background: rgba(0,0,0,0.1);
+        margin: 0 auto;
+        text-align: center;
+        span {
+            display: inline-block;
+            width: 84px;
+            height: 20px;
+            margin: 0 auto;
+            font-size:14px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(0,0,0,0.45);
+            line-height:20px;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+        .down {
+            display: inline-block;
+            width:9px;
+            height:6px;
+        }
+    }
+}
+
+:global {
+    .ant-select {
+        width: 120px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}

@@ -1,0 +1,206 @@
+// 添加时间的样式
+.add_due_time {
+  position: relative;
+  cursor: pointer;
+  .sub_icon {
+    font-size: 18px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 4px;
+  }
+  input {
+    cursor: pointer;
+  }
+}
+
+.add_due_time:hover .sub_icon {
+  color: #40A9FF;
+  background:rgba(230,247,255,1);
+  border-radius:4px;
+}
+
+.user_pr {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  // vertical-align: middle;
+  line-height: 16px;
+  border-radius:4px;
+  margin-left: 12px;
+}
+.sub_executor {
+  font-size: 18px;
+}
+.user_pr:hover .sub_executor {
+  color: #40A9FF;
+  background:rgba(230,247,255,1);
+}
+
+.cancel {
+  cursor: pointer;
+  &:hover {
+    color: #1890FF;
+  }
+}
+
+.overlay_sub_pricipal {
+  :global {
+    li {
+      line-height    : 40px !important;
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+      height         : 40px;
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+      }
+      > div {
+        width: 100%;
+      }
+    }
+    .anticon {
+      margin-right: 0;
+    }
+    .ant-dropdown-menu-item-selected {
+      background   : rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      color        : rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+.del_icon {
+  width:20px;
+  height:20px;
+  border-radius:4px;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: none;
+  > span {
+    font-size: 18px;
+  }
+  &:hover {
+    background:rgba(255,241,240,1);
+    color: #FF7875;
+  }
+}
+
+.active_icon {
+  margin-left: -32px;
+}
+
+.active_icon:hover .del_icon {
+  display: block;
+}
+
+.active_icon:hover .subTaskItemWrapper_active {
+  padding-left: 26px !important;
+}
+
+.subTaskItemWrapper {
+  display: flex;
+  // align-items: center;
+  padding-left: 46px;
+  flex: 1;
+  /* 公共点击完成卡片的样式 S */
+  .nomalCheckBox {
+    height       : 16px;
+    width        : 16px;
+    text-align   : center;
+    line-height  : 12px;
+    border       : 2px solid #8c8c8c;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+    &:hover {
+      border: 2px solid #40A9FF;
+    }
+  }
+  .nomalCheckBoxActive {
+    position: relative;
+    height          : 16px;
+    width           : 16px;
+    text-align      : center;
+    line-height     : 12px;
+    border          : 2px solid #1890ff;
+    background-color: #1890ff;
+    border-radius   : 4px;
+    margin-top: 12px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  /* 公共点击完成卡片的样式 E */
+  .card_name {
+    flex: 1;
+    // padding: 8px 12px;
+    min-height: 38px;
+    line-height: 38px;
+    padding-left: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    &:hover {
+      background   : rgba(0, 0, 0, 0.04);
+      cursor       : pointer;
+      border-radius: 4px;
+    }
+  }
+}
+
+// 设置时间的样式
+.due_time {
+  min-width:80px;
+  position: relative;
+  padding: 0 12px;
+  box-sizing: border-box;
+  // height:38px;
+  border-radius:4px;
+  text-align: center;
+  // padding: 8px 12px;
+  box-sizing: border-box;
+  margin-right: 12px;
+  color: rgba(0,0,0,0.45);
+  &:hover {
+    background:rgba(0,0,0,0.04);
+  }
+  .timeDeleBtn {
+    display          : none;
+    width            : 14px;
+    height           : 14px;
+    border-radius    : 4px;
+    position         : absolute;
+    background       : url(../../../assets/workbench/close-circle@2x.png);
+    background-repeat: no-repeat;
+    background-size  : contain;
+    transition       : all 0.3s;
+    cursor: pointer;
+  }
+
+  .timeDeleBtn:hover {
+    background       : url(../../../assets/workbench/close-circle-active@2x.png);
+    background-repeat: no-repeat;
+    background-size  : contain;
+  }
+  input {
+    cursor: pointer;
+  }
+}
+.due_time:hover .timeDeleBtn {
+  display   : inline-block;
+  top       : -4px;
+  right     : -4px;
+  transition: all 0.3s;
+}
+

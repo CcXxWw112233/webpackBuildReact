@@ -1,0 +1,59 @@
+// 关于圈评的样式
+.fileDetailContentOut:hover .otherFilesOperator {
+  opacity: 1;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select  : none;
+  -khtml-user-select   : none;
+  -moz-user-select     : none;
+  -ms-user-select      : none;
+  user-select          : none;
+}
+
+// 关于圈评的样式 S
+.overlay_iframBigDom:hover .otherFilesOperator {
+  opacity: 1;
+}
+
+.otherFilesOperator {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  height:40px;
+  background:rgba(89,89,89,0.8);
+  border-radius:4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  transition: opacity .3s, width .3s;
+  min-width: 132px;
+  color: #FFFFFF;
+}
+
+.operator_bar {
+  display: flex;
+  .circle_icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}
+
+.operator_bar:hover {
+  cursor: pointer;
+  color: #1890FF;
+}
+// 关于圈评的样式 E
+
+.fileDetailContentOut {
+  //height: 100%;
+  // display : flex;
+
+  .fileDetailContentLeft {
+    flex: 1;
+  }
+
+}

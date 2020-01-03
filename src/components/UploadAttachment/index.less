@@ -1,0 +1,113 @@
+.fileListWrapper {
+  width        : 508px;
+  background   : rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  border       : 1px solid rgba(0, 0, 0, 0.09);
+  padding      : 12px 12px;
+  font-size    : 14px;
+  color        : rgba(0, 0, 0, 0.65);
+  margin-top   : 14px;
+
+  .fileItem {
+    height         : 38px;
+    line-height    : 38px;
+    display        : flex;
+    justify-content: space-between;
+
+    .itemLeft {}
+
+    .itemRight {
+      width     : 60px;
+      text-align: center;
+
+    }
+  }
+
+
+}
+.uploadWrapper {
+  :global {
+    .ant-upload{
+      display: block;
+      height     : 38px;
+      line-height: 38px;
+    }
+  }
+}
+.addNoticePerson {
+  cursor     : pointer;
+  width      : 40px;
+  height     : 40px;
+  line-height: 40px;
+  margin     : 4px 12px 2px 2px;
+}
+
+.noticeUsersWrapper {
+  margin: 12px 2px;
+
+  // 每一个用户的样式
+  .user_item {
+    padding   : 2px 8px;
+    box-sizing: border-box;
+    cursor    : pointer;
+
+    &:hover {
+      background   : rgba(0, 0, 0, 0.09);
+      border-radius: 4px;
+    }
+
+    .userItemDeleBtn {
+      display          : none;
+      width            : 14px;
+      height           : 14px;
+      border-radius    : 4px;
+      position         : absolute;
+      background       : url(../../assets/workbench/close-circle@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+      transition       : all 0.3s;
+    }
+
+    .userItemDeleBtn:hover {
+      background       : url(../../assets/workbench/close-circle-active@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+    }
+  }
+
+  .user_item:hover .userItemDeleBtn {
+    display   : inline-block;
+    top       : -4px;
+    right     : -4px;
+    transition: all 0.3s;
+  }
+}
+
+/* 添加执行人下拉样式 S */
+.overlay_pricipal {
+  left: 0px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+  :global {
+    li {
+      line-height: 40px !important;
+      height     : 40px !important;
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+      }
+
+      .ant-menu-item-selected {
+        background   : rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.45);
+      }
+
+      .anticon {
+        margin-right: 0;
+      }
+    }
+  }
+}

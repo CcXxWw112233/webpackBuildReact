@@ -1,0 +1,116 @@
+// 通知提醒的样式
+.informRemindWrapper {
+    min-width: 595px !important;
+}
+.inform_remind {
+	display: inline-block;
+	font-style: normal;
+	// width:16px;
+	// height:16px;
+	font-size: 18px;
+	cursor: pointer;
+	&:hover {
+		color: #40A9FF;
+	}
+	&:focus {
+		color: #40A9FF;
+	}
+}
+
+.info_icon {
+	&:hover {
+		background:rgba(0,0,0,0.04);
+		cursor: pointer;
+	}
+	.inform_remind {
+		&:hover {
+			color: rgba(0,0,0,0.45);
+		}
+	}
+}
+
+.wrapperInfo{
+    // min-height: 175px;
+    position: relative;
+    z-index: 1100;
+}
+
+.add_header {
+    width: 76px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    .icon {
+        font-size: 14px;
+        color: #1890FF;
+    }
+    .text {
+        font-size: 14px;
+        color: #1890FF;
+        margin-left: 4px;
+    }
+}
+
+.content {
+    position: relative; 
+    cursor: pointer;
+    .trigger_select {
+        min-width: 135px;
+    }
+    .slip{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 48px;
+        position: relative;
+        // padding-bottom: 16px;
+        cursor: pointer;
+        &:hover {
+            // background: palegoldenrod;
+            .slip_hover {
+                display: block;
+            }
+            .overdue {
+                display: none;
+            }
+            .checked {
+                display: none;
+            }
+        }
+        .slip_hover {
+            display: none;
+        }
+        .user_info {
+            position: absolute;
+            right: 74px;
+            top: 12px;
+            .plus {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+    
+    .del {
+        cursor: pointer;
+        &:hover {
+            color: #1890FF;
+        }
+    }
+    .overdue {
+        top: 16px;
+        // display: block;
+        color: #FAAD14;
+        cursor: pointer;
+    }
+    .checked {
+        top: 16px;
+        // display: block;
+        color: #52C41A;
+        cursor: pointer;
+    }
+    .icon {
+        position: absolute;
+        right: 0;
+        flex-shrink: 0; 
+    }
+}

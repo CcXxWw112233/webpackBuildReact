@@ -1,0 +1,47 @@
+.wrapper {
+  position: absolute;
+  right: 112px;
+  top: 0;
+  z-index: 1001;
+  width: 52px;
+  height: 23px;
+  background: #1890FF;
+  text-align: center;
+  transition: all .3s ease-out;
+  .text {
+    cursor: pointer;
+    user-select: none;
+    height: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 23px;
+  }
+}
+.wrapper:hover {
+  height: 30px;
+}
+.wrapper::before,
+.wrapper::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  top: 100%;
+}
+
+.wrapper::after {
+  right: 0;
+  border-top: 10px solid #1890FF;
+  border-right: 13px solid #1890FF;
+  border-bottom: 10px solid transparent;
+  border-left: 13px solid transparent;
+}
+.wrapper::before {
+  left: 0;
+  border-top: 10px solid #1890FF;
+  border-left: 13px solid #1890FF;
+  border-bottom: 10px solid transparent;
+  border-right: 13px solid transparent;
+}

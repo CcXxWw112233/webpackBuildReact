@@ -1,0 +1,60 @@
+.dropOut {
+  background: #FFFFFF;
+  width: 260px;
+  height: auto;
+  max-height: 400px;
+  padding: 4px;
+  cursor: pointer;
+  //重要 //隐藏滚动条
+  position: absolute;
+  left: 0;
+  overflow-y: scroll;
+}
+.outercontainer {
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+  width: 244px;
+  // 重要 隐藏滚动条
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+
+}
+
+.dropItem{
+  height: 28px;
+  background: #FBFBFB;
+  border: 1px dotted  rgba(191,191,191,1);
+  margin-bottom: 4px;
+  border-radius: 4px;
+  padding:  0 8px;
+  display: flex;
+  align-items: center;
+  .dropItem_left{
+    flex: 1;
+  }
+  .dropItem_right{
+    display: flex;
+    align-items: center;
+    div{
+      margin-left: 6px;
+    }
+  }
+}
+
+.selectColorOut {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  width: 210px;
+  padding: 10px 0 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  div{
+    width: 16px;
+    height: 16px;
+    background: #F7F7F7;
+    border: 1px solid rgba(90,90,90,1);
+    margin: 0 8px 8px 0;
+  }
+}

@@ -1,0 +1,61 @@
+.mapsContainer {
+    position: relative;
+    width   : 100%;
+    padding : 8px 8px;
+
+    .boardSelectWapper {
+        padding-top: 48px;
+        height     : 100%;
+        width      : 736px;
+        margin     : 0 auto;
+
+        .groupName {
+            height     : 26px;
+            font-size  : 18px;
+            font-weight: 500;
+            color      : rgba(0, 0, 0, 0.85);
+            line-height: 26px;
+        }
+
+        .boardItemWapper {
+            display        : flex;
+            flex-wrap      : wrap;
+            justify-content: flex-start;
+            margin-bottom  : 48px;
+
+            .boardItem {
+                width          : 128px;
+                height         : 140px;
+                background     : rgba(255, 255, 255, 1);
+                text-align     : center;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                flex-direction : column;
+                cursor         : pointer;
+                margin-right   : 24px;
+                margin-top     : 24px;
+
+                .boardIcon {
+                    color      : #18B2FF;
+                    font-size  : 64px;
+                    width      : 64px;
+                    line-height: 64px;
+                }
+
+                .boardName {
+                    display    : inline-block;
+                    width      : 96px;
+                    height     : 44px;
+                    font-size  : 14px;
+                    font-weight: 500;
+                    color      : rgba(0, 0, 0, 0.65);
+                    line-height: 22px;
+                    overflow   : hidden;
+                }
+            }
+
+        }
+
+    }
+}

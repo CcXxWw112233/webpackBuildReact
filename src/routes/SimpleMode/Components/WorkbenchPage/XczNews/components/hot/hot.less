@@ -1,0 +1,82 @@
+@import '../../common/common.less';
+// .mainContainer {
+//     width: 740px;
+//     margin: 16px auto;
+//     background:rgba(255,255,255,1);
+//     min-height: 1000px;
+.tabsWrapper {
+    width: 740px;
+    margin: 16px auto 0;
+    background:rgba(255,255,255,1);
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 682px;
+        // background: #fff;
+        margin: 0 auto;
+        padding: 30px 46px 0px 46px;
+        border-bottom: 1px solid rgba(0,0,0,0.09);
+        // max-height: 130px;
+        overflow: hidden;
+        // border-color: rgba(0,0,0,0.09);
+        .hotTabs {
+            width: 16%;
+            height: 34px;
+            // background:rgba(24,144,255,1);
+            border-radius:18px;
+            color: rgba(0,0,0,0.85);
+            text-decoration: none;
+            text-align: center;
+            line-height: 34px;
+            margin-bottom: 16px;
+            font-family:'PingFangSC-Regular';
+            cursor: pointer;
+        }
+        .current {
+            background:rgba(24,144,255,1);
+            color: #fff;
+        }
+        
+    }
+}
+    
+// }
+
+:global {
+    .ant-col-12 {
+        width: 100%;
+        min-height: 125px;
+        .ant-radio-group {
+            min-height: 125px;
+        }
+    }
+    .ant-radio-button-wrapper {
+        padding: 0;
+        min-width: 88px;
+        height: 32px;
+        text-align: center;
+        border-radius:18px;
+        border: 0 none;
+        margin-bottom: 16px;
+        font-family:'PingFangSC-Regular';
+        color: rgba(0,0,0,0.85);
+        // margin-right: 40px;
+        &:not(:first-child)::before {
+            display: none;
+        }
+        &:first-child {
+            border-radius:18px;
+            border-left: 0;
+        }
+        &:last-child {
+            border-radius:18px;
+        }
+        &:focus-within {
+            outline: none;
+        }
+    }
+    .ant-radio-button-wrapper-checked {
+        background:rgba(24,144,255,1);
+        color: #fff;
+    }
+}

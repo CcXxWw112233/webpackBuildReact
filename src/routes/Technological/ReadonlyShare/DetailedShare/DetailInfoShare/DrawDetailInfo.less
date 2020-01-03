@@ -1,0 +1,247 @@
+@keyframes mymove
+{
+  from {
+    left: 0;
+    height: auto;
+  }
+  to {  left: -100%;
+    height: 0;
+  }
+}
+@-webkit-keyframes mymove{
+  from {  left: 0;}
+  to {  left: -100%;}
+}
+
+@keyframes myIn
+{
+  from {  left: -100%;}
+  to {  left: 0;}
+}
+@-webkit-keyframes myIn{
+  from {  left: -100%;}
+  to {  left: 0;}
+}
+@keyframes maskShow
+{
+  from {  background-color: rgba(255,255,255,0);}
+  to { background-color: rgba(0,0,0,.2);}
+}
+@-webkit-keyframes maskShow{
+  from {  background-color: rgba(255,255,255,0);}
+  to { background-color: rgba(0,0,0,.2);}
+}
+@keyframes maskHide
+{
+  from {  background: rgba(0,0,0,.2);}
+  to { background: rgba(255,255,255,0);}
+}
+@-webkit-keyframes maskHide{
+  from {  background: rgba(0,0,0,.2);}
+  to { background: rgba(255,255,255,0);}
+}
+//项目详细信息
+.detailInfoOut{
+
+}
+.detailInfo, .detailInfo_2{
+  //margin-top: 160px;
+  //width: 336px;
+  background-color: #FFFFFF;
+  max-height: 530px;
+  //padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+.top{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  color: #8c8c8c;
+  padding: 0 12px;
+  .topItem{
+    text-align: center;
+    margin-left: 30px;
+    div:nth-child(1){
+      font-size: 24px;
+      color: #595959 ;
+    }
+  }
+  .topItem:nth-child(1) {
+    margin-left: 0;
+  }
+}
+
+.manImageList{
+  display: flex;
+  flex-wrap:  wrap;
+  padding: 0 12px;
+  .manImageItem{
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    //margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 40px;
+    cursor: pointer;
+    position: relative;
+    img{
+      width: 36px;
+      height: 36px;
+      border-radius: 36px;
+    }
+    .delete{
+      display: none;
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      font-size: 6px;
+      text-align: center;
+      line-height: 12px;
+      color: #F5222D ;
+      background: #FFE7E8;
+    }
+  }
+  .manImageItem:hover{
+    .delete{
+      display: block;
+    }
+  }
+  //.manImageItem:nth-child(5n+1) {
+  //  margin-left: 0;
+  //}
+  .addManImageItem{
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 36px;
+    border: 1px solid rgba(217,217,217,1);
+    //margin: 40px 0 0 15px;
+    margin: 40px 15px 0 0;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+  }
+}
+
+.Bottom{
+  margin-top: 40px;
+  font-size: 12px;
+  color: #595959;
+  line-height: 22px;
+  cursor: pointer;
+  padding: 0 12px;
+}
+.editTextArea{
+  font-size: 12px;
+  line-height: 22px;
+  margin-top: 34px;
+}
+//hover头像出现的内容
+.manImageDropdown {
+  width: 244px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 2px;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+  .manImageDropdown_top{
+    position: relative;
+    display: flex;
+    .left{
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+      img{
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+      }
+    }
+    .right{
+      margin-left: 8px;
+      flex: 1;
+      .name{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        font-family: PingFangSC-Regular;
+        color: #262626;
+        font-size: 14px;
+        line-height: 14px;
+      }
+      .percent{
+        width: 100%;
+        height: 6px;
+        border-radius: 6px;
+        margin-top: 10px;
+        overflow: hidden;
+        display: flex;
+        cursor: pointer;
+        div:nth-child(1) {
+          background-color: #F5222D;
+        }
+        div:nth-child(2) {
+          background-color: #FAAD14;
+        }
+        div:nth-child(3) {
+          background-color: #1890FF;        }
+      }
+    }
+    .manImageDropdown_top_operate{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: #E8E8E8;
+      text-align: center;
+      line-height: 20px;
+      right: 0px;
+      top: -6px;
+      cursor: pointer;
+      color: #595959;
+    }
+  }
+  .manImageDropdown_middle{
+    font-size: 12px;
+    color: #595959;
+    margin-top: 20px;
+    .detailItem{
+      margin-top: 10px;
+      display: flex;
+      >div:nth-child(2) {
+        flex: 1;
+      }
+    }
+  }
+  .manImageDropdown_bott{
+    height: 144px;
+    width: 144px;
+    margin: 0 auto;
+    margin-top: 20px;
+    img{
+      height: 144px;
+      width: 144px;
+    }
+  }
+}
+//menu
+.elseProjectMemu{
+  padding: 4px 10px;
+}
+.elseProjectDangerMenu{
+  width: 100%;
+  height: 100%;
+  color: #F5222D ;
+  padding: 4px 10px;
+
+}
+.elseProjectDangerMenu:hover ,.elseProjectDangerMenu:active{
+  background: #FFE7E8;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-6.2.1.min.js"></script>
+</head>
+
+<body>
+    <input type="file" id="file" />
+    <script type="text/javascript">
+        document.getElementById('file').addEventListener('change', function (e) {
+            let file = e.target.files[0];
+            let storeAs = `2019-11-27/upload-file/${new Date().getTime()}.jpg`;
+            console.log(file.name + ' => ' + storeAs);
+            let client = new OSS({
+                // accessKeyId: result.AccessKeyId,
+                // accessKeySecret: result.AccessKeySecret,
+                // stsToken: result.SecurityToken,
+                // endpoint: '<oss endpoint>',
+                // bucket: '<Your bucket name>',
+
+                accessKeyId: 'STS.NTK91J1mmDQmjnAC9CXsDwNDT',
+                accessKeySecret: 'DJQQmMbbjedLsyEQTaGuaraXuo5W5JC97qTYxUi3twHg',
+                region: 'cn-beijing', //
+                bucket: 'newdi-test',
+                stsToken: 'CAISswJ1q6Ft5B2yfSjIr5f+cov+3LJM85OGaEjwpzkWVPxomIvvtjz2IHpLeXlhBusesvgznWxW7foSlqN3SplKVU2BcsZ6tnfiKLUjJtivgde8yJBZonPMewHKefaSvqL7Z+H+U6mSGJOEYEzFkSle2KbzcS7YMXWuLZyOj+wADLEQRRLqVSdaI91UKwB+0ul4U0HcLvGwKBXnr3PNBU5zwGpGhHh49L60z7/GiGrXh0aozfQO9cajYMqiYtZgPdJjXsypm64UCKPKy3xX8AMYtvU03qpJ5jvG+82QGEVzm0zdY7KNqoQyc18pPfFgSvN+waKixaEiiIv6jJ/qzhtBB+ZRXhnESZqoqMm+Q7n2a4ZoKu2jZyiRi4zRbcWlqWY7bHgQMAJHfcY7LXt9Gcuv0tstpH7NGoABUzccsKMeaCR2SV0g0nn4iztTwnly5XMvV25J5Sf7iZXNLUX+Qbp9vaiiKwquqvhnpRbVlJnbpMkCp7t8+a1Ts7RwjkO7T3iU05ypn8aBOhm9hQbFw/fCbRe2V9K9yExpqcRjcJN64gKgC3KACQWk2FsC93IUpI+CUL5oe1YF/W4=',
+                endpoint: 'http://oss-cn-beijing.aliyuncs.com',
+                secure: true
+            });
+            //storeAs表示上传的object name , file表示上传的文件
+            client.multipartUpload(storeAs, file).then(function (result) {
+                console.log(result);
+            }).catch(function (err) {
+                console.log(err);
+            });
+        });
+    </script>
+</body>
+
+</html>

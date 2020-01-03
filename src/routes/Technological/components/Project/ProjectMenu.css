@@ -1,0 +1,115 @@
+.wrapper {
+  min-width: 210px;
+  position: fixed;
+}
+.projectGather__wrapper {
+  margin-left: 26px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #595959;
+  line-height: 24px;
+}
+.projectGather__wrapper .projectGather__participate_wrapper,
+.projectGather__wrapper .projectGather__collection_wrapper {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  color: #595959;
+}
+.projectGather__wrapper .projectGather__participate_wrapper:hover,
+.projectGather__wrapper .projectGather__collection_wrapper:hover {
+  color: #40a9ff;
+  cursor: pointer;
+}
+.projectGather__wrapper .projectGather__participate_wrapper {
+  margin-bottom: 16px;
+}
+.projectGather__wrapper .projectGather__participate_wrapper .projectGather__participate_title {
+  display: inline-block;
+}
+.projectGather__wrapper .projectGather__collection_wrapper {
+  margin-bottom: 24px;
+}
+.projectMenuTree__wrapper {
+  margin-top: 70px;
+  top: 70px;
+  height: 70vh;
+  overflow: auto;
+}
+.projectMenuTree__wrapper .projectMenuTree__title {
+  user-select: none;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #747474;
+  line-height: 24px;
+  margin-left: 5px;
+}
+/*滚动条样式*/
+.projectMenuTree__wrapper::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 8px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+}
+.projectMenuTree__wrapper::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px #bfbfbf;
+  background: #bfbfbf;
+}
+.projectMenuTree__wrapper::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px #e8e8e8;
+  border-radius: 8px;
+  background: #e8e8e8;
+}
+.menuItem_actived {
+  font-weight: 600;
+}
+.projectMenuTree__treeNode_wrapper {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+.projectMenuTree__treeNode_wrapper .projectMenuTree__treeNode_title {
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.projectMenuTree__treeNode_wrapper .projectMenuTree__treeNode_boardCount,
+.projectMenuTree__treeNode_wrapper .projectMenuTree__treeNode_boardCount_with_ellipsis {
+  text-align: right;
+}
+.projectMenuTree__treeNode_wrapper .projectMenuTree__treeNode_boardCount_with_ellipsis {
+  position: relative;
+  padding: 0 5px;
+}
+.projectMenuTree__treeNode_wrapper .projectMenuTree__treeNode_boardCount_with_ellipsis::after {
+  content: '•••';
+  width: 20px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  left: -3px;
+  color: #40a9ff;
+  font-weight: 600;
+  display: none;
+}
+.projectMenuTree__treeNode_boardCount_with_ellipsis:hover {
+  cursor: pointer;
+  color: transparent;
+}
+.projectMenuTree__treeNode_wrapper:hover .projectMenuTree__treeNode_boardCount_with_ellipsis {
+  color: transparent;
+}
+.projectMenuTree__treeNode_wrapper:hover .projectMenuTree__treeNode_boardCount_with_ellipsis::after {
+  display: inline-block;
+}
+.projectMenuTree__treeNode_boardCount_with_ellipsis:hover::after {
+  display: inline-block;
+}

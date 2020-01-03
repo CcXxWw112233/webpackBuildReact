@@ -1,0 +1,51 @@
+@import "../../globalset/css/constant";
+.card{
+  border: 1px solid #ececec;
+  maxWidth: 472;
+  margin: 0 auto;
+  width: 100%;
+  paddingLeft: 0
+}
+
+//验证码
+.vertificatioinCode{
+  color: @color-link-normal ;
+}
+.vertificatioinCode:hover{
+  color: @color-link-hover ;
+}
+.vertificatioinCode:active{
+  color: @color-link-active ;
+}
+.bottomWhole{
+  width: 274px;
+  margin: 0 auto;
+  height: auto;
+  border-top: 1px solid #E8E8E8;
+  margin-top: 36px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px; 
+  .bottomWholeLeft{
+  }
+  .bottomWholeRight{
+    span{
+      color: @color-link-normal ;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    span:hover{
+      color: @color-link-hover ;
+    }
+    span:active{
+      color: @color-link-active ;
+    }
+    span:nth-child(2){
+      color: #BFBFBF;
+      font-size: 16px;
+      margin:0 8px 0 8px;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.board_file_area_item {
+    margin-top: 24px;
+    cursor: pointer;
+    position: relative;
+    .drag_out {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius:4px;
+        .drag_inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .upload_logo{
+                color: #1890FF;
+                font-size: 22px;
+                margin-right: 8px;
+            }
+            .upload_des {
+                color: #1890FF;
+                font-size: 16px;
+            }
+        }
+        
+    }
+
+    .folder_list {
+        display: flex;
+        flex-wrap: wrap;
+        .folder_item {
+            margin-top: 12px;
+            margin-right: 24px;
+            width: 208px;
+            height: 40px;
+            background:rgba(255,255,255,1);
+            box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.04);
+            padding: 0 10px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            .file_logo{
+                color: rgba(24,205,255,1);
+                margin-right: 6px;
+            }
+            .file_name{
+                flex: 1;
+                color: rgba(0,0,0,.65);
+            }  
+            .operator {
+                width:14px;
+                height:14px;
+                line-height: 14px;
+                border-radius: 14px;
+                color: #ffffff;
+                background:rgba(0,0,0,0.15);
+                display: none;
+            }   
+            .operator:hover {
+               background: #40A9FF;
+            }
+        }
+        .folder_item:hover {
+            .operator {
+                display: block;
+            }
+        }        
+        .add_item {
+            color: rgba(24,205,255,1);
+            justify-content: center;
+            padding: 0;
+        }
+    }
+}
+
+:global {
+    .ant-upload-drag {
+        background:rgba(230,247,255,0.8) !important;
+    }
+    // .ant-upload-drag .ant-upload{
+    //     padding: 0px!important;
+    // }
+}
+
+.foder_name_bread {
+    color: rgba(0,0,0,.65);
+}
+.foder_name_bread:hover{
+    color: #18B2FF;
+}
+
+.folder_item{
+    position: relative;
+    .has_no_read{
+        background: #F5222D;
+        min-width: 14px;
+        padding: 0 4px;
+        height: 14px;
+        position: absolute;
+        color: #ffffff;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 14px;
+        font-size: 10px;
+        right: -4px;
+        top: -7px;
+
+        // position: absolute;
+        // width: 0px;
+        // height: 0px;
+        // border-color: transparent #F76E75;
+        // border-width: 0px 12px 12px 0px;
+        // background-color: #ffffff;
+    
+        // border-style: solid;
+        // right: 0px;
+        // top: 0;
+    }
+}

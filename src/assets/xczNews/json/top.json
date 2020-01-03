@@ -1,0 +1,64 @@
+{
+    "tabs": [
+        {
+            "flag": 1,
+            "name": "hot",
+            "path": "/technological/xczNews/hot",
+            "text": "热点"
+        },
+        {
+            "flag": 2,
+            "name": "highRise",
+            "path": "/technological/xczNews/highRise",
+            "text": "高层"
+        },
+        {   
+            "flag": 3,
+            "name": "authority",
+            "path": "/technological/xczNews/authority",
+            "text": "权威"
+        },
+        {
+            "flag": 4,
+            "name": "area",
+            "path": "/technological/xczNews/area",
+            "text": "地区"
+        },
+        {
+            "flag": 5,
+            "name": "dataBase",
+            "path": "/technological/xczNews/dataBase",
+            "text": "资料库"
+        }
+    ],
+    "commonList": [
+        {
+            "hasImg": false,
+            "text": "国务院办公厅关于全面开展工程建设项目审批制度改革的实施意见",
+            "newsNet": "新华社",
+            "newsDate": "2019-05-24",
+            "id": 1
+        },
+        {
+            "hasImg": true,
+            "text": "中共中央 国务院关于支持河北雄安新区全面深化改革和扩大开放的指导意见 ",
+            "newsNet": "央视新闻网",
+            "newsDate": "2019-05-15",
+            "id": 2
+        },
+        {
+            "hasImg": false,
+            "text": "中共中央办公厅 国务院办公厅印发《地方党政领导干部食品安全责任制规定》",
+            "newsNet": "人民日报海外网",
+            "newsDate": "2019-05-20",
+            "id": 3
+        },
+        {
+            "hasImg": true,
+            "text": "韩长赋：“五推进一加强”推动实施乡村振兴战略",
+            "newsNet": "新华社",
+            "newsDate": "2019-05-24",
+            "id": 4
+        } 
+    ]
+}

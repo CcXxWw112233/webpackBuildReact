@@ -1,0 +1,80 @@
+
+.workbenchboxsNavsWapper {
+    height: 52px;
+    margin:14px 0px;
+    padding: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxnavsWapper {
+    //margin       : 0 auto;
+    //background : #000000;
+    width: auto;
+    padding      : 10px 32px;
+    background   : rgba(0, 0, 0, 0.1);
+    //background: red;
+    border-radius: 8px;
+    display        : inline-flex;
+    align-items  : center;
+
+    .nav {
+        height         : 32px;
+        line-height    : 32px !important;
+        background     : rgba(255, 255, 255, 0.2);
+        border-radius  : 4px;
+        display        : inline-flex;
+        align-items    : center;
+        justify-content: center;
+        margin-right   : 24px;
+        cursor         : pointer;
+
+        .text {
+            margin-left:8px;
+            height     : 22px;
+            line-height: 22px;
+            font-size  : 14px;
+            font-family: PingFangSC-Medium;
+            font-weight: 500;
+            color      : rgba(255, 255, 255, 1);
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+        }
+    }
+    .nav:hover {
+        background:rgba(255,255,255,0.6);
+        border-radius:4px;
+    }
+
+    .nav.selected {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    .nav.disabled {
+        background     : rgba(255, 255, 255, 0.2)!important;
+        cursor         : not-allowed;
+        opacity: 0.5;
+    }
+    .nav.disabled:hover {
+        background     : rgba(255, 255, 255, 0.2)!important;
+        cursor         : not-allowed!important;
+        opacity: 0.5;
+    }
+
+    .nav.home {
+        width: 32px;
+    }
+
+    .nav.menu {
+        width: 112px;
+    }
+    .nav:last-child{
+        margin-right:0px;
+    }
+
+    .divider {
+        width     : 1px;
+        height    : 24px;
+        background: rgba(255, 255, 255, 0.5);
+        margin-right   : 24px;
+    }
+}

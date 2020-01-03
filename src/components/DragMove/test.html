@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+　　<head>
+  　　　　<meta charset="UTF-8">
+  　　　　<title>divDrag</title>
+  　　</head>
+　<body style="width: 100% ;overflow: hidden">
+　　　<div id="div1" style="width: 100%;height: 100%;background-color: red;position: absolute">sss</div>
+　</body>
+<script type="text/javascript">
+  window.onload = function() {
+    var div1 = document.getElementById("div1");
+    div1.onmousedown = function (ev) {
+      var oevent = ev || event;
+
+      var distanceX = oevent.clientX - div1.offsetLeft;
+      var distanceY = oevent.clientY - div1.offsetTop;
+      // console.log(distanceX)
+      document.onmousemove = function (ev) {
+        var oevent = ev || event;
+        // console.log(oevent.clientX,distanceX )
+        div1.style.left = oevent.clientX - distanceX + 'px';
+        div1.style.top = oevent.clientY - distanceY + 'px';
+      };
+      document.onmouseup = function () {
+        document.onmousemove = null;
+        document.onmouseup = null;
+      };
+    }
+  }
+</script>
+
+</html>

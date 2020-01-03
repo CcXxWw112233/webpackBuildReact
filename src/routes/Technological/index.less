@@ -1,0 +1,105 @@
+//聊天iframe
+.imIframOut{
+  width: 500px;
+  height: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ifram{
+  background: #FFFFFF;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.08);
+
+}
+
+.imMessage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #1890FF;
+  position: fixed;
+  bottom: 120px;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 50px;
+  cursor: pointer;
+  right: 20px;
+  z-index: 1;
+}
+
+.closeimMessage{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #1890FF;
+  line-height: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+
+@keyframes hideIframe {
+  from {
+    height: 600px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes showIframe {
+  from {
+    height: 0;
+  }
+  to {
+    height: 600px;
+  }
+}
+.showIframe{
+  height: 600px;
+  animation: showIframe 300ms ease
+}
+.hideIframe {
+  height:0;
+  animation: hideIframe 300ms ease
+
+}
+
+@keyframes imMessageShow {
+  from {
+    right: 0;
+  }
+  to {
+    right: 20px;
+  }
+}
+@keyframes imMessageHide {
+  from {
+    right: 20px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.imMessageShow{
+  right: 20px;
+  animation: imMessageShow 300ms ease;
+}
+.imMessageHide{
+  right: 0;
+  animation: imMessageHide 300ms ease;
+
+}
+//新增
+

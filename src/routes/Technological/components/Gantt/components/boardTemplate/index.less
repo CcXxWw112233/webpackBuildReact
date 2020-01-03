@@ -1,0 +1,297 @@
+.container,
+.container_hide,
+.container_show,
+.container_init {
+    position      : fixed;
+    box-sizing    : border-box;
+    z-index       : 8;
+    right         : 0px;
+    top           : 0px;
+    width         : 248px;
+    height        : 100%;
+    background    : rgba(255, 255, 255, 1);
+    box-shadow    : -1px 0px 2px 0px rgba(0, 0, 0, 0.15), 1px 0px 0px 0px rgba(0, 0, 0, 0.09);
+    display       : flex;
+    flex-direction: column;
+    overflow-x    : hidden;
+
+    .top {
+        height         : 48px;
+        font-size      : 14px;
+        display        : flex;
+        padding        : 0 12px;
+        justify-content: space-between;
+        align-items    : center;
+        box-shadow     : 0px -1px 0px 0px rgba(0, 0, 0, 0.09);
+        border-bottom  : 1px solid #f5f5ff;
+
+        .top_left {
+            display    : flex;
+            align-items: center;
+            font-weight: bold;
+
+            .name {
+                max-width: 110px;
+            }
+
+            .down {
+                font-weight: normal;
+                font-size  : 12px;
+                margin-left: 4px;
+                margin-top : 4px;
+            }
+        }
+
+        .top_right {
+            font-size: 16px;
+        }
+
+        .top_right:hover {
+            color: #40A9FF;
+        }
+    }
+
+    .main {
+        flex    : 1;
+        overflow: auto;
+        padding : 0 12px;
+
+        .downSpin {
+            font-size: 18px;
+        }
+
+        :global {
+            .ant-tree-switcher-noop {
+                visibility: hidden;
+            }
+
+            .ant-tree-switcher-icon {
+                font-size: 20px !important;
+                color    : rgba(0, 0, 0, 0.45) !important;
+            }
+        }
+    }
+}
+
+@keyframes containerShow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 248px;
+    }
+}
+
+@keyframes containerHide {
+    from {
+        width: 248px;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+.container_init {
+    width: 0;
+}
+
+.container_show {
+    animation: containerShow 300ms ease;
+    width    : 248px;
+}
+
+.container_hide {
+    animation: containerHide 300ms ease;
+    width    : 0;
+}
+
+
+
+.main::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 4px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 4px;
+    background   : rgba(0, 0, 0, .15);
+}
+
+.main::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 4px;
+    background   : #ffffff;
+}
+
+
+@keyframes switchSpin_top {
+    from {
+        transform : rotate(0deg);
+        height    : 24px;
+        left      : 0;
+        top       : 0;
+        margin-top: 0;
+    }
+
+    to {
+        transform : rotate(45deg);
+        height    : 20px;
+        left      : 2px;
+        top       : 1px;
+        margin-top: 10px;
+    }
+}
+
+@keyframes switchSpin_bott {
+    from {
+        transform    : rotate(0);
+        border-radius: 0 0 6px 6px;
+
+    }
+
+    to {
+        transform    : rotate(-45deg);
+        border-radius: 6px 0 6px 6px;
+
+    }
+}
+
+@keyframes switchSpin_top_close {
+    from {
+        transform    : rotate(0deg);
+        border-radius: 6px 6px 0 0;
+        height       : 24px;
+        top          : 0;
+        margin-top   : 0;
+    }
+
+    to {
+        transform : rotate(-45deg);
+        height    : 19px;
+        left      : -2px;
+        top       : 2px;
+        margin-top: 10px;
+        left      : 8px;
+
+    }
+}
+
+@keyframes switchSpin_bott_close {
+    from {
+        transform    : rotate(0);
+        border-radius: 0 0 6px 6px;
+
+    }
+
+    to {
+        transform    : rotate(45deg);
+        border-radius: 6px
+    }
+}
+
+@keyframes switchSpinShow {
+    from {
+        right: 20px;
+    }
+
+    to {
+        right: 248px;
+    }
+}
+
+@keyframes switchSpinHide {
+    from {
+        right: 248px;
+    }
+
+    to {
+        right: 20px;
+    }
+}
+
+
+.switchSpin_init,
+.switchSpinShow,
+.switchSpinClose {
+
+    position: fixed;
+    right   : 248px;
+    width   : 20px;
+    height  : 48px;
+
+    >div {
+        width           : 6px;
+        height          : 24px;
+        background-color: rgb(208, 208, 208);
+    }
+
+    .switchSpin_top {
+        border-radius: 6px 6px 0 0;
+        position     : absolute;
+        top          : 0;
+    }
+
+    .switchSpin_bott {
+        border-radius: 0 0 6px 6px;
+        position     : absolute;
+        top          : 24px;
+    }
+
+
+}
+
+.switchSpin_init {
+    right: 20px;
+}
+
+.switchSpinShow {
+    animation   : switchSpinShow 300ms ease;
+    right       : 248px;
+    padding-left: 10px;
+    width       : 30px;
+}
+
+.switchSpinClose {
+    animation: switchSpinHide 300ms ease;
+    right    : 20px;
+}
+
+.switchSpin_init:hover,
+.switchSpinClose:hover {
+    .switchSpin_top {
+        animation : switchSpin_top 300ms ease;
+        transform : rotate(45deg);
+        margin-top: 10px;
+        height    : 20px;
+        left      : 2px;
+        top       : 1px;
+    }
+
+    .switchSpin_bott {
+        animation    : switchSpin_bott 300ms ease;
+        transform    : rotate(-45deg);
+        border-radius: 6px 0 6px 6px;
+    }
+}
+
+.switchSpinShow:hover {
+    .switchSpin_top {
+        animation : switchSpin_top_close 300ms ease;
+        transform : rotate(-45deg);
+        margin-top: 10px;
+        height    : 19px;
+        left      : 8px;
+        top       : 2px;
+    }
+
+    .switchSpin_bott {
+        animation    : switchSpin_bott_close 300ms ease;
+        transform    : rotate(45deg);
+        border-radius: 6px;
+    }
+}

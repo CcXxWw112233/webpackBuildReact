@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聆悉</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="shortcut icon" href="./img/bitbug_favicon.ico" >
+  <script type="text/javascript" src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+  <style>
+    body{
+      overflow: hidden;
+    }
+    iframe{
+      width: 212px; 
+    }
+  </style>
+<body>  <!-- 放置二维码的div -->
+<div id="login_container"></div>
+</body>
+<script type="text/javascript">
+  window.onload = function() {
+    var url
+    if(window.location.host.indexOf('lingxi') !== -1){
+      url = 'https://lingxi.di-an.com/api/upms/weChat/collBack'
+    } else {
+      url =  'https://lingxi.di-an.com/api/upms/weChat/collBack'//'http://d4x6rb.natappfree.cc/api/upms/weChat/collBack'
+    }
+    var obj = new WxLogin({
+      self_redirect:true,
+      id:"login_container",
+      appid: "wx358dea60cb617301",
+      scope: "snsapi_login",
+      redirect_uri: encodeURIComponent(url),
+      state: Math.ceil(Math.random()*1000),
+      style: "black",
+      href: "data:text/css;base64,LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O21hcmdpbjogMCAhaW1wb3J0YW50O30KLmltcG93ZXJCb3ggLnRpdGxlIHtkaXNwbGF5OiBub25lO30KLmltcG93ZXJCb3ggLmluZm8ge3dpZHRoOiAyMDBweDt9Ci5zdGF0dXNfaWNvbiB7ZGlzcGxheTogbm9uZX0KLmltcG93ZXJCb3ggLnN0YXR1cyB7fQouaW1wb3dlckJveCB7CiAgICBsaW5lLWhlaWdodDogMS42OwogICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgd2lkdGg6IDEwMCU7CiAgICB6LWluZGV4OiAxOwogICAgdGV4dC1hbGlnbjogMCAhaW1wb3J0YW50IDsKfQppZnJhbWV7CiAgICAgIHdpZHRoOiA0NzBweDsgCiAgICB9"
+    });
+  }
+</script>
+
+</html>

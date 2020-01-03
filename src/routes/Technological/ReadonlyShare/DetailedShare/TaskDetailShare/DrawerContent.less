@@ -1,0 +1,674 @@
+@import "../../../../../globalset/css/constant.less";
+
+.nomalCheckBox {
+  height       : 16px;
+  width        : 16px;
+  text-align   : center;
+  line-height  : 12px;
+  border       : 2px solid #8c8c8c;
+  border-radius: 2px;
+  margin-top   : 4px;
+  margin-right : 10px;
+}
+
+.nomalCheckBoxActive {
+  height          : 16px;
+  width           : 16px;
+  text-align      : center;
+  line-height     : 12px;
+  border          : 2px solid #1890ff;
+  background-color: #1890ff;
+  border-radius   : 2px;
+  margin-top      : 4px;
+  margin-right    : 10px;
+}
+
+.DrawerContentOut {
+  width  : 100%;
+  padding: 0 20px;
+
+  .fileIcon {
+    width        : 68px;
+    height       : 30px;
+    background   : rgba(230, 247, 255, 1);
+    border-radius: 4px;
+    margin-right : 12px;
+    text-align   : center;
+    line-height  : 30px;
+    color        : #69C0FF;
+
+    .fileTitle {
+      color    : #69C0FF;
+      font-size: 16px;
+    }
+  }
+
+  .divContent_1 {
+    padding-left: 34px;
+    margin-top  : -8px;
+  }
+
+  .contain_1 {
+    display        : flex;
+    justify-content: space-between;
+
+    .right {
+      display: flex;
+    }
+
+    .right__shareIndicator {
+      cursor       : pointer;
+      display      : flex;
+      align-items  : center;
+      padding      : 2px 16px;
+      border-radius: 12px;
+      background   : rgba(245, 245, 245, 1);
+      margin-right : 18px;
+      margin-bottom: 0;
+      line-height  : 20px;
+
+      .right__shareIndicator_icon {
+        display        : inline-block;
+        width          : 12px;
+        height         : 12px;
+        background     : url(./../../../../../assets/project/share_fill@2x.png) center center no-repeat;
+        background-size: contain;
+        margin-right   : 7px;
+      }
+
+      .right__shareIndicator_text {
+        font-size  : 12px;
+        font-weight: 400;
+        color      : rgba(140, 140, 140, 1);
+      }
+    }
+
+    .right__share {
+      cursor         : pointer;
+      display        : inline-block;
+      height         : 20px;
+      width          : 20px;
+      background     : url(./../../../../../assets/project/share@2x.png) center center no-repeat;
+      background-size: contain;
+      margin-right   : 16px;
+    }
+
+    .right__share:hover {
+      cursor         : pointer;
+      height         : 20px;
+      width          : 20px;
+      background     : url(./../../../../../assets/project/share_active@2x.png) center center no-repeat;
+      background-size: contain;
+    }
+
+    .left,
+    .right {
+      height          : 24px;
+      line-height     : 24px;
+      // background   : #F5F5F5;
+      // border-radius: 4px;
+      color           : #8c8c8c;
+      padding         : 0 10px;
+    }
+  }
+
+  .divContent_2 {
+    padding-left: 0;
+  }
+
+  .contain_2 {
+    display   : flex;
+    font-size : 20px;
+    color     : #262626;
+    margin-top: 10px;
+    cursor    : pointer;
+
+    .contain_2_title {
+      flex: 1;
+    }
+  }
+
+  .contain_3 {
+    cursor     : pointer;
+    margin-top : 10px;
+    font-size  : 14px;
+    height     : auto;
+    color      : #595959;
+    display    : flex;
+    align-items: center;
+    flex-wrap  : wrap;
+
+    span {
+      color         : #8c8c8c;
+      display       : inline-block;
+      height        : 24px;
+      line-height   : 24px;
+      vertical-align: middle;
+    }
+  }
+
+  .contain_4 {
+    margin-top: 10px;
+    font-size : 14px;
+    overflow  : hidden;
+    color     : #595959;
+
+    img {
+      width : 160px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    video {
+      width : 160px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .editorWraper {
+    background   : #FFFFFF;
+    margin-top   : 10px;
+    margin-left  : 30px;
+    color        : #595959;
+    font-size    : 14px;
+    border       : 1px solid rgba(217, 217, 217, 1);
+    border-radius: 4px;
+  }
+
+  .contain_5 {
+    margin-top: 12px;
+    font-size : 14px;
+    color     : #d9d9d9;
+    display   : flex;
+    flex-wrap : wrap;
+
+    .contain_5_add {
+      height : 22px;
+      width  : 64px;
+      padding: 0;
+      cursor : pointer;
+    }
+
+    .contain_5_add:hover {
+      border: 1px dashed rgba(217, 217, 217, 1);
+      ;
+      text-align   : center;
+      border-radius: 2px;
+    }
+  }
+
+  .contain_6 {
+    margin-top: 20px;
+    font-size : 14px;
+    color     : #d9d9d9;
+    display   : flex;
+
+    .contain_6_add {
+      height    : 22px;
+      width     : 100px;
+      padding   : 0;
+      cursor    : pointer;
+      box-sizing: border-box;
+    }
+
+    .contain_6_add:hover {
+      border: 1px dashed rgba(217, 217, 217, 1);
+      ;
+      text-align   : center;
+      border-radius: 2px;
+    }
+  }
+
+  .spaceLine {
+    border    : 1px solid rgba(232, 232, 232, 1);
+    margin-top: 20px;
+  }
+
+  .contain_7 {
+    margin-top: 20px;
+    font-size : 14px;
+    width     : 100%;
+    color     : #d9d9d9;
+    display   : flex;
+
+    .contain_7_add {
+      width          : 100%;
+      padding        : 0;
+      cursor         : pointer;
+      box-sizing     : border-box;
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+
+      div {
+        display    : flex;
+        align-items: center;
+      }
+
+      div:nth-child(1) {
+        flex: 1;
+
+        input {
+          border : none;
+          outline: none;
+          color  : #595959;
+          width  : 100%;
+        }
+
+        input::input-placeholder {
+          color: #d9d9d9;
+        }
+
+        /* 有些资料显示需要写，有些显示不需要，但是在编辑器webstorm中该属性不被识别 */
+        ::-webkit-input-placeholder {
+          /* WebKit browsers */
+          color: #d9d9d9;
+        }
+
+        :-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+          color: #d9d9d9;
+        }
+
+        ::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+          color: #d9d9d9;
+        }
+
+        :-ms-input-placeholder {
+          /* Internet Explorer 10+ */
+          color: #d9d9d9;
+        }
+      }
+
+      div:nth-child(2) {
+
+        .userIconNormal,
+        .calendarIconNormal {
+          color: #8c8c8c;
+        }
+
+        .userIconNormal:hover,
+        .calendarIconNormal:hover,
+        .userIconSelected {
+          color: #595959;
+        }
+      }
+    }
+  }
+
+  .userIconNormal,
+  .calendarIconNormal {
+    color: #8c8c8c;
+  }
+
+  .userIconNormal:hover,
+  .calendarIconNormal:hover,
+  .userIconSelected {
+    color: #595959;
+  }
+
+  .calendarIconSelected {
+    color: #1890ff;
+  }
+}
+
+//任务执行人
+.excutorsOut {
+  padding        : 8px;
+  border-radius  : 4px;
+  margin-left    : -8px;
+  display        : flex;
+  align-items    : center;
+  width          : 100%;
+  justify-content: space-between;
+  max-width      : 398px;
+
+  .excutorsOut_left {
+    display : flex;
+    flex    : 1;
+    overflow: hidden;
+  }
+
+  .excutorsOut_right {
+    margin-left       : 8px;
+    width             : 20px;
+    //background-color: #f5f5f5;
+    height            : 20px;
+    border-radius     : 20px;
+    text-align        : center;
+  }
+}
+
+.excutorsOut:hover {
+  background-color: #f5f5f5;
+}
+
+//DCMenuItemOne
+.menuOneout {
+  background-color: #FFFFFF;
+  box-shadow      : 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+
+  .menuOne {
+    border-radius: 4px;
+    color        : #595959;
+    font-size    : 14px;
+    width        : 174px;
+
+    .menuOneitemDiv {
+      width      : 100%;
+      height     : 100%;
+      padding    : 0 10px;
+      line-height: 32px;
+      display    : flex;
+      align-items: center;
+
+      >span {
+        font-size    : 14px;
+        display      : inline-block;
+        margin-left  : 6px;
+        flex         : 1;
+        max-width    : 100px;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+        white-space  : nowrap;
+      }
+
+      .avatar {
+        width        : 20px;
+        height       : 20px;
+        border-radius: 14px;
+      }
+    }
+
+    .menuOneitemDiv:hover {
+      color           : #595959;
+      background-color: #f5f5f5;
+    }
+
+    .menuOneitemDiv:active {
+      background-color: #E6F7FF;
+      ;
+    }
+  }
+
+}
+
+///DCAddChirdrenTaskItem
+.taskItem {
+  .title {
+    font-size    : 16px;
+    color        : #595959;
+    margin-bottom: 14px;
+    cursor       : pointer;
+
+    .checkBox {
+      width : 100%;
+      border: 1px solid #595959;
+    }
+  }
+
+  .item_1 {
+    padding      : 0;
+    width        : 100%;
+    background   : #FFFFFF;
+    border-radius: 4px;
+    margin-top   : 10px;
+    display      : flex;
+    cursor       : pointer;
+    color        : #262626;
+
+    div:nth-child(2) {
+      flex: 1;
+    }
+  }
+
+  .nomalCheckBox {
+    height       : 16px;
+    width        : 16px;
+    text-align   : center;
+    line-height  : 12px;
+    border       : 2px solid #8c8c8c;
+    border-radius: 2px;
+    margin-top   : 4px;
+    margin-right : 6px;
+  }
+
+  .nomalCheckBoxActive {
+    height          : 16px;
+    width           : 16px;
+    text-align      : center;
+    line-height     : 12px;
+    border          : 2px solid #1890ff;
+    background-color: #1890ff;
+    border-radius   : 2px;
+    margin-top      : 4px;
+    margin-right    : 6px;
+  }
+
+}
+
+
+//右上角下拉菜单
+.elseProjectMemu {
+  padding: 4px 10px;
+}
+
+.elseProjectDangerMenu {
+  width  : 100%;
+  height : 100%;
+  color  : #F5222D;
+  padding: 4px 10px;
+
+}
+
+.elseProjectDangerMenu:hover,
+.elseProjectDangerMenu:active {
+  background: #FFE7E8;
+}
+
+.onlyReadingShareModal__spec {
+  height       : 22px;
+  font-size    : 16px;
+  font-weight  : 400;
+  color        : rgba(140, 140, 140, 1);
+  line-height  : 22px;
+  margin-bottom: 16px;
+}
+
+.onlyReadingShareModal__linkAndPasswordWrapper {
+  display        : flex;
+  justify-content: space-between;
+  height         : 32px;
+  line-height    : 32px;
+  font-size      : 16px;
+  font-weight    : 400;
+  color          : rgba(0, 0, 0, 0.65);
+  margin-bottom  : 16px;
+
+  .onlyReadingShareModal__linkWrapper {
+
+    .onlyReadingShareModal__link_title {
+      display     : inline-block;
+      margin-right: 8px;
+    }
+
+    .onlyReadingShareModal__link_input {
+      display: inline-block;
+      width  : 400px;
+    }
+  }
+
+  .onlyReadingShareModal__passwordWrapper {
+    .onlyReadingShareModal__password_title {
+      display     : inline-block;
+      margin-right: 8px;
+    }
+
+    .onlyReadingShareModal__password_input {
+      display  : inline-block;
+      max-width: 70px;
+    }
+  }
+}
+
+.onlyReadingShareModal__operatorWrapper {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  line-height    : 32px;
+  height         : 32px;
+
+  .onlyReadingShareModal__operatorEXPWrapper {
+    font-size    : 16px;
+    font-weight  : 400;
+    color        : rgba(0, 0, 0, 0.65);
+    margin-bottom: 0;
+
+    .onlyReadingShareModal__operatorEXP_title {
+      display     : inline-block;
+      font-size   : 16px;
+      font-weight : 400;
+      color       : rgba(0, 0, 0, 0.65);
+      margin-right: 8px;
+    }
+
+    .onlyReadingShareModal__operatorEXP_selected {
+      display     : inline-block;
+      margin-right: 8px;
+    }
+
+    .onlyReadingShareModal__operatorEXP_select {
+      cursor     : pointer;
+      font-size  : 14px;
+      font-weight: 400;
+      color      : rgba(24, 144, 255, 1);
+    }
+  }
+
+  .onlyReadingShareModal__operatorShareWrapper {
+    margin-bottom: 0;
+
+    .onlyReadingShareModal__operatorShareStopShare {
+      cursor         : pointer;
+      display        : inline-block;
+      font-size      : 15px;
+      font-weight    : 400;
+      color          : rgba(245, 34, 45, 1);
+      text-decoration: underline;
+      margin-right   : 16px;
+    }
+
+    .handleOnlyReadingShareCopyLinkAndPwd {}
+  }
+}
+
+.attach_file_list_out {
+  position: relative;
+
+  .attach_file_list {
+    width        : 100%;
+    padding-right: 40px;
+    font-size    : 14px;
+    position     : absolute;
+    top          : 40px;
+    background   : #FFFFFF;
+
+    .attach_file_item {
+      display        : flex;
+      justify-content: space-between;
+      margin-top     : 9px;
+      cursor         : pointer;
+      padding-right  : 4px;
+
+      .link_pre {
+        color      : #8c8c8c;
+        font-size  : 8px;
+        margin     : 0 10px 0 4px;
+        transform  : scale(0.8, 1.1);
+        padding-top: 2px;
+      }
+
+      .attach_file_item_name {
+        flex: 1;
+      }
+
+      .attach_file_time {
+        font-size  : 12px;
+        color      : #8c8c8c;
+        margin-left: 8px;
+      }
+
+      .link_opera {
+        color      : #595959;
+        margin-left: 8px;
+        display    : none;
+        font-size  : 14px;
+      }
+
+      .link_opera:hover {
+        color: #40A9FF;
+      }
+    }
+
+  }
+
+  .attach_file_item:hover {
+    background: rgba(230, 247, 255, 1);
+
+    .attach_file_item_name,
+    .link_pre {
+      color: #40A9FF;
+    }
+
+    .link_opera {
+      display: block;
+    }
+
+    .attach_file_time {
+      display: none;
+    }
+  }
+}
+
+//里程碑
+.miletones {
+  margin-top: 16px;
+
+  .miletones_item_add {
+    font-size: 14px;
+    color    : #d9d9d9;
+    cursor   : pointer;
+  }
+
+  .miletones_item {
+    cursor         : pointer;
+    margin-top     : 4px;
+    display        : flex;
+    justify-content: space-between;
+
+    .miletones_item_logo {
+      color: #1890ff;
+    }
+
+    .miletones_item_name {
+      flex   : 1;
+      padding: 0 6px;
+    }
+
+    .miletones_item_delete {
+      display: none;
+    }
+  }
+
+  .miletones_item:hover {
+    .miletones_item_delete {
+      display: block;
+    }
+
+    .miletones_item_delete:hover {
+      color: #1890ff;
+    }
+  }
+}

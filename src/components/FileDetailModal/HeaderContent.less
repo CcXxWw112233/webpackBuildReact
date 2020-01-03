@@ -1,0 +1,89 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // 头部左边 S
+  .header_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .header_icon {
+      width: 68px;
+      height: 30px;
+      background: #e6f7ff;
+      border-radius: 4px;
+      margin-right: 12px;
+      text-align: center;
+      line-height: 30px;
+      color: #69c0ff;
+    }
+  }
+  // 头部左边 E
+
+  // 头部右边 S
+  .header_right {
+    // background: rosybrown;
+    // min-width: 500px;
+    // height: 38px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    // line-height: 38px;
+  }
+  .header_rightMenuWrapper {
+    display: flex;
+    align-items: center;
+    .margin_right10 {
+      margin-right: 15px;
+    }
+
+    // 分享协作样式
+    .share_wrapper {
+      .right__share {
+        cursor         : pointer;
+        display        : inline-block;
+        line-height    : 24px;
+        height         : 24px;
+        width          : 24px;
+      }
+      
+      .right__share:hover {
+        cursor         : pointer;
+        line-height    : 24px;
+        height         : 24px;
+        width          : 24px;
+        color: #40A9FF;
+      }
+      .share_icon {
+        width       : 24px;
+        height      : 24px;
+        text-align  : center;
+        line-height : 24px;
+      }
+      
+      .right__shareIndicator {
+        cursor          : pointer;
+        display         : inline-flex;
+        background      : rgba(0, 0, 0, 0.04);
+        border-radius   : 4px;
+        line-height     : 24px;
+        height:24px;
+        padding: 0px 8px 0px 6px;
+        .right__shareIndicator_icon{
+          display         : inline-block;
+          font-size: 16px;
+        }
+        .right__shareIndicator_text {
+          margin-left: 4px;
+          display         : inline-block;
+          font-size: 12px;
+        }
+      
+        &:hover {
+          background: rgba(230, 247, 255, 1);
+          color     : #40A9FF;
+        }
+      }
+    }
+  }
+  // 头部右边 E
+}

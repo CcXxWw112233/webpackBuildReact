@@ -1,0 +1,59 @@
+// 添加评论的框架样式
+.common_item {
+  display: flex;
+  line-height: 24px;
+  margin-bottom: 24px;
+  .common_left {
+    margin-right: 8px;
+  }
+  .common_right {
+    flex: 1;
+    .common_top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      .common_name {
+        color: rgba(0, 0, 0, 0.45);
+        font-weight: 900;
+      }
+      .common_create_time {
+        color: rgba(0, 0, 0, 0.45);
+      }
+      .common_delete {
+        cursor: pointer;
+        color: #1890FF;
+      }
+    }
+  }
+}
+// 动态列表的样式
+.news_item {
+  // padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(0,0,0,0.45);
+  line-height: 22px;
+  margin: 24px 0;
+  span {
+    margin-right: 2px;
+  }
+  .news_text {
+    flex: 1;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    word-break: break-all;
+  }
+  .news_creator {
+    font-weight: 900;
+    margin-right: 2px;
+  }
+  .news_card_name {
+    font-weight: 900;
+    margin-left: 2px;
+  }
+  .news_update_start_name {
+    font-weight: 900;
+    margin-left: 2px;
+  }
+}

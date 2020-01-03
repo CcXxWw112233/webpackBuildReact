@@ -1,0 +1,94 @@
+//hover头像出现的内容
+.manImageDropdown {
+  width: 244px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  .manImageDropdown_top {
+    display: flex;
+    .left {
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+      }
+    }
+    .right {
+      margin-left: 8px;
+      flex: 1;
+      .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: PingFangSC-Regular;
+        color: #262626;
+        font-size: 14px;
+        line-height: 14px;
+      }
+      .percent {
+        width: 100%;
+        height: 6px;
+        border-radius: 6px;
+        margin-top: 10px;
+        overflow: hidden;
+        display: flex;
+        cursor: pointer;
+        div:nth-child(1) {
+          background-color: #f5222d;
+        }
+        div:nth-child(2) {
+          background-color: #faad14;
+        }
+        div:nth-child(3) {
+          background-color: #1890ff;
+        }
+      }
+    }
+  }
+  .manImageDropdown_middle {
+    font-size: 12px;
+    color: #595959;
+    margin-top: 20px;
+    .detailItem {
+      margin-top: 10px;
+      display: flex;
+      > div:nth-child(2) {
+        flex: 1;
+      }
+    }
+  }
+  .manImageDropdown_bott {
+    height: 144px;
+    width: 144px;
+    margin: 0 auto;
+    margin-top: 20px;
+    img {
+      height: 144px;
+      width: 144px;
+    }
+  }
+}
+
+.noPermissionPrompt__wrapper {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e8e8e8;
+  .noPermissionPrompt__icon {
+    font-size: 56px;
+  }
+  .noPermissionPrompt__text {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.25);
+    line-height: 20px;
+  }
+}

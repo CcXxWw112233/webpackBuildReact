@@ -1,0 +1,172 @@
+.detail_head {
+  line-height    : 20px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+
+  .detail_head_left {
+    display            : -webkit-flex;
+    display            : -ms-flexbox;
+    display            : flex;
+    -webkit-align-items: center;
+    -ms-flex-align     : center;
+    align-items        : center;
+    overflow           : hidden;
+  }
+
+  .detail_head_right {
+    -webkit-flex: 0 0 auto;
+    -ms-flex    : 0 0 auto;
+    flex        : 0 0 auto;
+    margin-left : 40px;
+  }
+
+  // 这是头部图标的样式
+  .header_icon {
+    display      : flex;
+    padding      : 4px 8px;
+    background   : rgba(230, 247, 255, 1);
+    border-radius: 4px;
+    align-items  : center;
+    color        : #69C0FF;
+    font-style   : normal;
+    line-height  : 20px;
+
+    .title_icon {
+      margin-right  : 4px;
+      vertical-align: middle;
+
+    }
+  }
+
+
+}
+
+
+// 这是面包屑小导航的样式
+.bread_nav {
+  // cursor  : pointer;
+  margin-left: 12px;
+
+  .bread_board_name {
+    font-size: 16px;
+    color    : rgba(0, 0, 0, 0.65)
+  }
+
+  .bread_org_name {
+    font-size: 14px;
+    color    : rgba(0, 0, 0, 0.45)
+  }
+
+  .bread_list_name {
+    color: rgba(0, 0, 0, 0.65)
+  }
+
+  .arrow {
+    color: rgba(0, 0, 0, 0.25)
+  }
+
+  // &:hover {
+  //   .bread_board_name, .bread_org_name, .bread_list_name {
+  //     color: #40A9FF;
+  //   }
+  // }
+}
+
+
+.detail_action_list {
+  display            : -webkit-flex;
+  display            : -ms-flexbox;
+  display            : flex;
+  -webkit-align-items: center;
+  -ms-flex-align     : center;
+  align-items        : center;
+  margin-right: 10px;
+  .action {
+    margin-left: 12px;
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+
+
+.right_menu {
+  display: inline-block;
+
+  &:hover {
+    background   : rgba(230, 247, 255, 1);
+    border-radius: 4px;
+  }
+}
+
+.visit_icon {
+  margin-right: 12px;
+}
+
+.right__share {
+  cursor         : pointer;
+  display        : inline-block;
+  line-height    : 24px;
+  height         : 24px;
+  width          : 24px;
+}
+
+.right__share:hover {
+  cursor         : pointer;
+  line-height    : 24px;
+  height         : 24px;
+  width          : 24px;
+  color: #40A9FF;
+}
+.share_icon {
+  width       : 24px;
+  height      : 24px;
+  text-align  : center;
+  line-height : 24px;
+}
+
+.right__shareIndicator {
+  cursor          : pointer;
+  display         : inline-flex;
+  background      : rgba(0, 0, 0, 0.04);
+  border-radius   : 4px;
+  line-height     : 24px;
+  height:24px;
+  padding: 0px 8px 0px 6px;
+  .right__shareIndicator_icon{
+    display         : inline-block;
+    font-size: 16px;
+  }
+  .right__shareIndicator_text {
+    margin-left: 4px;
+    display         : inline-block;
+    font-size: 12px;
+  }
+
+  &:hover {
+    background: rgba(230, 247, 255, 1);
+    color     : #40A9FF;
+  }
+}
+
+.dele_icon {
+  display    : inline-block;
+  width      : 24px;
+  height     : 24px;
+  text-align : center;
+  line-height: 24px;
+  cursor     : pointer;
+
+  &:hover {
+    background   : rgba(255, 241, 240, 1);
+    border-radius: 4px;
+  }
+
+  .dele {
+    font-size: 20px;
+  }
+}
+
+.dele_icon:hover .dele {
+  color: #FF7875;
+}

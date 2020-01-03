@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript">
+        function getX(obj) {
+            var parObj = obj;
+            var left = obj.offsetLeft;
+            while (parObj = parObj.offsetParent) {
+                left += parObj.offsetLeft;
+            }
+            return left;
+        }
+
+        function getY(obj) {
+            var parObj = obj;
+            var top = obj.offsetTop;
+            while (parObj = parObj.offsetParent) {
+                top += parObj.offsetTop;
+            }
+            return top;
+        }
+
+        function DisplayCoord(event) {
+            var top, left, oDiv;
+            oDiv = document.getElementById("demo");
+            top = getY(oDiv);
+            left = getX(oDiv);
+            document.getElementById("mp_x").innerHTML = (event.clientX - left + document.documentElement.scrollLeft) - 2 + "px";
+            document.getElementById("mp_y").innerHTML = (event.clientY - top + document.documentElement.scrollTop) - 2 + "px";
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <div style="background-color:#000000;color:#0011FF;width:300px;height:300px;position:absolute;top:80px;left:90px;margin:0px; border:0px;"
+        id="demo" onmousemove="DisplayCoord(event)">
+
+        我是DIV,经测试,有2PX的误差...
+    </div>
+    当前鼠标坐标为：
+    X：<span id="mp_x"></span>
+    Y：<span id="mp_y"></span>
+</body>
+
+</html>

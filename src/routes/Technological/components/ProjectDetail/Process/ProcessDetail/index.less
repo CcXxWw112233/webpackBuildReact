@@ -1,0 +1,532 @@
+@import "../../../../../../globalset/css/constant";
+
+.processDetailOut_out{
+  width: 100%;
+  background-color: #FFFFFF;
+  position: relative;
+  padding: 40px 0px;
+  margin-top: 20px;
+}
+
+.processDetailOut{
+  //width: 1100px;
+  min-width: @child_page_min_width;
+  //margin: 0px 0 100px 104px;
+  margin: 100px;
+  .topTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .topTitle_left{
+      display: flex;
+      align-items: center;
+      div:nth-child(1) {
+        background: #FF4E4F;
+        border-radius: 4px;
+        height: 22px;
+        width: 22px;
+      }
+      div:nth-child(2) {
+        font-size: 20px;
+        color: #262626;
+        margin-left: 12px;
+      }
+    }
+    .topTitle_right{
+      width: 34px;
+      height: 24px;
+      text-align: center;
+      line-height: 24px;
+      border-radius: 4px;
+      background-color: #e5e5e5;
+    }
+  }
+  .userJoin {
+    margin-top: 14px;
+    display: flex;
+    .taskManImag{
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      background-color: #e5e5e5;
+      border-radius: 18px;
+      margin-left: 8px;
+      text-align: center;
+    }
+    .taskManImag:nth-child(1){
+      margin-left: 0;
+    }
+    .manwrap{
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+      background-color: #e5e5e5;
+      margin-left: 8px;
+      text-align: center;
+      line-height: 22px;
+      margin-right: 8px;
+    }
+  }
+  .description{
+    margin-top: 14px;
+    font-size: 12px;
+    color: #595959;
+  }
+
+  .bottContainer{
+    display: flex;
+    margin-top: 20px;
+    .bottContainer_left {
+      width: 212px;
+      margin-right: 40px;
+      .circle{
+        //background-color: red;
+        width: 210px;
+        height: 210px;
+        border-radius: 210px;
+      }
+    }
+    .bottContainer_right{
+      flex: 1;
+      .news{
+        .newsTitle{
+          font-size: 14px;
+          color: #262626;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+        .newsList{
+          font-size: 14px;
+          color: #595959;
+          .newsItem{
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            .newsItem_left{
+              display: flex;
+              flex: 1;
+              .newsItem_left_l {
+                background: #E6F7FF;
+                border: 0.5px solid rgba(135,209,255,1);
+                height: 24px; width: 24px;border-radius: 24px;
+                margin-right: 12px;
+              }
+              .newsItem_left_r {
+                flex: 1;
+              }
+            }
+            .newsItem_right{
+              font-size: 12px;
+              color: #8c8c8c;
+              width: 160px;
+              margin-left: 20px;
+              text-align: right;
+            }
+          }
+          .seeAllList{
+            display: flex;
+            align-items: center;
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 14px;
+            div:nth-child(1), div:nth-child(3){
+              height: 2px;
+              width: 20px;
+              background-color: #f2f2f2;
+            }
+            div:nth-child(2){
+              color: #1890ff;
+              font-size: 12px;
+              margin: 0 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .processPoint {
+        margin-top: 14px;
+        .processPointTitle{
+          font-size: 14px;
+          color: #262626;
+          padding-bottom: 10px;
+          font-weight: bold;
+        }
+        .processPointItem{
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+//----------------------------------------itemxiang
+
+//箭头
+@-webkit-keyframes spinup {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes spinup {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes spindown {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes spindown {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes hideBott {
+  from {
+    height: auto;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes hideBott {
+  from {
+    height: auto;
+  }
+  to {
+    height: 0;
+  }
+}
+@-webkit-keyframes showBott {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+@keyframes showBott {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+
+.upDown_up {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  animation: spinup 500ms ease;
+}
+.upDown_down {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  animation: spindown 500ms ease;
+}
+
+.ConfirmInfoOut_1{
+  margin-top: 16px;
+  //margin-bottom: 60px;
+  .ConfirmInfoOut_1_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >div{
+      height: 46px;
+    }
+    .ConfirmInfoOut_1_top_left{
+      width: 40%;
+      margin-right: 5%;
+      display: flex;
+      align-items: center;
+      .ConfirmInfoOut_1_top_left_left{
+        background: #FFFFFF;
+        height: 40px;
+        width: 40px;
+        line-height: 36px;
+        border-radius: 40px;
+        border: 2px solid rgba(140,140,140,1);
+        font-size: 20px;
+        text-align: center;
+        margin-right: 12px;
+      }
+      .ConfirmInfoOut_1_top_left_right{
+        flex: 1;
+        div:nth-child(1){
+          font-size: 16px;
+          color: #595959;
+        }
+        div:nth-child(2){
+          font-size: 14px;
+          color: #8c8c8c;
+        }
+      }
+    }
+    .ConfirmInfoOut_1_top_right{
+      flex: 1;
+      display: flex;
+      color: @color-link-normal;
+      font-size: 14px;
+      justify-content: flex-end;
+      align-items: center;
+      >div{
+        cursor: pointer;
+        margin-right: 8px;
+      }
+    }
+  }
+  .ConfirmInfoOut_1_bottNormal, .ConfirmInfoOut_1_bottShow{
+    padding-top: 6px;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    .ConfirmInfoOut_1_bott_left{
+      // width: 40px;
+      margin-right: 12px;
+    }
+    .ConfirmInfoOut_1_bott_right{
+      flex: 1;
+      // margin-top: 12px;
+      //里程碑详情描述
+      .ConfirmInfoOut_1_bott_right_dec{
+        font-size: 12px;
+        color: #595959;
+      }
+      .ConfirmInfoOut_1_bott_right_operate{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 12px;
+        div:nth-child(1){
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 14px;
+          color: @color-link-normal;
+        }
+      }
+
+      //上传
+      .fileList{
+        margin-top: 14px;
+        //display: flex;
+        align-items: center;
+      }
+      .uploadAreaOut{
+        height: auto;
+      }
+      .uploadArea {
+        cursor: pointer;
+        width: 748px;
+        height: 60px;
+        // margin-top: 14px;
+        padding: 0 20px;
+        background-color: rgba(24,144,255,.1);
+        border-radius: 4px;
+        border: 1px #1890FF dashed;
+        display: flex;
+        align-items: center;
+        .uploadArea_left{
+          width: 36px;
+          height: 30px;
+          margin-right: 12px;
+          .uploadArea_right{
+            flex: 1;
+            .uploadArea_right_l {
+              color: @color-link-normal;
+              font-size: 16px;
+            }
+            .uploadArea_right_r {
+              color: #8c8c8c;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      // 抄送
+      .copy{
+        margin-top: 14px;
+        .title{
+          color: #8c8c8c;
+          font-size: 12px;
+        }
+        .imglist{
+          margin-top: 10px;
+          display: flex;
+        }
+      }
+
+      //  填写
+      .fill{
+        margin-top: 14px;
+        .EditFormThreeOneOut{
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          .EditFormThreeOneOut_delete{
+            height: 18px;
+            width: 18px;
+            border-radius: 18px;
+            text-align: center;
+            background-color: red;
+            margin-right: 14px;
+            >div{
+              background-color: #FFFFFF;
+              height: 2px;
+              width: 10px;
+              margin: 0 auto;
+              margin-top: 8px;
+            }
+          }
+          .EditFormThreeOneOut_form{
+            background: #FBFBFB;
+            flex: 1;
+            border: 1px solid rgba(217,217,217,1);
+            border-radius: 4px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            .EditFormThreeOneOut_form_left{
+              width: 28px;
+              height: 28px;
+              margin-right: 12px;
+            }
+            .EditFormThreeOneOut_form_right{
+              display: flex;
+              flex: 1;
+              .EditFormThreeOneOutItem{
+                font-size: 12px;
+                margin-right: 8px;
+                p{
+                  color: #8c8c8c;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+  .ConfirmInfoOut_1_bottNormal{
+    height: 0;
+    //animation: hideBott 1000ms ease;
+  }
+  .ConfirmInfoOut_1_bottShow{
+    //height: auto;
+    //animation: showBott 1000ms ease;
+  }
+}
+
+
+.commentListItem{
+  font-size: 12px;
+  display: flex;
+  margin-top: 10px;
+  .left{
+    width: 32px;
+    margin-top: 4px;
+  }
+  .right{
+    flex: 1;
+    margin-left: 10px;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      .create_time{
+        color: #BFBFBF;
+      }
+      .full_name{
+        font-size: 12px;
+        color: #8c8c8c;
+      }
+
+    }
+    .text{
+      font-size: 12px;
+      margin-top: 2px;
+      color: #595959
+    }
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.outDiv {
+  color: #FFFFFF;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 32px;
+  width:716px;
+  height:80px;
+  background:#D9D9D9;
+  border:1px solid rgba(217,217,217,1);
+}
+.circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #7ED321;
+  text-align: center;
+  line-height: 40px;
+  color: #FFFFFF
+}
+.arrow {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: 10px;
+  border-right-color: #D9D9D9;
+}
+
+.line{
+  width: 2px;
+  background: #7ED321;
+  position: relative;
+  top: 25px;
+  left: 21px;
+  z-index: -1;
+}
+.hasnotCompetedCircle{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid #BFBFBF;
+  background-color: #BFBFBF;
+  text-align: center;
+  line-height: 40px;
+}
+.hasnotCompetedLine{
+  width: 2px;
+  background: #E0E0E0;
+  position: relative;
+  top: 25px;
+  left: 21px;
+  z-index: -1;
+}
