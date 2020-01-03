@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
-const { srcPath, indexJsPath, indexHtmlPath  } = require('./webpack/file.path.js')
+const { srcPath, indexJsPath, indexHtmlPath } = require('./webpack/file.path.js')
 const { resolve } = require('path')
 
 var path = require('path');
@@ -20,8 +20,9 @@ module.exports = {
         'react-hot-loader/patch',
         indexJsPath
     ],
-    resolve:{
+    resolve: {
         //配置别名，在项目中可缩减引用路径
+        extensions: ['.js', '.less', '.css', '.scss', '.json', '.scss'],
         alias: {
             '@': resolve('src'),
         }
@@ -43,7 +44,7 @@ module.exports = {
                         options: {
                             modules: true
                         }
-                    },  {
+                    }, {
                         loader: 'less-loader',
                         options: {
                             modules: true
@@ -59,7 +60,7 @@ module.exports = {
                         attrs: [':data-src']
                     }
                 },
-            },   {
+            }, {
                 test: /\.jsx?$/,
                 use: ['babel-loader'],
                 include: path.join(process.cwd(), 'src')
@@ -93,7 +94,7 @@ module.exports = {
         new webpack.NamedModulesPlugin(),
         // // 解决无需 import React from 'react' 便可以创建函数组件
         new webpack.ProvidePlugin({
-          'React': 'react'
+            'React': 'react'
         }),
     ]
 }

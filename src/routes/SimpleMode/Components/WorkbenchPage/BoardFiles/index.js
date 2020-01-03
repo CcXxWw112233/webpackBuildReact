@@ -10,7 +10,7 @@ import {
   isPaymentOrgUser,
   selectBoardToSeeInfo
 } from "../../../../../utils/businessFunction";
-import { height } from 'window-size';
+// import { height } from 'window-size';
 import BoarderfilesHeader from '@/routes/Technological/components/ProjectDetail/BoarderfilesHeader'
 import { setShowSimpleModel } from '../../../../../services/technological/organizationMember';
 

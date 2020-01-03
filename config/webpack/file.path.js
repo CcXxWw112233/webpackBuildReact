@@ -6,10 +6,10 @@ const projectPath = process.cwd()
 
 const srcPath = resolve(projectPath, 'src')
 // 入口文件目录
-const mainPath = srcPath//resolve(srcPath, 'main')
+const mainPath = resolve(projectPath, 'public')
 
 // 入口文件
-const indexJsPath = resolve(mainPath, 'index.js')
+const indexJsPath = resolve(srcPath, 'index.js')
 const indexHtmlPath = resolve(mainPath, 'index.html')
 
 module.exports = {
