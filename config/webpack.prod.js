@@ -1,10 +1,12 @@
 const merge = require('webpack-merge');
 const base = require('./webpack.base.js');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const webpack = require('webpack')
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = merge(base, {
     mode: 'production',
@@ -21,13 +23,21 @@ module.exports = merge(base, {
         minimizer: [
             new TerserPlugin()
         ],
+        splitChunks: {
+            name: 'common'
+        }
     },
     plugins: [
-        new ExtractTextPlugin({ //css打包单独立一个文件，而不是在js中生成
-            filename: 'style.[hash].css'
+        new MiniCssExtractPlugin({ //css打包单独立一个文件，而不是在js中生成
+            filename: '[name].[hash].css',
+            chunkFilename: '[id].[hash].css',
         }),
-        new CleanWebpackPlugin('dist'),
+        new CleanWebpackPlugin({
+            dry: true,
+        }),
         new webpack.HashedModuleIdsPlugin(),
-
+        // new CompressionPlugin({
+        //     test: new RegExp('\\.(js|css)$'),
+        // })
     ]
 })
