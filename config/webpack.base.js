@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
-const { srcPath, indexJsPath, indexHtmlPath  } = require('./webpack/file.path.js')
+const { srcPath, indexJsPath, indexHtmlPath } = require('./webpack/file.path.js')
 var path = require('path');
 // 生成HTML文件
 const generateIndex = new HtmlWebpackPlugin({
@@ -18,7 +18,7 @@ module.exports = {
         'react-hot-loader/patch',
         indexJsPath
     ],
-    resolve:{
+    resolve: {
         //配置别名，在项目中可缩减引用路径
         alias: {
             '@': path.resolve('src'),
@@ -27,17 +27,23 @@ module.exports = {
     // 模块配置
     module: {
         rules: [
-             {
+            {
                 test: /\.jsx?$/,
-                exclude:  /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015']
                 }
             },
             {
+                test: /\.tsx?$/,
+                // ts-loader是官方提供的处理tsx的文件
+                use: 'ts-loader',
+                exclude: /node_modules/
+            },
+            {
                 test: /\.js?$/,
-                exclude:  /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015']
@@ -53,7 +59,7 @@ module.exports = {
                         options: {
                             modules: true
                         }
-                    },  {
+                    }, {
                         loader: 'less-loader',
                         options: {
                             modules: true
@@ -69,7 +75,7 @@ module.exports = {
                         attrs: [':data-src']
                     }
                 },
-            },  {
+            }, {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
@@ -100,6 +106,6 @@ module.exports = {
         //解决函数组件没 import React from 'react'报错
         new webpack.ProvidePlugin({
             "React": "react",
-        }) 
+        })
     ]
 }
