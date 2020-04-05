@@ -22,7 +22,8 @@ module.exports = {
         //配置别名，在项目中可缩减引用路径
         alias: {
             '@': path.resolve('src'),
-        }
+        },
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     // 模块配置
     module: {
@@ -56,9 +57,6 @@ module.exports = {
                 use: ['style-loader',
                     {
                         loader: "css-loader",
-                        options: {
-                            modules: true
-                        }
                     }, {
                         loader: 'less-loader',
                         options: {
