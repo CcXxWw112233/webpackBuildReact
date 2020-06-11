@@ -9,7 +9,7 @@ const srcPath = resolve(projectPath, 'src')
 const mainPath = resolve(srcPath, 'main')
 
 // 入口文件
-const indexJsPath = resolve(mainPath, 'index.jsx')
+const indexJsPath = resolve(mainPath, 'index.js')
 const indexHtmlPath = resolve(mainPath, 'index.html')
 
 module.exports = {

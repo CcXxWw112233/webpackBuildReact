@@ -28,28 +28,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            },
-            {
+                test: /(\.jsx|\.js)/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            }, {
                 test: /\.tsx?$/,
                 // ts-loader是官方提供的处理tsx的文件
                 use: 'ts-loader',
                 exclude: /node_modules/
-            },
-            {
-                test: /\.js?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            },
-            {
+            }, {
                 test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']
             }, {
                 test: /\.less$/,
