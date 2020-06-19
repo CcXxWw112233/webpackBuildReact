@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 export default class VisualList extends Component {
     constructor(props) {
         super(props)
-        this.state({
+        this.state = {
             s: 1
-        })
+        }
         this.x = '2'
     }
     static aa = () => {

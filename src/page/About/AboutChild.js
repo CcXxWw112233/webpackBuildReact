@@ -1,10 +1,29 @@
-import React from 'react'
-
-const AboutChild = () => {
-    return (
-        <div>
-            我是关于的内容详情
-        </div>
-    );
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import HookTest from './HookTest'
+class AboutChild extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            count: 0
+        }
+    }
+    componentDidMount() {
+        // setInterval(() => {
+        //     this.setState({
+        //         count: this.state.count + 1
+        //     })
+        // }, 1000)
+    }
+    render() {
+        return (
+            <div>
+                <HookTest count={this.state.count} />
+            </div>
+        )
+    }
+}
+AboutChild.FpropTypes = {
+    prop: PropTypes
 }
 export default AboutChild
