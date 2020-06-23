@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import HookTest from './HookTest'
+import ObjectProto from './ObjectProto'
 class AboutChild extends Component {
     constructor(props) {
         super(props)
@@ -18,6 +19,7 @@ class AboutChild extends Component {
     render() {
         return (
             <div>
+                <ObjectProto />
                 <HookTest count={this.state.count} />
             </div>
         )
