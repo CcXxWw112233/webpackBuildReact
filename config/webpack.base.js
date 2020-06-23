@@ -15,6 +15,7 @@ module.exports = {
     context: srcPath,
     // 入口文件
     entry: [
+        'babel-polyfill', //react regeneratorRuntime is not defined
         'react-hot-loader/patch',
         indexJsPath
     ],

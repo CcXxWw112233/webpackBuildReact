@@ -1,9 +1,19 @@
-import React, { Component } from 'react'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import React, { Component, Suspense, lazy } from 'react'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import { hot } from 'react-hot-loader/root';
-import Home from '../page/Home'
-import About from '../page/About'
-import Topics from '../page/Topics'
+
+// import Home from '../page/Home'
+// import About from '../page/About'
+// import Topics from '../page/Topics'
+
+const Home = lazy(() => import('../page/Home'));
+const About = lazy(() => import('../page/About'));
+const Topics = lazy(() => import('../page/Topics'));
+
+// const Topics = React.lazy(async () => {
+//     const com = await import("../page/Topics");
+//     return { default: com.default || com };
+// })
 
 class App extends Component {
 
@@ -17,11 +27,14 @@ class App extends Component {
                         <li><Link to="/topics">Topics</Link></li>
                     </ul>
 
-                    <hr/>
-
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/topics" component={Topics}/>
+                    <hr />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/about" component={About} />
+                            <Route path="/topics" component={Topics} />
+                        </Switch>
+                    </Suspense>
                 </div>
             </BrowserRouter>
         )
