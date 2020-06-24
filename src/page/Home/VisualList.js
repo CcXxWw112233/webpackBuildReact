@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { List } from 'react-virtualized';
 import { connect } from 'react-redux';
+
+let a     =  'a'
+
+
 @connect()
 export default class VisualList extends Component {
     constructor(props) {
