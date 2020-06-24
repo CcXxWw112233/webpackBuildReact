@@ -82,7 +82,6 @@
   "lint-staged": {
     "./src/*.{js,jsx,ts,tsx}": [
       "npm run lint:js",
-      "npx prettier --write",
       "eslint src/*.js --fix-dry-run",
       "git add"
     ]
