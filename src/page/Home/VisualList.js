@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 let a     =  'a'
 
-
+// dasd 
 @connect()
 export default class VisualList extends Component {
     constructor(props) {
