@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { List } from 'react-virtualized';
 import { connect } from 'react-redux';
 
-let a     =  'a'
-
+let a       =  'a'
+// a
 // dasd 
 @connect()
 export default class VisualList extends Component {
