@@ -10,7 +10,7 @@
     "build": "webpack --mode=production --config config/webpack.prod.js",
     "lint": "eslint --ext .js src"
   },
-  "pre-commit": [
+  "precommit": [
     "lint"
   ],
   "author": "",
