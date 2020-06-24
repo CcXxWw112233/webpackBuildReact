@@ -8,12 +8,8 @@
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --config config/webpack.prod.js",
-    "lint": "eslint --ext .js src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "lint": "eslint --ext .js src",
+    "precommit": "npm run lint"
   },
   "author": "a",
   "license": "ISC",
@@ -53,6 +49,7 @@
     "husky": "^0.12.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "react-hot-loader": "^4.12.12",
