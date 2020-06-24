@@ -8,8 +8,12 @@
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --config config/webpack.prod.js",
-    "lint": "eslint --ext .js src",
-    "precommit": "npm run lint"
+    "lint": "eslint --ext .js src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "author": "a",
   "license": "ISC",
