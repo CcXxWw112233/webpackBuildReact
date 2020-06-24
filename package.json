@@ -8,8 +8,21 @@
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --config config/webpack.prod.js",
-    "lint": "eslint --ext .js src",
-    "precommit": "lint-staged"
+    "lint": "eslint --ext .js ./src --fix",
+    "prettier": "prettier --write src/**/*.js",
+    "precommit": "pretty-quick --staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "author": "a",
   "license": "ISC",
@@ -52,6 +65,7 @@
     "lint-staged": "^10.2.11",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
     "react-hot-loader": "^4.12.12",
     "redbox-react": "^1.4.3",
     "sass-loader": "^7.3.1",
