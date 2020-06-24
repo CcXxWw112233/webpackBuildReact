@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { List } from 'react-virtualized';
 import { connect } from 'react-redux';
-@connect()
+// @connect()
 export default class VisualList extends Component {
     constructor(props) {
         super(props)

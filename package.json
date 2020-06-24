@@ -10,9 +10,11 @@
     "build": "webpack --mode=production --config config/webpack.prod.js",
     "lint": "eslint --ext .js src"
   },
-  "precommit": [
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "author": "a",
   "license": "ISC",
   "devDependencies": {
@@ -23,6 +25,7 @@
     "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-dva-hmr": "^0.4.1",
     "babel-plugin-import": "^1.11.0",
