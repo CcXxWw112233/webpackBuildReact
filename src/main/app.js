@@ -1,7 +1,7 @@
 import React, { Component, Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import { hot } from 'react-hot-loader/root';
-
+import NotFound from '../page/NotFound'
 // import Home from '../page/Home'
 // import About from '../page/About'
 // import Topics from '../page/Topics'
