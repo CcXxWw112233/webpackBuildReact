@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const { srcPath, indexJsPath, indexHtmlPath } = require('./webpack/file.path.js')
 var path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 // 生成HTML文件
 const generateIndex = new HtmlWebpackPlugin({
     inject: 'body',
@@ -41,20 +43,25 @@ module.exports = {
                 test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']
             }, {
                 test: /\.less$/,
-                use: ['style-loader',
+                use: [
+                    // 'style-loader',
+                    MiniCssExtractPlugin.loader, //可以打包出一个单独的css文件
+                    "css-loader",
+                    "postcss-loader",
                     {
-                        loader: "css-loader",
-                        options: {
-                            modules: true
-                        }
-                    }, {
                         loader: 'less-loader',
                         options: {
                             modules: true
                         }
                     }]
             }, {
-                test: /\.css$/, use: ['style-loader', 'css-loader']
+                test: /\.css$/,
+                use: [
+                    // 'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    "postcss-loader"
+                ]
             }, {
                 test: /\.(html)$/,
                 use: {
@@ -94,6 +101,10 @@ module.exports = {
         //解决函数组件没 import React from 'react'报错
         new webpack.ProvidePlugin({
             "React": "react",
-        })
+        }),
+        new MiniCssExtractPlugin({ //css打包单独立一个文件，而不是在js中生成
+            filename: '[name].[hash].css',
+            chunkFilename: '[id].[hash].css',
+        }),
     ]
 }
