@@ -1,0 +1,214 @@
+// 更多选项的样式
+.more_select {
+  min-height: 60px;
+  line-height: 60px;
+  // margin-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+  .more_label {
+    margin-right: 16px;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .select_item {
+    min-width:80px;
+    height:28px;
+    background:rgba(245,245,245,1);
+    border-radius:4px;
+    // opacity:0.9;
+    border:1px solid rgba(0,0,0,0.15);
+    line-height: 14px;
+    text-align: center;
+    padding: 6px 10px;
+    margin-right: 16px;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+}
+
+/* 完成期限 S */
+.complet_deadline {
+  min-height: 54px;
+  line-height: 54px;
+  border-bottom: 1px solid #e8e8e8;
+  .select_number {
+    width:88px;
+    height:32px;
+    background:rgba(255,255,255,1);
+    border-radius:4px;
+    border:1px solid rgba(217,217,217,1);
+    margin-right: 8px;
+    margin-left: 16px;
+  }
+  .select_day {
+    width:88px;
+    height:32px;
+    background:rgba(255,255,255,1);
+    border-radius:4px;
+    border:1px solid rgba(217,217,217,1);
+    margin-right: 16px;
+    border: 0 none;
+    margin-right: 8px;
+  }
+}
+/* 完成期限 E */
+
+// 填写人 审批人  抄送人样式
+.fill_person {
+  min-height: 54px;
+  // line-height: 54px;
+  border-bottom: 1px solid #e8e8e8;
+  // display: flex;
+  // align-items: center;
+  padding: 20px 0 16px 0;
+  .label_person {
+    margin-right: 12px;
+    // margin-top: 14px;
+    flex-shrink: 0;
+  }
+}
+
+// 添加审批人等的样式
+.overlay_pricipal {
+  // height:168px;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 2px 8px 0px rgba(0,0,0,0.15);
+  border-radius:4px;
+  min-width: 200px !important;
+  max-width: 200px !important;
+  :global {
+    li {
+      line-height: 32px !important;
+      height     : 32px !important;
+      text-align: center;
+      color:rgba(0,0,0,0.65);
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+        color:rgba(0,0,0,0.65);
+      }
+    }
+    .anticon {
+      margin-right: 0;
+    }
+  }
+}
+
+.addNoticePerson {
+  width:32px;
+  height:32px;
+  border:1px solid rgba(24,144,255,1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 4px;
+  .plus_icon {
+    color: #1890FF;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+  // 每一个用户的样式
+.user_item {
+    padding   : 2px 8px;
+    box-sizing: border-box;
+    cursor    : pointer;
+
+    // &:hover {
+    //   border: 1px solid #b1b1b1;
+    // }
+    .img_hover, .default_user_hover {
+      &:hover {
+        border: 1px solid #b1b1b1;
+      }
+    }
+
+    .userItemDeleBtn {
+      display          : none;
+      width            : 14px;
+      height           : 14px;
+      border-radius    : 4px;
+      position         : absolute;
+      background       : url(../../../../assets/workbench/close-circle@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+      transition       : all 0.3s;
+    }
+
+    .userItemDeleBtn:hover {
+      background       : url(../../../../assets/workbench/close-circle-active@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+    }
+}
+
+.user_item:hover .userItemDeleBtn {
+  display   : inline-block;
+  top       : 0px;
+  right     : 6px;
+  transition: all 0.3s;
+}
+
+/* 备注 S */
+.select_remarks {
+  min-height: 88px;
+  // line-height: 88px;
+  padding-top: 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+  .remarks_content {
+    // width:866px;
+    min-height:38px;
+    // background:rgba(255,255,255,1);
+    border-radius:4px;
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    // color:rgba(0,0,0,0.25);
+    line-height: 38px;
+    margin-top: 4px;
+    cursor: pointer;
+    padding-left: 2px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+/* 备注 E */
+
+/* 关联内容 S */
+.select_related {
+  min-height: 95px;
+  padding-top: 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+  .related_content {
+    height: 38px;
+    line-height: 38px;
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(0,0,0,0.25);
+    margin-top: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding-left: 2px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+/* 关联内容 E */
+
+// 更多选项的删除按钮
+.del_moreIcon {
+  margin-left: 8px;
+  color: rgba(0,0,0,0.25);
+  cursor: pointer;
+  &:hover {
+    color: rgba(0,0,0,0.45);
+  }
+}

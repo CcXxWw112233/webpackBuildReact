@@ -1,0 +1,39 @@
+.popover_title {
+  width: 280px;
+  height: 54px;
+  line-height: 54px;
+  font-size:16px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(0,0,0,0.85);
+}
+
+.treeWrapper {
+ max-width: 315px;
+ min-height: 235px;
+ max-height: 235px;
+ overflow-y: auto;
+ margin: 0px -16px;
+ border-bottom: 1px solid #e8e8e8;
+ overflow-x: hidden;
+ :global {
+  .ant-tree-node-content-wrapper {
+    width: calc(84%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+ }
+}
+
+.fileds_button {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    width:120px;
+    height:38px;
+    border-radius:4px;
+  }
+}

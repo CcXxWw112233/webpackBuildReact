@@ -1,0 +1,23 @@
+.draw_field_detail {
+  :global {
+    .ant-drawer-header {
+      width: 280px !important;
+    }
+    .ant-drawer-content {
+      overflow: hidden;
+    }
+  }
+}
+
+// 完全隐藏
+.hide_over {
+  :global {
+      .ant-drawer-content-wrapper {
+          transform: translateX(110%) !important;
+          .ant-drawer-content {
+            display: none;
+            opacity: 0;
+          }
+      }
+  }
+}

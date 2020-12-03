@@ -1,0 +1,100 @@
+.notice_out {
+    padding         : 16px;
+    z-index         : 99999;
+    position        : fixed;
+    right           : 24px;
+    top             : 24px;
+    background-color: #ffffff;
+    overflow        : hidden;
+    box-shadow      : 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+
+    .picture_list {
+        margin-top    : 12px;
+        max-height    : 190px;
+        // overflow-y : scroll;
+        overflow-x    : hidden;
+        padding-bottom: 16px;
+
+        :global {
+            .ant-upload-list-item-card-actions {
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .top {
+        display        : flex;
+        justify-content: space-between;
+
+        .info_icon {
+            font-size: 20px;
+        }
+
+        .message {
+            flex        : 1;
+            color       : rgba(0, 0, 0, 0.85);
+            padding-left: 10px;
+            line-height : 30px;
+        }
+
+        .close {
+            font-size: 20px;
+            cursor   : pointer;
+        }
+    }
+}
+
+.notice_out_normal {
+    width     : 440px;
+    max-height: 260px;
+    min-height: 130px;
+}
+
+.notice_out_mini {
+    width     : 130px;
+    max-height: 100px;
+    min-height: 60px;
+}
+
+
+.file_out {
+    .upload_file_item {
+        width: 408px;
+        display: flex;
+        padding: 16px;
+        box-sizing: border-box;
+        border: 1px solid #f2f2f2;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        .upload_file_item_left {
+            width: 50px;
+            height: 40px;
+            margin-right: 12px;
+            img {
+                width: 50px;
+                height: 40px;
+            }
+        }
+        .upload_file_item_right {
+            width: 320px;
+            .upload_file_item_name {
+                width: 320px !important;
+            }
+            .upload_file_item_percent {
+                width: 320px !important;
+                box-sizing: border-box;
+                :global {
+                    .ant-progress-inner {
+                        height: 2px;
+                    }
+                }
+            }
+        }
+    }
+    .error {
+        color: rgba(245, 34, 55, 1);
+        border-color:  rgba(245, 34, 55, 1);
+    }
+}

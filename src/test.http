@@ -1,0 +1,30 @@
+GET http://localhost:8661/api/workbenchs/gantt_chart HTTP/1.1
+
+@hostname = localhost
+@port = 8661
+@host = {{hostname}}:{{port}}
+@contentType = application/json;charset=UTF-8
+@createdAt = {{$datetime iso8601}}
+
+###
+
+@name = hello
+
+PATCH  http://{{hostname}}:{{port}}/api/workbenchs/gantt_chart/card/dependency HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTE5NTI1MDcsInVzZXJJZCI6IjExOTI3NTMxNzk1NzAzNDM5MzYifQ.iZXQqA1VymeMJP74SIwEXt4ExqURWsAU9FIf2vjGxsU
+
+{
+    "board_id": "0",
+    "_organization_id": "1192754064144863232"
+}
+
+###
+
+PATCH https://{{host}}/authors/{{name}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "content": "foo bar",
+    "created_at": {{createdAt}}
+}

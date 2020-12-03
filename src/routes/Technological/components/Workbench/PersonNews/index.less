@@ -1,0 +1,79 @@
+@import "../../../../../globalset/css/constant";
+.person_news_out{
+  background-color: #ffffff;
+  height: auto;
+  //position: fixed;
+  position: relative;
+  top: 0;
+  z-index: 1;
+  border: 1px solid rgba(217,217,217,1);
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+  border-radius: 0 0 4px 4px;
+  padding: 0;
+
+  .contain1{
+    margin: 0 16px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    .contain1_one{
+      font-size: 14px;
+      color: #8C8C8C;
+      margin-right: 12px;
+      cursor: pointer;
+    }
+    .contain1_one:hover {
+      color: #262626;
+    }
+  }
+  .spin_turn{
+    position: absolute;
+    color: rgb(176,176,176);
+    height: 20px;
+    text-align: center;
+    width: 48px;
+    line-height: 20px;
+    border: 1px solid rgba(217,217,217,1);
+    border-top: none;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+    border-bottom: -44px;
+    left: 50%;
+    margin-left: -24px;
+    background-color: #ffffff;
+    border-radius: 0 0 4px 4px ;
+    cursor: pointer;
+  }
+  .bott_opacity{
+    width: 100%;
+    height: 30px;
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    bottom: 0;
+  }
+  .contain2, .contain2_hide{
+    height: auto;
+    min-height: 120px;
+    //overflow: hidden;
+  }
+  .contain2{
+    border-top: 1px solid #f5f5f5;
+  }
+  .contain2_hide{
+    height: 0;
+  }
+
+}
+.mask{
+  position: fixed;
+  background: rgba(0,0,0,.4);
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.ellipsis {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

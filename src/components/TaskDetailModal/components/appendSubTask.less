@@ -1,0 +1,344 @@
+// 添加时间的样式
+.add_due_time {
+  position: relative;
+  cursor: pointer;
+  .sub_icon {
+    font-size: 18px;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 4px;
+  }
+  input {
+    cursor: pointer;
+  }
+}
+
+.add_due_time:hover .sub_icon {
+  color: #40a9ff;
+  background: rgba(230, 247, 255, 1);
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.user_pr {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  // vertical-align: middle;
+  line-height: 16px;
+  border-radius: 4px;
+  margin-left: 12px;
+}
+.sub_executor {
+  font-size: 18px;
+}
+.user_pr:hover .sub_executor {
+  color: #40a9ff;
+  background: rgba(230, 247, 255, 1);
+}
+
+.cancel {
+  cursor: pointer;
+  &:hover {
+    color: #1890ff;
+  }
+}
+
+.overlay_sub_pricipal {
+  :global {
+    li {
+      line-height: 40px !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.04) !important;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      > div {
+        width: 100%;
+      }
+    }
+    .anticon {
+      margin-right: 0;
+    }
+    .ant-dropdown-menu-item-selected {
+      background: rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      color: rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+.del_icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 16px;
+  margin-top: 10px;
+  margin-left: -20px;
+  cursor: pointer;
+  display: block;
+  > span {
+    font-size: 18px;
+  }
+  &:hover {
+    background: rgba(255, 241, 240, 1);
+    color: #ff7875;
+  }
+}
+
+.active_icon {
+  // margin-left: -32px;
+  margin-bottom: 12px;
+  // margin-left: 9px;
+}
+
+// .active_icon:hover .del_icon {
+//   display: block;
+// }
+
+// .active_icon:hover .subTaskItemWrapper_active {
+//   padding-left: 26px !important;
+// }
+
+.subTaskItemWrapper {
+  // display: flex;
+  // align-items: center;
+  // padding-left: 46px;
+  flex: 1;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 9px 12px;
+  border-radius: 4px;
+  /* 公共点击完成卡片的样式 S */
+  .nomalCheckBox {
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    line-height: 12px;
+    border: 2px solid #8c8c8c;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+    &:hover {
+      border: 2px solid #40a9ff;
+    }
+  }
+  .nomalCheckBoxActive {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    line-height: 12px;
+    border: 2px solid #1890ff;
+    background-color: #1890ff;
+    border-radius: 4px;
+    margin-top: 12px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  /* 公共点击完成卡片的样式 E */
+  .card_name {
+    flex: 1;
+    // padding: 8px 12px;
+    min-height: 38px;
+    line-height: 38px;
+    padding-left: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 12px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  }
+  .sub_upload {
+    color: rgba(0, 0, 0, 0.65);
+    &:hover {
+      color: #1890ff;
+    }
+  }
+}
+
+// 设置时间的样式
+.due_time {
+  min-width: 80px;
+  position: relative;
+  padding: 0 12px;
+  box-sizing: border-box;
+  // height:38px;
+  border-radius: 4px;
+  text-align: center;
+  // padding: 8px 12px;
+  box-sizing: border-box;
+  // margin-right: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 5px;
+  &:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  .timeDeleBtn {
+    display: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    position: absolute;
+    background: url(../../../assets/workbench/close-circle@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .timeDeleBtn:hover {
+    background: url(../../../assets/workbench/close-circle-active@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  input {
+    cursor: pointer;
+  }
+}
+.due_time:hover .timeDeleBtn {
+  display: inline-block;
+  top: -4px;
+  right: -4px;
+  transition: all 0.3s;
+}
+
+.sub_filelist_wrapper {
+  padding-left: 16px;
+  .sub_filelist_item {
+    display: flex;
+    // justify-content: space-between;
+    margin-bottom: 10px;
+    .sub_file_icon {
+      color: #6294ff;
+      font-size: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .sub_file_name {
+      vertical-align: middle;
+      font-size: 14px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.65);
+      line-height: 12px;
+      margin-bottom: 10px;
+    }
+    .sub_file_creater {
+      font-size: 12px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.45);
+      line-height: 12px;
+    }
+    .sub_more_icon {
+      font-size: 16px;
+      &:hover {
+        color: #1890ff;
+      }
+    }
+  }
+}
+
+.filelist_wrapper {
+  // margin-left: -26px;
+  .file_item_wrapper {
+    // display: flex;
+    // align-items: center;
+    cursor: pointer;
+    margin-left: -22px;
+
+    .file_action {
+      // width: 16px;
+      font-size: 24px;
+      color: #1890ff;
+      margin-right: 8px;
+
+      i {
+        display: none;
+      }
+    }
+
+    .file_item {
+      // flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.65);
+      line-height: 38px;
+      height: 38px;
+      // padding-left: 28px;
+      margin-left: 20px;
+      padding: 8px 12px;
+
+      .file_title {
+        max-width: 400px;
+        display: inline-flex;
+        align-items: center;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .file_name {
+        // word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .file_info {
+        text-align: right;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+      .breadNav {
+        display: none;
+        margin-left: 16px;
+        margin-right: 12px;
+        // display: block;
+        .Breadcrumb {
+          max-width: 330px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          .breadItem {
+            color: rgba(0, 0, 0, 0.45);
+          }
+        }
+      }
+    }
+  }
+
+  .file_item_wrapper:hover {
+    .file_action {
+      i {
+        display: inline;
+      }
+    }
+    .breadNav {
+      display: block;
+    }
+    .file_info {
+      display: none;
+    }
+  }
+}

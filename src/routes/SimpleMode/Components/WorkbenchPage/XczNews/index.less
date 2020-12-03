@@ -1,0 +1,88 @@
+.xczNewContainer {
+    position: relative;
+    // width   : 100%;
+    padding : 8px 8px;
+    width     : 100%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width : 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius     : 5px;
+        -webkit-box-shadow: inset 0 0 5px rgba(191, 191, 191, 1);
+        box-shadow        : inset 0 0 5px rgba(191, 191, 191, 1);
+        background        : #737372;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: 0;
+        box-shadow        : 0;
+        border-radius     : 0;
+        background        : #ffffff;
+    }
+
+
+    .container {
+        width : 1298px;
+        margin: 0 auto;
+    }
+
+    .boardSelectWapper {
+        padding-top: 48px;
+        height     : 100%;
+        width      : 736px;
+        margin     : 0 auto;
+
+        .groupName {
+            height     : 26px;
+            font-size  : 18px;
+            font-weight: 500;
+            color      : rgba(0, 0, 0, 0.85);
+            line-height: 26px;
+        }
+
+        .boardItemWapper {
+            display        : flex;
+            flex-wrap      : wrap;
+            justify-content: flex-start;
+            margin-bottom  : 48px;
+
+            .boardItem {
+                width          : 128px;
+                height         : 140px;
+                background     : rgba(255, 255, 255, 1);
+                text-align     : center;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                flex-direction : column;
+                cursor         : pointer;
+                margin-right   : 24px;
+                margin-top     : 24px;
+
+                .boardIcon {
+                    color      : #18B2FF;
+                    font-size  : 64px;
+                    width      : 64px;
+                    line-height: 64px;
+                }
+
+                .boardName {
+                    display    : inline-block;
+                    width      : 96px;
+                    height     : 44px;
+                    font-size  : 14px;
+                    font-weight: 500;
+                    color      : rgba(0, 0, 0, 0.65);
+                    line-height: 22px;
+                    overflow   : hidden;
+                }
+            }
+
+        }
+
+    }
+}

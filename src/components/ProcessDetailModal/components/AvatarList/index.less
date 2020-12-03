@@ -1,0 +1,66 @@
+.avatarList {
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: -5px;
+  ul {
+    display: inline-block;
+    padding-left: 0;
+    font-size: 0;
+    height: 20px;
+    line-height: 20px;
+  }
+}
+
+.avatarItem {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-left: -8px;
+  font-size: 32px;
+  // border: 1px solid #fff;
+  :global {
+    .ant-avatar {
+      border: 1px solid #fff;
+    }
+  }
+}
+
+.avatarItemLarge {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.avatarItemSmall {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.avatarItemMini {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  .ant-avatar {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0;
+    .ant-avatar-string {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  :global {
+    .ant-avatar {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 0;
+      .ant-avatar-string {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}

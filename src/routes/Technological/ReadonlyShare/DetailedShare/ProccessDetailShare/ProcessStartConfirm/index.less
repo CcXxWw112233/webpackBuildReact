@@ -1,0 +1,303 @@
+@import "../../../../../../globalset/css/constant";
+.toptitle{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #8c8c8c;
+  >div:nth-child(1){
+    margin-right: 10px;
+    background: #1890FF;
+    border-radius: 4px;
+    height: 20px;
+    width: 20px;
+  }
+}
+.editorWraper{
+  background: #FFFFFF;
+  margin-top: 14px;
+  color: #595959;
+  font-size: 14px;
+  border: 1px solid rgba(217,217,217,1);
+  border-radius: 4px;
+}
+
+
+//箭头
+@-webkit-keyframes spinup {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes spinup {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes spindown {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@keyframes spindown {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes hideBott {
+  from {
+    height: auto;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes hideBott {
+  from {
+    height: auto;
+  }
+  to {
+    height: 0;
+  }
+}
+@-webkit-keyframes showBott {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+@keyframes showBott {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+
+.upDown_up {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  animation: spinup 500ms ease;
+}
+.upDown_down {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  animation: spindown 500ms ease;
+}
+
+.ConfirmInfoOut_1{
+  margin-top: 16px;
+  //margin-bottom: 60px;
+  .ConfirmInfoOut_1_top{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   >div{
+     height: 46px;
+   }
+   .ConfirmInfoOut_1_top_left{
+     width: 40%;
+     margin-right: 5%;
+     display: flex;
+     align-items: center;
+     .ConfirmInfoOut_1_top_left_left{
+       background: #FFFFFF;
+       height: 40px;
+       width: 40px;
+       line-height: 36px;
+       border-radius: 40px;
+       border: 2px solid rgba(140,140,140,1);
+       font-size: 20px;
+       text-align: center;
+       margin-right: 12px;
+     }
+     .ConfirmInfoOut_1_top_left_right{
+       flex: 1;
+       div:nth-child(1){
+         font-size: 16px;
+         color: #595959;
+       }
+       div:nth-child(2){
+         font-size: 14px;
+         color: #8c8c8c;
+       }
+     }
+   }
+   .ConfirmInfoOut_1_top_right{
+     flex: 1;
+     display: flex;
+     color: @color-link-normal;
+     font-size: 14px;
+     justify-content: flex-end;
+     align-items: center;
+     >div{
+       cursor: pointer;
+        margin-right: 8px;
+     }
+   }
+ }
+  .ConfirmInfoOut_1_bottNormal, .ConfirmInfoOut_1_bottShow{
+    padding-top: 6px;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    .ConfirmInfoOut_1_bott_left{
+      width: 40px;
+      margin-right: 12px;
+    }
+    .ConfirmInfoOut_1_bott_right{
+      flex: 1;
+      //里程碑详情描述
+      .ConfirmInfoOut_1_bott_right_dec{
+        font-size: 12px;
+        color: #595959;
+      }
+      .ConfirmInfoOut_1_bott_right_operate{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 20px;
+        div:nth-child(1){
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 14px;
+          color: @color-link-normal;
+        }
+      }
+
+      //上传
+      .fileList{
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+      }
+      .uploadAreaOut{
+        height: auto;
+      }
+      .uploadArea {
+        cursor: pointer;
+        width: 748px;
+        height: 60px;
+        margin-top: 14px;
+        padding: 0 20px;
+        background-color: rgba(24,144,255,.1);
+        border-radius: 4px;
+        border: 1px #1890FF dashed;
+        display: flex;
+        align-items: center;
+        .uploadArea_left{
+          width: 36px;
+          height: 30px;
+          margin-right: 12px;
+          .uploadArea_right{
+            flex: 1;
+            .uploadArea_right_l {
+              color: @color-link-normal;
+              font-size: 16px;
+            }
+            .uploadArea_right_r {
+              color: #8c8c8c;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      // 抄送
+      .copy{
+       margin-top: 14px;
+        .title{
+          color: #8c8c8c;
+          font-size: 12px;
+        }
+        .imglist{
+          margin-top: 10px;
+          display: flex;
+        }
+      }
+
+      //  填写
+      .fill{
+        margin-top: 14px;
+        .EditFormThreeOneOut{
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          .EditFormThreeOneOut_delete{
+            height: 18px;
+            width: 18px;
+            border-radius: 18px;
+            text-align: center;
+            background-color: red;
+            margin-right: 14px;
+            >div{
+              background-color: #FFFFFF;
+              height: 2px;
+              width: 10px;
+              margin: 0 auto;
+              margin-top: 8px;
+            }
+          }
+          .EditFormThreeOneOut_form{
+            background: #FBFBFB;
+            flex: 1;
+            border: 1px solid rgba(217,217,217,1);
+            border-radius: 4px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            .EditFormThreeOneOut_form_left{
+              width: 28px;
+              height: 28px;
+              margin-right: 12px;
+            }
+            .EditFormThreeOneOut_form_right{
+              display: flex;
+              flex: 1;
+              .EditFormThreeOneOutItem{
+                font-size: 12px;
+                margin-right: 8px;
+                p{
+                  color: #8c8c8c;
+                  margin-bottom: 4px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+  .ConfirmInfoOut_1_bottNormal{
+    height: 0;
+    //animation: hideBott 1000ms ease;
+  }
+  .ConfirmInfoOut_1_bottShow{
+    //height: auto;
+    //animation: showBott 1000ms ease;
+  }
+}
+
+.confirmOutCard{
+  min-width: @child_page_min_width;
+  margin: 0 auto;
+  margin-top: 40px;
+}

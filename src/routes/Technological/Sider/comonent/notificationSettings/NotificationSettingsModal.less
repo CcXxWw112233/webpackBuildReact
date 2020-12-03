@@ -1,0 +1,92 @@
+.wrapper {
+    min-height: 200px;
+    // background: pink;
+    .top {
+        text-align: left;
+        font-size:16px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(89,89,89,1);
+        line-height:22px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid;
+        border-color: rgba(0,0,0,0.09);
+        margin-bottom: 24px;
+        .checkbox {
+            display: flex;
+        }
+    }
+    .contant {
+        text-align: left;
+        font-size:16px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(89,89,89,1);
+        line-height:22px;
+        .radio {
+            margin-bottom: 8px;
+            .detail_recover {
+                cursor: pointer;
+                color: #1890FF;
+            }
+            .simple_recover {
+                cursor: pointer;
+                color: #1890FF;
+            }
+        }
+        .set_options {
+            max-height: 316px;
+            overflow-y: auto;
+            padding: 16px;
+            font-size:14px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(89,89,89,1);
+            line-height:22px;
+            // border: 1px solid #ccc;
+            background:rgba(255,255,255,1);
+            border:1px solid rgba(233,233,233,1);
+            // box-shadow:0px 4px 12px 0px rgba(0,0,0,0.2);
+            border-radius:4px;
+            .project, .task, .process, .file {
+                cursor: pointer;
+                // margin-bottom: 16px;
+                .contain {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 0 14px;
+                }
+            }
+        }
+        .daily_agent {
+            margin-top: 25px;
+            border-top: 1px solid rgba(0,0,0,0.09);
+            text-align: center;
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                font-size:16px;
+                font-family:PingFangSC;
+                font-weight:400;
+                color:rgba(89,89,89,1);
+                line-height:22px;
+            }
+            div {
+                font-size:12px;
+                font-family:PingFangSC;
+                font-weight:400;
+                color:rgba(0,0,0,0.45);
+                line-height:22px;
+            }
+        }
+    }
+}
+
+:global {
+    .ant-checkbox-group-item {
+        margin-right: 20px;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,286 @@
+.pub_hover {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+  }
+}
+
+.custom_operate_wrapper {
+  .custom_field_item_wrapper {
+    margin-left: -24px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .custom_field_item {
+    display: flex;
+    color: rgba(0, 0, 0, 0.45);
+    // padding-left: 24px;
+    padding-left: 16px;
+    .c_left {
+      display: flex;
+      align-items: center;
+      margin-left: -24px;
+      min-width: 150px;
+      max-width: 150px;
+      max-height: 38px;
+      line-height: 30px;
+      position: relative;
+      color: rgba(0, 0, 0, 0.65);
+      margin-right: 24px;
+      .delete_icon {
+        display: none;
+        position: absolute;
+        left: 5px;
+        cursor: pointer;
+        &:hover {
+          color: rgba(0, 0, 0, 0.65);
+        }
+      }
+    }
+    .c_left:hover .delete_icon {
+      display: block;
+    }
+    .field_name {
+      max-width: 120px;
+      padding: 4px 8px;
+      // height:38px;
+      // line-height: 38px;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-right: 4px;
+      font-weight: 500;
+      border-radius: 4px;
+      margin-left: 24px;
+      .field_name_icon {
+        font-size: 16px;
+        margin-right: 9px;
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.04);
+      }
+      border-radius: 4px;
+    }
+    .field_value {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 4px;
+      position: relative;
+      .field_selected {
+        display: flex;
+        justify-content: space-between;
+        .field_s_item {
+          // flex: 1;
+          margin-right: 12px;
+          flex-wrap: wrap;
+          margin-bottom: 4px;
+          .field_s_item_bg {
+            // height:26px;
+            background: rgba(0, 0, 0, 0.04);
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 2px 8px;
+            .field_s_item_close {
+              color: rgba(0, 0, 0, 0.45);
+              &:hover {
+                color: rgba(0, 0, 0, 0.65);
+              }
+            }
+          }
+        }
+      }
+      :global {
+        .ant-upload-select {
+          width: 100%;
+        }
+      }
+    }
+    .common_input {
+      height: 38px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      border: none;
+      margin-right: 8px;
+      :global {
+        .ant-input-number-input {
+          height: 38px;
+        }
+      }
+    }
+  }
+
+  .overlay_common {
+    min-height: 128px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    max-width: calc(100% - 150px);
+    max-height: 250px;
+    overflow-y: auto;
+    :global {
+      .ant-menu-item-selected {
+        display: flex;
+        justify-content: space-between;
+        > div {
+          display: block !important;
+        }
+      }
+    }
+  }
+  .common_select {
+    display: flex;
+    > span:nth-child(1) {
+      flex: 1;
+    }
+  }
+}
+
+/* 添加执行人下拉样式 S */
+.overlay_pricipal {
+  left: 0px !important;
+  min-width: 248px !important;
+  max-width: 248px;
+  :global {
+    li {
+      line-height: 40px !important;
+      height: 40px !important;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.04) !important;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .ant-menu-item-selected {
+        background: rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        color: rgba(0, 0, 0, 0.45);
+      }
+
+      .anticon {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// 每一个用户的样式
+.user_item {
+  padding: 2px 8px;
+  box-sizing: border-box;
+  margin-left: 24px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.09);
+    border-radius: 4px;
+  }
+
+  .usericon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .userItemDeleBtn {
+    display: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    position: absolute;
+    background: url(../../assets/workbench/close-circle@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s;
+  }
+
+  .userItemDeleBtn:hover {
+    background: url(../../assets/workbench/close-circle-active@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.user_item:hover .userItemDeleBtn {
+  display: inline-block;
+  top: -4px;
+  right: -4px;
+  transition: all 0.3s;
+}
+
+.file_item {
+  // width:842px;
+  min-height: 38px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px 8px;
+  margin-top: 8px;
+  .file_theme_code {
+    font-size: 24px;
+    color: #1890ff;
+    vertical-align: middle;
+  }
+  .file_name {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+  }
+  .del_name {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(245, 34, 45, 1);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .down_name {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1890ff;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+}
+
+.upload_file_progress {
+  :global {
+    .ant-progress-bg {
+      height: 2px !important;
+    }
+  }
+}
+
+.custom_operate_wrapper {
+  .custom_field_item_wrapper_1 {
+    .custom_field_item {
+      flex-direction: column;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      padding-bottom: 12px;
+      padding-left: 0;
+      margin-left: 24px;
+      .c_left {
+        max-width: none;
+        flex: 1;
+        .delete_icon {
+          right: 12px;
+          left: auto;
+        }
+        .field_name {
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.65);
+          max-width: none;
+        }
+      }
+    }
+  }
+}

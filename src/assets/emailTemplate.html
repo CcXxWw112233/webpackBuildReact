@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+  <title>Title</title>
+</head>
+<style type="text/css">
+  *,html,body{
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+  }
+  html,body{background-color: #f5f5f5;
+   font-family: "苹方 常规",PingFangSC-Regular
+  }
+  .page_style_1 {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 80px;
+    padding-top: 168px;
+  }
+  .card{
+    width: 100%;
+    max-width: 472px;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 4px;
+    padding: 64px 20px 80px 20px ;
+    box-sizing: border-box;
+  }
+  .circleDec{
+    display: flex;
+    justify-content: center;
+  }
+  .circle{
+    width: 46px;
+    height: 46px;
+    margin-right: 18px;
+    border-radius: 64px;
+    background: -webkit-linear-gradient(top,#28CAFF ,#0C68FF );
+    background: -o-linear-gradient(top,#28CAFF ,#0C68FF);
+    background: -moz-linear-gradient(top,#28CAFF ,#0C68FF);
+    /*background: -mos-linear-gradient(top,#28CAFF ,#0C68FF);*/
+    background: linear-gradient(top,#28CAFF ,#0C68FF);
+  }
+  .productName{
+    text-align: center;
+    height: 46px;
+    line-height: 46px;
+    font-size: 24px;
+    color: #262626;
+    font-family: PingFangSC-Medium, sans-serif;
+  }
+  .description{
+    margin-top: 32px;
+    color: #262626;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .btn{
+    height: 40px;
+    width: 272px;
+    background-color: #1890FF;
+    color: #FFFFFF;
+    display: block;
+    margin: 32px auto 0;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+  }
+  .btn:hover{
+    background-color:  #40A9FF;
+  }
+  .btn:active{
+    background-color: #096DD9 ;
+  }
+  .link{
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-top: 14px;
+    word-wrap:break-word;overflow:hidden;
+    line-height: 20px;
+  }
+  .CopyrightOuter{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #8C8C8C;
+    padding: 0 5%;
+  }
+  @media only screen and (max-width: 600px) {
+    .page_style_1 {
+      padding-top: 0;
+    }
+  }
+</style>
+<body style="height: 100%">
+  <div class="page_style_1">
+    <div class="card">
+      <div class="circleDec">
+        <div class="circle"></div>
+        <div class="productName">productName</div>
+      </div>
+      <div class="description">
+        #用户名#：你好，我们收到了你的重置账户密码请求，确认请链接下列按钮或使用链接前往密码修改页面，如有疑问请发送邮件到如下地址与我们联系：app.di-an.com，本邮件为系统发出，请勿直接回复。
+      </div>
+      <button class="btn">修改密码</button>
+      <div class="description">若按钮无法点击，你可以复制到浏览器地址打开或点击下面链接确认</div>
+      <div class="link">https://ProductName.com/account/changepassword?token=NDA4OTY6aVVGOXhwbEdDRFFtcUZXSmRYcXhOQ2t1Qms0UGZVOGdFakg1bU5aeFN0bUtJc3loSTFiRlFMVUNPZ3hidUEyeg==</div>
+      <div class="description">为了保障你账号的安全，此链接将在你邮箱激活过一次后失效！若你没有访问过ProductName或没有进行上述操作，请忽略这封邮件。</div>
+    </div>
+    <div class="CopyrightOuter">
+      ©&nbsp;&nbsp;2018&nbsp;&nbsp;ProductName&nbsp;&nbsp;粤ICP备00000000号
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  window.onload  = function () {
+    //
+  }
+</script>
+</html>

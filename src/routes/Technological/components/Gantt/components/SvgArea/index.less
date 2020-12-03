@@ -1,0 +1,65 @@
+.path {
+    cursor  : pointer;
+    position: relative;
+    z-index : 1 !important;
+}
+
+.path_g:hover {
+    .path_arrow {
+        stroke-width: 2;
+        stroke      : rgb(227, 142, 146);
+        fill        : rgb(227, 142, 146);
+    }
+
+    .path_line {
+        stroke      : rgb(227, 142, 146);
+        stroke-width: 2;
+    }
+}
+
+.path_line:hover {}
+
+.path_arrow:hover {}
+
+.operate_wrapper {
+    width: 160px;
+
+    .top {
+        display        : flex;
+        justify-content: space-between;
+        font-size      : 18px;
+
+        >div {
+            cursor: pointer;
+        }
+
+        .close {}
+
+        .delete {
+            color: rgb(245, 34, 45);
+        }
+    }
+
+    .color_wrapper {
+        margin-top: 10px;
+        display   : flex;
+
+        .color_selector {
+            width        : 20px;
+            height       : 20px;
+            margin-right : 8px;
+            cursor       : pointer;
+            border-radius: 20px;
+        }
+
+        .selected {
+            border    : 3px solid #9F9F9F;
+            margin-top: -3px;
+            box-sizing: initial;
+        }
+
+        :last-child {
+            margin-right: 0;
+        }
+    }
+}

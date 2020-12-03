@@ -1,0 +1,55 @@
+.draw_detail {
+    :global {
+        .ant-drawer-header {
+            position        : fixed;
+            height          : 57px;
+            width           : 396px;
+            background-color: #ffffff !important;
+            z-index: 3;
+        }
+
+        .ant-drawer-header,
+        .ant-drawer-body {
+            padding: 16px 14px !important;
+        }
+
+        .ant-drawer-content {
+            overflow: auto !important;
+
+            &::-webkit-scrollbar {
+                /*滚动条整体样式*/
+                width        : 4px;
+                /*高宽分别对应横竖滚动条的尺寸*/
+                height       : 8px;
+                border-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                /*滚动条里面小方块*/
+                border-radius     : 5px;
+                -webkit-box-shadow: inset 0 0 5px #bfbfbf;
+                background        : #bfbfbf;
+            }
+
+            &::-webkit-scrollbar-track {
+                /*滚动条里面轨道*/
+                -webkit-box-shadow: inset 0 0 5px #E8E8E8;
+                border-radius     : 8px;
+                background        : #E8E8E8;
+            }
+        }
+    }
+}
+
+// 完全隐藏
+.hide_over {
+    :global {
+        .ant-drawer-content-wrapper {
+            transform: translateX(110%) !important;
+            .ant-drawer-content {
+                display: none;
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,256 @@
+.mainContentWapper {
+    margin          : 0 auto;
+    height          : 0 auto;
+    // padding      : 32px;
+    padding         : 4px 0 36px 0;
+    border-radius   : 16px;
+    filter          : blur(0px);
+    width           : 810px;
+
+}
+
+.myWorkbenchBoxWapper {
+    display  : flex;
+    flex-wrap: wrap;
+
+    .myWorkbenchBox {
+        width               : 136px;
+        height              : 136px;
+        // background       : rgba(255, 255, 255, 0.2);
+        border-radius       : 6px;
+        margin-right        : 32px;
+        margin-top          : 32px;
+        padding-top         : 18px;
+        vertical-align      : middle;
+        text-align          : center;
+        cursor              : pointer;
+        background          : rgba(255, 255, 255, 0.1);
+
+        .myWorkbenchBox_icon {
+            font-style : 'normal';
+            font-size  : 48px;
+            color      : rgba(255, 255, 255, 1);
+            line-height: 48px;
+            margin     : 0px !important;
+        }
+
+        .myWorkbenchBox_title {
+            font-size  : 16px;
+            font-weight: 100;
+            color      : rgba(255, 255, 255, 1);
+            line-height: 24px;
+            margin     : 4px 0 0 0 !important;
+        }
+
+        .myWorkbenchBox_add {
+            font-style : 'normal';
+            font-size  : 48px;
+            color      : rgba(255, 255, 255, 1);
+            line-height: 96px !important;
+        }
+    }
+
+    .myWorkbenchBox:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .myWorkbenchBox:nth-child(5n) {
+        margin-right: 0
+    }
+
+    .myWorkbenchBox[disabled] {
+        opacity   : 0.5;
+        cursor    : not-allowed;
+        background: rgba(255, 255, 255, 0.1)
+    }
+
+    .myWorkbenchBox[disabled]:hover {
+        opacity   : 0.5;
+        cursor    : not-allowed;
+        background: rgba(255, 255, 255, 0.1)
+    }
+
+    .myWorkbenchBox2[disabled] {
+        background: none !important;
+    }
+
+    .myWorkbenchBox2[disabled]:hover {
+        background: none !important;
+    }
+}
+
+.feature_item,
+.feature_item2 {
+    border-top     : 1px solid rgba(255, 255, 255, 0.15);
+    display        : flex;
+    font-style     : 14px;
+    color          : #ffffff;
+    height         : 40px;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 0 20px;
+    cursor         : pointer;
+
+    .feature_item_lf {
+        height       : 22px;
+        background   : rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        text-align   : center;
+        padding      : 0 4px;
+
+        span:nth-child(1) {
+            margin-right: 2px;
+        }
+    }
+
+    .feature_item_middle {
+        flex   : 1;
+        padding: 0 18px;
+
+        .feature_item_middle_orgname {
+            color       : rgba(255, 255, 255, 0.65);
+            font-size   : 12px;
+            padding-left: 18px;
+        }
+
+        span:nth-child(1) {
+            margin-right: 4px;
+        }
+    }
+
+    .feature_item_rt {
+        text-align: right;
+    }
+    .feature_item_reject {
+        width:44px;
+        height:22px;
+        background:rgba(255, 255, 255, 0.2);
+        border-radius:4px;
+        color: #FF7875;
+        text-align: center;
+        font-size:12px;
+        font-weight:500;
+        line-height: 22px;
+        margin-left: 8px;
+    }
+}
+
+.feature_item:hover,
+.feature_item2:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.feature_item2 {
+    height     : 56px;
+    align-items: flex-start;
+    padding-top: 8px;
+    box-sizing : border-box;
+}
+
+.nodataArea {
+
+    color     : rgba(255, 255, 255, 0.65);
+    margin    : 0 auto;
+    text-align: center;
+    margin-top: 30px;
+
+    .alarm {
+        font-size  : 88px;
+        line-height: 88px;
+
+    }
+
+    .title {
+        font-size: 14px;
+    }
+}
+
+.nodataArea2 {
+
+    display        : flex;
+    width          : 748px;
+    height         : 92px;
+    justify-content: center;
+    align-items    : center;
+    margin         : 0 auto;
+    background     : rgba(255, 255, 255, 0.1);
+    color          : #ffffff;
+    border-radius  : 6px;
+    margin-bottom  : 20px;
+
+    .alarm {
+        font-size  : 40px;
+        line-height: 40px;
+
+    }
+
+    .title {
+        font-size  : 14px;
+        margin-left: 10px;
+    }
+}
+
+.overlay_featurebox_dropdown {
+ min-width: 120px !important;  
+}
+
+@media screen and(max-width:1366px) {
+    .mainContentWapper {
+        width: 472px;
+
+        .myWorkbenchBox:nth-child(5n) {
+            margin-right: 32px
+        }
+
+        .myWorkbenchBox:nth-child(3n) {
+            margin-right: 0
+        }
+    }
+
+    .nodataArea2 {
+        width: 472px !important;
+    }
+}
+
+.debounce_select_wrapper {
+    position: relative;
+    margin-top: -6px;
+    width: 100%;
+    // max-width: 100%;
+    // min-width: 96px;
+    display: flex;
+    margin-left: 16px;
+    > span {
+        color: #fff;
+        margin-top: 4px;
+    }
+    > div {
+        flex: 1
+    }
+    :global {
+        .ant-select-selection {
+            border: none;
+            box-shadow: none;
+            background: transparent;
+            // margin-top: -16px;
+            color: #fff;
+        }
+        .ant-select-selection__choice {
+            background-color: transparent;
+            color: #fff;
+            border-color: rgba(255,255,255,0.5);
+        }
+        .ant-select-selection__choice__remove {
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .ant-select-selection__rendered {
+            height: 32px;
+            > ul {
+                overflow: hidden;
+            }
+        }
+    }
+}

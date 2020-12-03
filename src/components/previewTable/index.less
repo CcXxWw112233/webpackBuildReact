@@ -1,0 +1,80 @@
+.tableContainer{
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    // height: 500px;
+    max-height: 340px;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 8px;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px  #bfbfbf;
+        background: #bfbfbf;
+    }
+    &::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px  #E8E8E8;
+        border-radius: 8px;
+        background: #E8E8E8;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    td,th{
+        // border-top: 1px solid rgba(0,0,0,0.15);
+        // border-right: 1px solid rgba(0,0,0,0.15);
+        border: 1px solid rgba(0,0,0,0.15);
+        text-align: center;
+        min-width: 60px;
+        vertical-align: middle;
+        // min-height: 24px;
+    }
+    tr > td:first-child{
+        border-left: 1px solid rgba(0,0,0,0.15);
+    }
+    tr{
+        height: 26px;
+    }
+    tr:last-child{
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+    .exportFile{
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+        margin-top: 5px;
+        &:hover {
+            color: #1890FF;
+        }
+    }
+    .sheetList{
+        position: sticky;
+        bottom: -10px;
+        padding-bottom: 10px;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        // border-left: 1px solid #ddd;
+        // border-bottom: 1px solid #ddd;
+        // border-right: 1px solid #ddd;
+        .sheetItem{
+            cursor: pointer;
+            &.activeTab {
+                background-color: #1890FF;
+                color: #fff;
+                transition: all .5s;
+            }
+            background-color: #fff;
+            display: inline-block;
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all .5s;
+        }
+    }
+}

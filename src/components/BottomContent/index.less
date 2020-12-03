@@ -1,0 +1,34 @@
+@import "../../globalset/css/constant";
+//底部整体
+.bottomWhole{
+  width: 274px;
+  margin: 0 auto;
+  height: auto;
+  border-top: 1px solid #E8E8E8;
+  margin-top: 36px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  .bottomWholeLeft{
+  }
+  .bottomWholeRight{
+    span{
+      color: @color-link-normal ;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    span:hover{
+      color: @color-link-hover ;
+    }
+    span:active{
+      color: @color-link-active ;
+    }
+    span:nth-child(2){
+      color: #BFBFBF;
+      font-size: 16px;
+      margin:0 8px 0 8px;
+    }
+  }
+}

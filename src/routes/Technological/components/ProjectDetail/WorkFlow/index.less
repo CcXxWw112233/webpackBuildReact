@@ -1,0 +1,280 @@
+.processOut {
+  padding-top: 32px;
+  padding-left: 20px;
+  
+  .processDefautOut {
+    /* 默认模板列表的样式 S */
+    .processDefautOut_top {
+      height: 280px;
+      // background: pink;
+      .title {
+        width:54px;
+        height:26px;
+        font-size:18px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(0,0,0,0.65);
+        line-height:26px;
+      }
+      /* 模板内容样式 -- TemplateContent -- S */
+      .templateContent {
+        padding-top: 18px;
+        padding-left: 64px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        /* 暂无数据样式 S */
+        .nodata {
+          display: flex;
+          width: 100%;
+          // align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 16px;
+          color: #8c8c8c;
+          margin-left: -42px;      
+          margin-top: 22px;
+        }
+        /* 暂无数据样式 E */
+        /* 新建模板样式 S */
+        .addTemplate {
+          display: inline-block;
+          margin-right: 88px;
+          .add_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width:106px;
+            height:136px;
+            background:rgba(255,255,255,1);
+            // background: palegoldenrod;
+            border:1px solid rgba(0,0,0,0.15);
+            box-shadow:0px 1px 4px 0px rgba(0,0,0,0.15);
+            // margin-bottom: 10px;
+            position: relative;
+            cursor: pointer;
+            // margin-left: 25px;
+            margin: 0 auto 10px;
+            flex-direction: column;
+          }
+          .add_name {
+            display: block;
+            text-align: center;
+            font-weight: 900;
+          }
+        }
+        /* 新建模板样式 E */
+        /* 每一项模板选项样式 -- TemplateItem -- S */
+        .templateItemContent {
+          display: flex;
+          overflow-x: auto;
+          height: 236px;
+          .tempItemWrapper {
+            display: inline-block;
+            margin: 0 auto;
+            width: 154px;
+            margin-right: 88px;
+            .tem_item {
+              // display: block;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              width:106px;
+              height:136px;
+              background:rgba(255,255,255,1);
+              // background: palegoldenrod;
+              border:1px solid rgba(0,0,0,0.15);
+              box-shadow:0px 1px 4px 0px rgba(0,0,0,0.15);
+              // margin-bottom: 10px;
+              position: relative;
+              cursor: pointer;
+              // margin-left: 25px;
+              margin: 0 auto 10px;
+              .tem_icon {
+                color: #91D5FF;
+                font-size: 24px;
+              }
+            }
+            .tem_item:hover .hover_icon_display .common_authority_hover {
+              // display: block;
+              transition: all 1s linear;
+              opacity: 1;
+            }
+            .hover_icon_display {
+              // display: flex;
+              // flex-direction: column;
+              // display: none;
+              z-index: 1;
+              position: absolute;
+              left: 0;
+              top: 0;
+              transition: all 1s linear;
+              display: flex;
+              flex-direction: column;
+              bottom: 0;
+              .common_authority_hover {// 有权限的人显示的样式
+                opacity: 0;
+                display: block;
+                width:106px;
+                height:45px;
+                background:rgba(0,0,0,0.65);
+                box-shadow:0px -1px 0px 0px rgba(255,255,255,1);
+                text-align: center;
+                line-height: 45px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                .hover_icon {
+                  // width:48px;
+                  height:20px;
+                  font-size:16px;
+                  // font-family:PingFangSC-Medium,PingFang SC;
+                  font-weight:500;
+                  color:rgba(255,255,255,1);
+                  line-height:20px;
+                }
+                .start_process_icon {
+                  &:hover {
+                    color: seagreen !important;
+                  }
+                }
+                .edit_temp_icon {
+                  &:hover {
+                    color: royalblue !important;
+                  }
+                }
+                .delete_temp_icon {
+                  &:hover {
+                    color: tomato !important;
+                  }
+                }
+              }
+              
+            }
+ 
+            .temp_item_name {
+              display: block;
+              text-align: center;
+              min-width:90px;
+              height:40px;
+              // background:rgba(24,144,255,1);
+              border-radius:4px;
+              // max-width: 154px;
+              max-width: 90px;
+              overflow: hidden;
+              white-space: normal;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              /* autoprefixer: off */
+              -webkit-box-orient: vertical;
+               /* autoprefixer: on */
+              -webkit-line-clamp: 2;
+              word-break: break-all;
+            }
+          }
+          
+        }
+        /* 每一项模板选项样式 E */
+      }
+    }
+    /* 默认模板的样式 E */
+    /* 流程列表样式 -- PagingnationContent -- S */
+    .processDefautOut_bottom {
+      // padding: 16px 0;
+      // background: thistle;
+      margin: 0 -20px 0 -40px;
+      min-height: 1000px;
+      .pagingnationContent {
+        .flowsInstanceItemContent {
+          display: flex;
+          height:46px;
+          line-height: 46px;
+          // background:rgba(255,255,255,1);
+          padding: 0 46px 0 50px;
+          cursor: pointer;
+          border-radius: 4px;
+          .flowsInstanceItem_left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .flow_instance_name {
+              font-size:14px;
+              font-family:PingFangSC-Medium,PingFang SC;
+              font-weight:500;
+              color:rgba(89,89,89,1);
+              line-height:22px;
+              // margin: 0 24px 0 5px;
+              max-width: 200px;
+              overflow: hidden;
+              display: block;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            .current_step {
+              font-size:14px;
+              font-family:PingFangSC-Medium,PingFang SC;
+              font-weight:500;
+              color:rgba(140,140,140,1);
+              line-height:22px;
+              margin-right: 12px;
+              flex-shrink: 0;
+            }
+            .current_step_name {
+              font-size:14px;
+              font-family:PingFangSC-Regular,PingFang SC;
+              font-weight:400;
+              color:rgba(24,144,255,1);
+              line-height:22px;
+              width: 200px;
+              word-break: break-all;
+              overflow: hidden;
+              /* display: block; */
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+          .flowsInstanceItem_right {
+            margin-right: 40px;
+            .current_step {
+              margin-right: 5px;
+            }
+           .date_line {
+            color:rgba(24,144,255,1);
+           }
+          }
+        }
+        .nodata {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          color: #8c8c8c;
+          .nodata_inner{
+            margin: 0 auto;
+          }
+          img{
+            width: 75px;
+            height: 70px;
+          }
+          text-align: center;
+          // margin-top: 12px;
+        }
+      }
+       .flowsInstanceItemContent:nth-of-type(odd) {
+        background-color: #fff !important;
+      }
+      .flowsInstanceItemContent:nth-of-type(even) {
+        background-color: #F7F7F7 !important;
+      }
+
+    }
+    /* 流程列表样式 E */
+  }
+
+}

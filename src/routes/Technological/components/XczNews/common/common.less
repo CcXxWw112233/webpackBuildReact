@@ -1,0 +1,169 @@
+// 资讯main中的公共样式
+.line {
+    width:692px;
+    height:1px;
+    background:rgba(0,0,0,0.09);
+}
+
+.mainContainer {
+    width: 740px;
+    margin: 16px auto;
+    background:rgba(255,255,255,1);
+    min-height: 500px;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+}
+
+.info {
+    margin-top: 32px;
+    .title {
+        display: flex;
+        width: 200px;
+        margin-bottom: 24px;
+        margin-left: 25px;
+        padding-top: 13px;
+        h2 {
+            // width:40px;
+            height:28px;
+            font-size:20px;
+            font-family:'PingFangSC-Medium';
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            line-height:28px;
+            margin-right: 8px;
+            &::before {
+                display: inline-block;
+                content: '';
+                width:4px;
+                height:16px;
+                margin-right: 8px;
+                background:rgba(24,144,255,1);
+                border-radius:2px;
+            }
+        }
+        span {
+            display: block;
+            // width:28px;
+            height:22px;
+            font-size:14px;
+            font-family:PingFangSC-Regular;
+            font-weight:400;
+            color:rgba(0,0,0,0.45);
+            line-height:34px;
+            text-decoration: none;
+            white-space: pre-wrap;
+            cursor: pointer;
+        }
+    }
+    .news {
+        margin-bottom: 20px;
+        .ul {
+            margin-left: 25px;
+            .li {
+                display: flex;
+                list-style: none;
+                margin-bottom: 12px;
+                border-bottom: 1px solid rgba(0,0,0,0.09);
+                margin-right: 24px;
+                align-items: center;
+                position: relative;
+                &:first-child {
+                    padding-top: 5px;
+                }
+                .left {
+                    margin: 6px 16px 12px 0;
+                    img {
+                        width: 173px;
+                        height: 101px;
+                        background: pink;
+                        display: block;
+                        border: none;
+                    }
+                }
+                .right {
+                    .message {
+                        .dot {
+                            display: inline-block;
+                            width:6px;
+                            height:6px;
+                            background:rgba(0,0,0,0.45);
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            line-height: 24px;
+                            position: absolute;
+                            left: 0px;
+                            top: 12px;
+                        }
+                        .text {
+                            text-decoration: none;
+                            display: inline-block;
+                            margin-left: 16px;
+                            color: #000;
+                            font-size: 16px;
+                            line-height: 24px;
+                            max-width: 490px;
+                        }
+                        .img_text {
+                            text-decoration: none;
+                            display: inline-block;
+                            color: #000;
+                            font-size: 16px;
+                            line-height: 24px;
+                            max-width: 490px;
+                        }
+                    }
+                    .dot_note {
+                        margin-left: 15px;
+                        span {
+                            display: inline-block;
+                            // width:42px;
+                            height:22px;
+                            font-size:14px;
+                            font-family:'PingFangSC-Regular';
+                            font-weight:400;
+                            color:rgba(0,0,0,0.45);
+                            line-height:22px;
+                            margin-right: 6px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                    .img_note {
+                        // margin-left: 15px;
+                        span {
+                            display: inline-block;
+                            // width:42px;
+                            height:22px;
+                            font-size:14px;
+                            font-family:'PingFangSC-Regular';
+                            font-weight:400;
+                            color:rgba(0,0,0,0.45);
+                            line-height:22px;
+                            margin-right: 6px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+:global {
+    .anticon-down {
+        width: 12px;
+        height: 8px;
+        // margin-left: 8px;
+    }
+    .anticon-right {
+        svg {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            margin-right: 8px;
+            top: -1px;
+            position: relative;
+        }
+        
+    }
+}

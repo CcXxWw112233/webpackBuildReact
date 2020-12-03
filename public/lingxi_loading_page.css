@@ -1,0 +1,60 @@
+#lingxi_html_loading_page {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 200000;
+  background: #5f8de0 url('static/lingxi_loading_page.jpg') no-repeat 0 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%;
+}
+
+.lingxi_html_loading_page_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lingxi_html_loading_page_logo {
+  height: 80px;
+  width: 80px;
+}
+.lingxi_html_loading_page_logo img {
+  width: 100%;
+  height: 100%;
+}
+.lingxi_html_loading_page_dec {
+  font-size: 32px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.lingxi_html_loading_page_tip {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.lingxi_html_loading_page_progress_wrapper {
+  width: 170px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.lingxi_html_loading_page_progress {
+  width: 10px;
+  height: 16px;
+  background: linear-gradient(45deg, #5ba7ff 0%, #b5f9ff 100%);
+}
+@keyframes lingxi_html_loading_page_hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.lingxi_html_loading_page_hide {
+  animation: lingxi_html_loading_page_hide 300ms ease;
+  opacity: 0;
+}

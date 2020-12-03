@@ -1,0 +1,167 @@
+.temporaryFile.changeContentWidth{
+    width: calc(~"100% - 297px");
+    height: 100%;
+    margin-left: 298px;
+}
+.temporaryFile{ /* 上传临时文件组件 */
+    // .draggerContainerStyle.changeDraggerWidth{
+    //     width: calc(~"100% - 297px");
+    //     height: 100%;
+    //     margin-left: 298px;
+    // }
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    :global{
+        .ant-upload-drag{
+            background-color: #fff !important;
+            border: 0;
+        }
+    }
+    .draggerContainerStyle{
+        height: 100%;
+        .indexCoverWapper {
+            width          : 100%;
+            height         : 100%;
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            text-align     : center;
+
+            .icon {
+                width: 447px;
+                height: 264px;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .descriptionWapper {
+                margin: 28px auto;
+                height: 50px;
+
+                .linkTitle {
+                    display    : block;
+                    height     : 26px;
+                    font-size  : 18px;
+                    font-weight: 500;
+                    color      : rgba(0, 0, 0, 0.65);
+                    line-height: 26px;
+
+                    .alink {
+                        color: #1890FF;
+
+                    }
+
+                    .alink:hover {
+                        color: #40A9FF;
+
+                    }
+                }
+
+
+                .detailDescription {
+                    margin-top : 8px;
+                    display    : block;
+                    height     : 24px;
+                    font-size  : 15px;
+                    font-weight: 500;
+                    color      : rgba(0, 0, 0, 0.45);
+                    line-height: 24px;
+                }
+                .uploadBtnBox{
+                    margin-top: 10px;
+                    cursor: pointer;
+                    :global{
+                        .ant-upload{
+                            font-size: 16px;
+                            color: #18cdff;
+                        }
+                    }
+                }
+            }
+
+            .iconDescription {
+                margin-left: 12px;
+                font-size  : 20px;
+                font-family: PingFangSC-Medium;
+                font-weight: 500;
+                color      : rgba(24, 144, 255, 1);
+            }
+        }
+
+        .draging {
+            background   : rgba(230, 247, 255, 0.8);
+            border-radius: 8px 8px 0px 0px;
+            border       : 1px dashed rgba(24, 144, 255, 1);
+        }
+    }
+
+    .temporaryFilePart{ /* 临时文件组件 */
+        width: 568px;
+        height: 180px;
+        padding: 10px 0 0 20px;
+        margin: 0 auto;
+        margin-top: 24px;
+        background-color: #f9f9f9;
+        .headerContent{
+            padding: 5px 18px 2px 0;
+            overflow: hidden;
+            .header{
+                float: left;
+                font-size: 16px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.45);
+            }
+            .operation{
+                float: right;
+                font-size: 14px;
+                font-weight: 600;
+                color: #18cdff;
+            }
+        }
+
+        .temporaryList{
+            font-size: 12px;
+            margin-left: 0;
+            padding: 0 2px;
+            overflow: auto;
+            height: 136px;
+            .itemList{
+                float: left;
+                width: 100px;
+                height: 116px;
+                padding: 0 5px;
+                border: 1px solid transparent;
+                margin: 3px 5px 10px 0;
+                text-align: center;
+                .fileIcon{
+                    font-size: 21px;
+                    color: #18cdff;
+                    margin-top: 7px;
+                }
+                .fileName{
+                    height: 36px;
+                    margin: 5px 0;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+                .checkboxStyle{
+                    cursor: pointer;
+                    font-size: 14px;
+                    color: #18cdff;
+                }
+            }
+            .itemList:hover{
+                background-color: #fff;
+                box-shadow:0px 1px 4px 0px rgba(0,0,0,0.15);
+            }
+            
+        }
+    }
+}

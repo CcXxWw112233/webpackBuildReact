@@ -1,0 +1,79 @@
+.react_resizable {
+  position: relative;
+  background-clip: padding-box;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+.error_text {
+  background: rgba(245, 34, 45, 0.08);
+  &:hover {
+    background: rgba(245, 34, 45, 0.08) !important;
+  }
+}
+.order_display {
+  display: none;
+}
+
+.draggable_wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  .line {
+    background-color: #1890ff;
+    width: 2px;
+    height: 100%;
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .handle_shake {
+    height: 40px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #1890ff;
+    position: absolute;
+    top: 20px;
+    right: -4px !important;
+    transform: translate(0px, 0px) !important;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .handle_shake > div {
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.45);
+    margin-right: 1px;
+  }
+}

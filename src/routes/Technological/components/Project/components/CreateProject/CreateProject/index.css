@@ -1,0 +1,62 @@
+.circleOut {
+  display: flex;
+  justify-content: center;
+  clear: both;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -27px;
+}
+.circleOut div {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  margin-left: 12px;
+}
+.circleOut div:nth-child(1) {
+  margin-left: 0;
+}
+.circleOut .chooseCircle {
+  background-color: #8c8c8c;
+}
+.operateAreaOut {
+  height: 370px;
+  overflow: hidden;
+}
+.operateAreaOut .operateArea {
+  height: 370px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.operateAreaOut .operateArea .no_select_board {
+  height: 200px;
+  line-height: 200px;
+  color: #bfbfbf;
+  text-align: center;
+}
+.operateAreaOut .operateArea::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 2px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.operateAreaOut .operateArea::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+}
+.operateAreaOut .operateArea::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #EDEDED;
+}
+.copyCheckOut {
+  margin-top: 6px;
+}
+.copyCheckOut .checkChildren {
+  margin-left: 24px;
+  margin-top: 4px;
+}

@@ -1,0 +1,161 @@
+@import "../../../../../../../globalset/css/constant";
+.commentOut {
+  width: 322px;
+  background: #FFFFFF;
+  border: 1px solid rgba(191,191,191,1);
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.out{
+  display: flex;
+};
+.avartarImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+.right {
+  margin-left: 12px;
+  flex: 1;
+};
+.input {
+  height: 40px;
+  width: 100%;
+};
+.comment{
+  font-size:0;
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(217,217,217,1);
+  border-radius: 4px;
+  padding: 1px 0;
+};
+.textArea{
+  font-size:14px;
+  height:48px;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  padding:0 12px;
+}
+.mention{
+  border: none;
+  outline: none;
+  height: 38px;
+}
+
+.functionBar {
+  cursor: pointer;
+  background: #f5f5f5;
+  border-top: 1px solid rgba(217,217,217,1);
+  height: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  justify-content: space-between;
+  .functionBar_left{
+    font-size: 12px;
+    color: #8c8c8c;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    position: relative;
+    .drag{
+      opacity: 1;
+      //width: 100px;
+      position: absolute;
+      //height: 100%;
+      //overflow: hidden;
+      right: 12px;
+      padding: 0;
+      top: 0;
+      span{
+        display: inline-block;
+        margin-top: -20px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+    span{
+      margin-left: 12px;
+      display: inline-block;
+      height: 100%;
+      line-height: 30px;
+    }
+    span:nth-child(3) {
+      background-color: rgba(232,232,232,1);
+      display: inline-block;
+      vertical-align: middle;
+      height: 14px;
+      width: 1px;
+    }
+  }
+}
+
+
+//评论
+.commentListItemBox{
+  margin-bottom: 10px;
+  padding: 0 8px;
+  .commentListItemControl{
+    cursor: pointer;
+    height: 16px;
+    width: 100%;
+    border-top: 2px solid #f2f2f2;
+    margin-bottom: 10px;
+    div{
+      height: 100%;
+      width: 60px;
+      border-radius: 0 0 6px 6px;
+      background-color: #f2f2f2;
+      margin:0 auto;
+      text-align: center;
+      color: #BFBFBF;
+      line-height: 16px;
+    }
+  }
+
+  .commentListItem{
+    font-size: 12px;
+    display: flex;
+    margin-top: 10px;
+    .left{
+      width: 32px;
+      margin-top: 4px;
+    }
+    .right{
+      flex: 1;
+      margin-left: 10px;
+      .full_name{
+        font-size: 12px;
+        color: #BFBFBF;
+      }
+      .text{
+        font-size: 12px;
+        color: #595959
+      }
+      .bott{
+        display: flex;
+        margin-top: 4px;
+        .create_time{
+          color: #BFBFBF;
+        }
+        .delete{
+          margin-left: 10px;
+          color: @color-link-normal;
+          cursor: pointer;
+        }
+        .delete:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

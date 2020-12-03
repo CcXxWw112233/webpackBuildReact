@@ -1,0 +1,132 @@
+.fileDetailOut{
+  //position: fixed;
+  width: 100%;
+  margin: 0;
+
+  //min-width: 1200px;
+  // background-color: #F5F5F5;
+  //z-index: 1008;
+  // overflow-y: scroll
+}
+.fileDetailHead{
+  height: 60px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #FFFFFF;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .fileDetailHeadLeft{
+    max-width: 60%;
+  }
+  .fileDetailHeadRight{
+    display: flex;
+    align-items: center;
+    color: #595959;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.fileDetailContentOut{
+  //height: 100%;
+  display: flex;
+  .fileDetailContentLeft {
+    flex: 1;
+    .pictureEditState{
+      z-index: 6;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #ffffff;
+      width: 120px;
+      text-align: center;
+      left: 50%;
+      margin-left: -60px;
+      position: absolute;
+      bottom: 40px;
+      background: rgba(89,89,89,0.80);
+
+    }
+    .flag{
+      height: 32px;
+      width: 32px;
+      background-color: rgba(24,144,255,1);
+      position: absolute;
+      border-radius: 32px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 14px;
+      color: #ffffff;
+      top: -16px;
+      left: -16px;
+    }
+  }
+  .fileDetailContentRight{
+    //width: 420px;
+    //height: 100%;
+    //overflow-x: hidden;
+    border-left: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+    position: relative;
+    .fileDetailContentRight_top{
+      padding: 40px 20px;
+      background-color: #F5F5F5;
+      max-height: 260px;
+      overflow-x: hidden;
+      color: #8c8c8c;
+      .versionInfoList{
+        margin-top: 10px;
+        .versionInfoListItem{
+          cursor: pointer;
+          margin-top: 12px;
+          color: #595959;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          overflow-x: hidden;
+          >div{
+            margin-right: 12px;
+          }
+          .point{
+            background: #1890FF;
+            width: 4px;
+            height: 4px;
+            margin-right: 4px;
+            border-radius: 4px;
+          }
+          .point2{
+            background: #F5F5F5;
+            width: 4px;
+            height: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+    .fileDetailContentRight_middle{
+      padding-bottom: 80px;
+      overflow-x: hidden;
+
+    }
+
+    .fileDetailContentRight_bott{
+      position: absolute;
+      height: 70px;
+      background-color: #ffffff;
+      border-top: 1px solid #D9D9D9;
+      bottom: 0;
+      width: 100%;
+    }
+
+  }
+}

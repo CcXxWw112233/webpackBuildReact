@@ -1,0 +1,74 @@
+.guideModal {
+    position  : absolute;
+    bottom    : 0;
+    width     : 100%;
+    height    : auto;
+    background: white;
+    display   : flex;
+    z-index   : 9999;
+
+    .guideModalLeft {
+        height        : 100%;
+        width         : 300px;
+        display       : flex;
+        flex-direction: column;
+
+        .guideModalLeftHender {
+            width          : 100%;
+            height         : 60px;
+            text-align     : center;
+            color          : #18B2FF;
+            font-size      : 18px;
+            justify-content: center;
+            align-items    : center;
+            display        : flex;
+        }
+
+        .guideNavigationView {
+            width: 100%;
+            flex : 1;
+
+            .menu_item_style {
+
+                .menu_item_text_style {
+                    margin-left    : 50px;
+                    font-size      : 16px;
+                    justify-content: left;
+                    display        : flex;
+                }
+            }
+        }
+    }
+
+    .guideModalRight {
+        width         : 300px;
+        display       : flex;
+        flex-direction: column;
+        height        : 100%;
+        flex          : 1;
+
+        .guideModalRightHender {
+            width     : 100%;
+            min-height: 34px;
+
+            .close {
+                position: absolute;
+                top     : 10px;
+                right   : 10px;
+                width   : 24px;
+                height  : 24px;
+                color   : gray;
+                cursor  : pointer;
+            }
+        }
+
+        .guidenTabsView {
+            width: 100%;
+            flex : 1;
+
+            .tab_content_style {
+                padding: 20px;
+            }
+        }
+    }
+}

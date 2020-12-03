@@ -1,0 +1,69 @@
+.baselineitem_box {
+  z-index: 4;
+  pointer-events: none;
+  touch-action: none;
+  position: absolute;
+  .borders {
+    border: 2px solid rgba(0, 0, 0, 0.25);
+  }
+  .task {
+    border-radius: 50px;
+    .borders;
+    // background-color: rgb(235, 235, 235);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 6px;
+  }
+  .hasLeft {
+    margin-left: 9px;
+  }
+  .month {
+    padding-left: 32px;
+  }
+  .year {
+    padding-left: 1px;
+  }
+  .week {
+    padding-left: 10px;
+  }
+  .hours {
+    padding-left: 20px;
+  }
+  .milepost {
+    & > div {
+      color: rgba(0, 0, 0, 0.25);
+    }
+    .icons {
+      position: absolute;
+    }
+  }
+  .parentMilepost {
+    display: flex;
+    // padding-left: 28px;
+  }
+  .subMilepost {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 15px;
+    height: 15px;
+    .borders;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 7px;
+  }
+  .milepostLine {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 6px;
+    margin-right: 2px;
+  }
+  .process {
+    width: 26px;
+    height: 26px;
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.1);
+    // border: 2px solid rgba(0, 0, 0, 0.25);
+    .borders;
+    margin-left: 10px;
+  }
+}

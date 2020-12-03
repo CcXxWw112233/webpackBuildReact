@@ -1,0 +1,125 @@
+.meeting_container{
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  .meeting_container_title{
+    color: #474A5B;
+    padding: 20px;
+    background-color: #F5F7FA;
+    box-shadow: 0 1px 1px #D0D3E2;
+  }
+  .meeting_container_content{
+    padding: 20px;
+  }
+  .status_list{
+    display: flex;
+    & > div{
+      margin-right: 15px;
+    }
+  }
+  .status_item{
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+  }
+  .title_time{
+    display: inline-block;
+    width: 80px;
+  }
+  .time_step{
+    position: relative;
+    & > div{
+      height: 100%;
+    }
+  }
+  .time_line{
+    position: absolute;
+    transition: left 0.3s linear;
+    left: 11px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 99px;
+    z-index: 10;
+    background-color: #FF7676;
+    i{
+      position: absolute;
+      left: 5px;
+      z-index: 10;
+      top: 100%;
+      width: 1px;
+      background-color: #FF7676;
+    }
+  }
+  .time_box{
+    display: flex;
+    div:nth-child(odd){
+      position: relative;
+      left: 1px;
+    }
+    .time_box_item{
+      display: flex;
+      width: 18px;
+      height: 35px;
+      margin-right: 2px;
+      box-sizing: border-box;
+      border-radius: 0px;
+      transition: background 0.2s linear;
+      span{
+        flex: 1;
+      }
+      span:first-child{
+        border-right: 1px solid #fff;
+      }
+      // cursor: pointer;
+    }
+    .noStateColor{
+      // span{
+        background-color: #F5F7FA !important;
+      // }
+    }
+  }
+  .status_item + span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .tableRender{
+    margin-top: 15px;
+  }
+}
+.defineUpload{
+  cursor: pointer;
+  width: 200px;
+  height: 110px;
+  background: rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .preview_img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .preview_img_delete{
+      svg{
+        top: 3px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 99px;
+      color: #fff;
+      background-color: #FF8181;
+    }
+  }
+}

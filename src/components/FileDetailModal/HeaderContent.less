@@ -1,0 +1,183 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // 头部左边 S
+  .header_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .header_icon {
+      width: 68px;
+      height: 30px;
+      background: #e6f7ff;
+      border-radius: 4px;
+      margin-right: 12px;
+      text-align: center;
+      line-height: 30px;
+      color: #69c0ff;
+    }
+  }
+  // 头部左边 E
+
+  // 头部右边 S
+  .header_right {
+    // background: rosybrown;
+    // min-width: 500px;
+    // height: 38px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    // line-height: 38px;
+  }
+  .header_rightMenuWrapper {
+    display: flex;
+    align-items: center;
+    .margin_right10 {
+      margin-right: 15px;
+    }
+
+    // 分享协作样式
+    .share_wrapper {
+      .right__share {
+        cursor         : pointer;
+        display        : inline-block;
+        line-height    : 24px;
+        height         : 24px;
+        width          : 24px;
+      }
+      
+      .right__share:hover {
+        cursor         : pointer;
+        line-height    : 24px;
+        height         : 24px;
+        width          : 24px;
+        color: #40A9FF;
+      }
+      .share_icon {
+        width       : 24px;
+        height      : 24px;
+        text-align  : center;
+        line-height : 24px;
+      }
+      
+      .right__shareIndicator {
+        cursor          : pointer;
+        display         : inline-flex;
+        background      : rgba(0, 0, 0, 0.04);
+        border-radius   : 4px;
+        line-height     : 24px;
+        height:24px;
+        padding: 0px 8px 0px 6px;
+        .right__shareIndicator_icon{
+          display         : inline-block;
+          font-size: 16px;
+        }
+        .right__shareIndicator_text {
+          margin-left: 4px;
+          display         : inline-block;
+          font-size: 12px;
+        }
+      
+        &:hover {
+          background: rgba(230, 247, 255, 1);
+          color     : #40A9FF;
+        }
+      }
+    }
+  }
+  // 头部右边 E
+}
+
+.treenode_wrapper {
+  :global {
+    .ant-select-selection--single {
+      height: 40px !important;
+      line-height: 40px !important;
+    }
+    .ant-select-selection__placeholder {
+      top: 18px !important;
+    }
+    .ant-select-selection__rendered {
+      line-height: 40px;
+    }
+  }
+}
+
+.noticeUsersWrapper {
+  margin: 12px 2px;
+
+  // 每一个用户的样式
+  .user_item {
+    padding   : 2px 8px;
+    box-sizing: border-box;
+    cursor    : pointer;
+
+    &:hover {
+      background   : rgba(0, 0, 0, 0.09);
+      border-radius: 4px;
+    }
+
+    .userItemDeleBtn {
+      display          : none;
+      width            : 14px;
+      height           : 14px;
+      border-radius    : 4px;
+      position         : absolute;
+      background       : url(../../assets/workbench/close-circle@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+      transition       : all 0.3s;
+    }
+
+    .userItemDeleBtn:hover {
+      background       : url(../../assets/workbench/close-circle-active@2x.png);
+      background-repeat: no-repeat;
+      background-size  : contain;
+    }
+  }
+
+  .user_item:hover .userItemDeleBtn {
+    display   : inline-block;
+    top       : -4px;
+    right     : -4px;
+    transition: all 0.3s;
+  }
+}
+
+/* 添加执行人下拉样式 S */
+.overlay_pricipal {
+  left: 0px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+  top: 45px !important;
+  :global {
+    li {
+      line-height: 40px !important;
+      height     : 40px !important;
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+      }
+
+      .ant-menu-item-selected {
+        background   : rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.45);
+      }
+
+      .anticon {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.addNoticePerson {
+  cursor     : pointer;
+  width      : 40px;
+  height     : 40px;
+  line-height: 40px;
+  margin     : 4px 12px 2px 2px;
+}

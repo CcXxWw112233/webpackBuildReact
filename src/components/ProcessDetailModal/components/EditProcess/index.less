@@ -1,0 +1,296 @@
+.popover_card, .default_popover_card {
+  margin: 0 12px 0 26px;
+  flex: 1;
+  flex-shrink: 0;
+  min-height:120px;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 0px 2px rgba(230,247,255,1),0px 0px 8px 2px rgba(24,144,255,0.15);
+  // opacity:0.9;
+  border:1px solid rgba(24,144,255,1);
+  border-radius: 4px;
+  position: relative;
+  padding: 16px 12px;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  width: calc(100% - 10vw);
+  .node_name {
+    // width:866px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height:40px;
+    line-height: 40px;
+    font-size:16px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:900;
+    color:rgba(0,0,0,0.65);
+    padding: 0 14px;
+    margin-bottom: 12px;
+    word-break: break-all;
+    .spreadIcon {
+      display: block;
+      width:24px;
+      height:24px;
+      background:rgba(255,255,255,1);
+      box-shadow:0px 0px 4px 1px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .spread_arrow {
+        font-size: 12px;
+        &:hover {
+          color: #1890FF;
+        }
+      }
+    }
+  }
+  .content__principalList_icon {
+    padding: 0 14px;
+  }
+  .content__principalList_info {
+    margin-left: 8px;
+    font-size:14px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(0,0,0,0.45);
+
+  }
+  .deadline_time {
+    font-size:14px;
+    font-weight:500;
+    color:rgba(0,0,0,0.45);
+  }
+  .stepTypeIcon {
+    color: #1890FF;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  .text_form {
+    // width:842px;
+    min-height:82px;
+    background:rgba(0,0,0,0.02);
+    border-radius:4px;
+    border:1px solid rgba(0,0,0,0.15);
+    margin-bottom: 8px;
+    padding: 8px 16px 16px;
+    position: relative;
+    > p {
+      margin-bottom: 4px;
+      font-size:14px;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:500;
+      color:rgba(0,0,0,0.65);
+      line-height:22px;
+      margin-right: 20px;
+    }
+    // 填写内容的框框
+    .text_fillOut {
+      // width:810px;
+      min-height:32px;
+      background:rgba(255,255,255,1);
+      border-radius:4px;
+      border:1px solid rgba(0,0,0,0.15);
+      padding: 5px 8px;
+      >span {
+        word-break: break-all;
+      }
+    } 
+    // 下拉选项的配置
+    .option_select {
+      width: 100%;
+      height: 32px;
+      border: 0 none;
+    }
+  }
+  // 上传
+  .upload_static {
+    // width:810px;
+    height:60px;
+    background:rgba(251,251,251,1);
+    border-radius:4px;
+    // opacity:0.9;
+    border:1px dashed rgba(24,144,255,1);
+    padding: 16px;
+    display: flex;
+    .file_drap_tips {
+      font-size:14px;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(24,144,255,1);
+      line-height:20px;
+    }
+    .file_layout {
+      font-size:12px;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(140,140,140,1);
+      line-height:17px;
+    }
+  }
+  .select_remarks {
+    // min-height: 106px;
+    padding: 16px;
+    border-top: 1px solid #e8e8e8;
+    // margin-top: 16px;
+    >div {
+      margin-top: 8px;
+      font-size: 14px;
+      color: rgba(0,0,0,0.65);
+    }
+  }
+    // 评分项
+    .ratingItems {
+      width: 100%;
+      min-height:138px;
+      background:rgba(0,0,0,0.02);
+      border-radius:4px;
+      border:1px solid rgba(0,0,0,0.09);
+      padding: 8px 0px 16px 8px;
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+      margin-bottom: 16px;
+      position: relative;
+      .rating_itemsValue {
+        // margin-right: 16px;
+        // margin-bottom: 12px;
+        margin: 0px 8px 12px 8px;
+        // width: 22%;
+        min-width: 22%;
+        width: auto;
+        > p {
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .rating_grade {
+          width:100%;
+          min-height:88px;
+          background:rgba(255,255,255,1);
+          border-radius:4px;
+          border:1px solid rgba(0,0,0,0.09);
+          padding: 10px 0px 10px 24px;
+          font-size:14px;
+          font-family:PingFangSC-Regular,PingFang SC;
+          font-weight:400;
+          color:rgba(0,0,0,0.15);
+          // line-height:80px;
+          padding-left: 4px;
+          .rating_grade_value {
+            font-size:35px;
+            font-family:PingFangSC-Medium,PingFang SC;
+            font-weight:500;
+            color:rgba(0,0,0,0.09);
+            line-height:68px;
+          }
+        }
+        .rating_weight {
+          color: #1890FF;
+        }
+      }
+      .rating_active_width {
+        // width: 22%;
+        min-width: 22%;
+        width: auto;
+      }
+      .rating_normal_width {
+        width: 100%;
+      }
+  
+    }
+    .rating_label_name {
+      margin-right: 8px;
+    }
+    .select_item {
+      // width:94px;
+      display: inline-block;
+      height:40px;
+      background:rgba(245,245,245,1);
+      border-radius:4px;
+      opacity:0.9;
+      border:1px solid rgba(0,0,0,0.09);
+      text-align: center;
+      line-height: 40px;
+      margin-right: 8px;
+    }
+}
+
+.default_popover_card {
+  border:1px solid rgba(0,0,0,0.15);
+  box-shadow: none;
+}
+
+// 以下是配置卡片上以及步骤类型上的三角形
+.popover_card:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #1890FF;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent; 
+}
+
+.popover_card:after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -9px;
+  width: 0;
+  height: 0;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid #fff;
+  border-top: 9px solid transparent; 
+}
+
+.default_popover_card::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid rgba(0,0,0,0.15);
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent; 
+}
+.default_popover_card::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -9px;
+  width: 0;
+  height: 0;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid #fff;
+  border-top: 9px solid transparent; 
+}
+
+// 步骤线和圈的样式
+.line{ // 理解成完成的样式
+  width: 2px;
+  background: #1890FF;
+  position: relative;
+  top: 48px;
+  left: 24px;
+  flex-shrink: 0;
+  // bottom: 0;
+}
+.circle{
+  width:48px;
+  height:48px;
+  background:rgba(255,255,255,1);
+  // opacity:0.9;
+  border:1px solid rgba(24,144,255,1);
+  border-radius: 40px;
+  text-align: center;
+  line-height: 48px;
+  color: #1890FF;
+  font-size: 20px;
+  flex-shrink: 0;
+}

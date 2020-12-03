@@ -1,0 +1,745 @@
+/* 公共hover的样式 */
+
+.value_text {
+  font-size: 14px;
+  color    : rgba(0, 0, 0, 0.65);
+}
+
+.pub_hover {
+  padding-left: 12px;
+}
+
+.pub_hover:hover {
+  background   : rgba(0, 0, 0, 0.04);
+  cursor       : pointer;
+  border-radius: 4px;
+}
+
+/* 公共点击完成卡片的样式 S */
+.title_icon {
+  height     : 44px;
+  display    : flex;
+  align-items: center;
+
+  .nomalCheckBox {
+    height       : 20px;
+    width        : 20px;
+    text-align   : center;
+    line-height  : 12px;
+    border       : 2px solid #8c8c8c;
+    border-radius: 4px;
+
+    &:hover {
+      border: 2px solid #40A9FF;
+    }
+  }
+
+  .nomalCheckBoxActive {
+    height          : 20px;
+    width           : 20px;
+    text-align      : center;
+    line-height     : 12px;
+    border          : 2px solid #1890ff;
+    background-color: #1890ff;
+    border-radius   : 4px;
+  }
+
+}
+
+/* 公共点击完成卡片的样式 E */
+
+/* 完成状态的下拉样式 S */
+.overlay_item {
+  min-width: 248px !important;
+
+  :global {
+    .ant-dropdown-menu-item {
+      line-height    : 40px !important;
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+      height         : 40px;
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04);
+        cursor       : pointer;
+        border-radius: 4px;
+      }
+
+      >span {
+        display      : inline-block;
+        width        : 52px;
+        height       : 24px;
+        background   : rgba(0, 0, 0, 0.09);
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.45);
+        line-height  : 24px;
+        text-align   : center;
+      }
+    }
+
+    .ant-dropdown-menu-item:nth-child(1) {}
+
+    .ant-dropdown-menu-item:nth-child(2) {
+      >span {
+        background: rgba(208, 239, 180, 1);
+        color     : #389E0D;
+      }
+    }
+
+    .ant-dropdown-menu-item-selected {
+      background   : rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      color        : rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+/* 完成状态的下拉样式 E */
+
+/* 添加属性的下拉样式 S */
+.overlay_attribute {
+  min-width: 248px !important;
+
+  .attrWrapper {
+    :global {
+      li {
+        line-height: 40px;
+        display    : flex;
+        align-items: center;
+        height     : 40px;
+        padding    : 9px 12px;
+
+        &:hover {
+          background   : rgba(0, 0, 0, 0.04) !important;
+          cursor       : pointer;
+          border-radius: 4px;
+        }
+      }
+
+      .ant-menu-item-selected {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    .attr_icon {
+      display     : inline-block;
+      width       : 16px;
+      height      : 16px;
+      color       : rgba(0, 0, 0, 0.45);
+      line-height : 16px;
+      margin-right: 6px;
+    }
+
+    .attr_name {
+      display    : inline-block;
+      min-width  : 42px;
+      height     : 22px;
+      font-size  : 14px;
+      color      : rgba(0, 0, 0, 0.65);
+      line-height: 22px;
+    }
+    .attr_btn {
+      min-width:72px;
+      height:32px;
+      background:rgba(116,166,247,0.1);
+      border-radius:16px;
+      border:1px solid rgba(138,180,248,0.5);
+      color: #5680FA;
+      margin: 0 5px;
+    }
+  }
+}
+
+.attr_btn {
+  min-width:72px;
+  height:32px;
+  background:rgba(116,166,247,0.1);
+  border-radius:16px;
+  border:1px solid rgba(138,180,248,0.5);
+  color: #5680FA;
+  margin: 0 5px 5px;
+}
+
+/* 添加属性的下拉样式 E */
+
+/* 添加执行人下拉样式 S */
+.overlay_pricipal {
+  left     : 0px !important;
+  min-width: 248px !important;
+  max-width: 248px;
+
+  :global {
+    li {
+      line-height: 40px !important;
+      height     : 40px !important;
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+      }
+
+      .ant-menu-item-selected {
+        background   : rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.45);
+      }
+
+      .anticon {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* 标签属性的下拉样式 S */
+.labelDataWrapper {
+  min-width: 248px !important;
+
+  :global {
+    li {
+      line-height: 40px !important;
+      height     : 40px !important;
+      color      : rgba(0, 0, 0, 0.65);
+
+      &:hover {
+        background   : rgba(0, 0, 0, 0.04) !important;
+        cursor       : pointer;
+        border-radius: 4px;
+        color        : rgba(0, 0, 0, 0.65);
+      }
+
+      .anticon {
+        margin-right: 0;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: transparent !important;
+      border-radius   : 4px;
+      color           : rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+
+/* 标签属性的下拉样式 E */
+
+/* 添加执行人下拉样式 E */
+
+/* 内容区的容器样式 S */
+.main_wrap {
+  // padding: 4px 0px;
+  width: 340px;
+  min-height: 900px;
+  .main_content {
+    /* 标题部分 S */
+    .title_content {
+      display      : flex;
+      align-items  : flex-start;
+      margin-bottom: 12px;
+
+      .card_name {
+        font-size   : 20px;
+        font-family : PingFangSC-Medium, PingFangSC;
+        font-weight : 500;
+        color       : rgba(0, 0, 0, 0.85);
+        line-height : 28px;
+        flex        : 1;
+        padding-left: 12px;
+        min-height  : 44px;
+        line-height : 44px;
+      }
+    }
+
+  }
+
+  /* 标题部分 E */
+
+  .clearfix:after {
+    content   : ".";
+    display   : block;
+    height    : 0;
+    clear     : both;
+    visibility: hidden;
+  }
+
+  .clearfix {
+    display: inline-block;
+  }
+
+  // .moveWrapper {
+  //   opacity: 1 !important;
+  //   visibility: visible !important;
+  // }
+
+  /* 各种不同字段部分 S */
+  .field_content {
+    // display      : flex;
+    line-height  : 38px;
+    margin-bottom: 12px;
+    // margin-left  : -26px;
+    cursor       : pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 12px;
+
+    //align-items : center;
+    // line-height: 55px;
+    .field_left {
+      min-width  : 128px;
+      display: flex;
+      justify-content: space-between;
+      // margin-left: 22px;
+
+      // cursor: move;
+      .field_hover {
+        min-width    : 68px;
+        // max-width    : 96px;
+        height       : 38px;
+        border-radius: 4px;
+        padding-left : 10px;
+        padding-right: 10px;
+        display      : inline-block;
+        min-width: 48px;
+        // height: 16px;
+        font-size: 16px;
+        font-family: PingFangSC-Semibold,PingFang SC;
+        font-weight: 600;
+        color: rgba(0,0,0,0.85);
+        // line-height: 16px;
+
+        // cursor: move;
+        >span:nth-child(1) {
+          font-size   : 16px;
+          margin-right: 9px;
+          color       : rgba(0, 0, 0, 0.65)
+        }
+
+        >span:nth-child(2) {
+          font-size: 14px;
+        }
+
+        // &:hover {
+        //   background: rgba(0, 0, 0, 0.04);
+        // }
+      }
+
+      >span:nth-child(1) {
+        font-size   : 14px;
+        margin-right: 9px;
+        color       : rgba(0, 0, 0, 0.65)
+      }
+
+      >span:nth-child(2) {
+        font-size: 14px;
+      }
+
+      .field_delIcon {
+        cursor : pointer;
+        display: none;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.45);
+        &:hover {
+          color: rgba(0, 0, 0, 0.65);
+        }
+      }
+    }
+
+    .field_left:hover .field_delIcon {
+      display: inline-block;
+    }
+
+    .field_right {
+      flex     : 1;
+      font-size: 14px;
+      color    : rgba(0, 0, 0, 0.45);
+
+      // margin-left: 12px;
+      .incomplete {
+        display       : inline-block;
+        // margin-left: 12px;
+        width         : 58px;
+        height        : 26px;
+        background    : rgba(0, 0, 0, 0.09);
+        border-radius : 4px;
+        line-height   : 26px;
+        text-align    : center;
+        font-size     : 14px;
+        color         : rgba(0, 0, 0, 0.65);
+      }
+
+      .complete {
+        display       : inline-block;
+        // margin-left: 12px;
+        width         : 58px;
+        height        : 26px;
+        background    : rgba(208, 239, 180, 1);
+        border-radius : 4px;
+        line-height   : 26px;
+        text-align    : center;
+        color         : rgba(56, 158, 13, 1);
+        font-size     : 14px;
+      }
+
+      .user_executor {
+        // margin-left: 12px;
+      }
+
+      // 第一个执行人样式
+      .first_pric .user_item:nth-child(1) {
+        margin-left: 0 !important;
+      }
+
+      // 每一个用户的样式
+      .user_item {
+        padding    : 2px 8px;
+        box-sizing : border-box;
+        margin-left: 24px;
+
+        &:hover {
+          background   : rgba(0, 0, 0, 0.09);
+          border-radius: 4px;
+        }
+
+        .usericon {
+          width : 40px;
+          height: 40px;
+        }
+
+        .userItemDeleBtn {
+          display          : none;
+          width            : 14px;
+          height           : 14px;
+          border-radius    : 4px;
+          position         : absolute;
+          background       : url(../../../../../../../assets/workbench/close-circle@2x.png);
+          background-repeat: no-repeat;
+          background-size  : contain;
+          transition       : all 0.3s;
+        }
+
+        .userItemDeleBtn:hover {
+          background       : url(../../../../../../../assets/workbench/close-circle-active@2x.png);
+          background-repeat: no-repeat;
+          background-size  : contain;
+        }
+      }
+
+      .user_item:hover .userItemDeleBtn {
+        display   : inline-block;
+        top       : -4px;
+        right     : -4px;
+        transition: all 0.3s;
+      }
+
+      .start_time,
+      .due_time {
+        display : inline-block;
+        position: relative;
+        cursor  : pointer;
+
+        input {
+          cursor: pointer;
+        }
+
+
+        &:hover {
+          background   : rgba(0, 0, 0, 0.04);
+          border-radius: 4px;
+        }
+
+        .userItemDeleBtn {
+          display          : none;
+          width            : 14px;
+          height           : 14px;
+          border-radius    : 4px;
+          position         : absolute;
+          background       : url(../../../../../../../assets/workbench/close-circle@2x.png);
+          background-repeat: no-repeat;
+          background-size  : contain;
+          transition       : all 0.3s;
+          cursor           : pointer;
+        }
+
+        .userItemDeleBtn:hover {
+          background       : url(../../../../../../../assets/workbench/close-circle-active@2x.png);
+          background-repeat: no-repeat;
+          background-size  : contain;
+        }
+      }
+
+      .start_time:hover .timeDeleBtn,
+      .due_time:hover .timeDeleBtn {
+        display   : inline-block;
+        top       : -4px;
+        right     : -4px;
+        transition: all 0.3s;
+      }
+
+      .labelDelItem {
+        position: relative;
+
+        .labelDelIcon {
+          display          : none;
+          top              : -8px;
+          right            : 6px;
+          width            : 14px;
+          height           : 14px;
+          border-radius    : 4px;
+          position         : absolute;
+          background       : url(../../../../../../../assets/workbench/close-circle@2x.png);
+          background-repeat: no-repeat;
+          background-size  : contain;
+          transition       : all 0.3s;
+
+          &:hover {
+            background       : url(../../../../../../../assets/workbench/close-circle-active@2x.png);
+            background-repeat: no-repeat;
+            background-size  : contain;
+          }
+        }
+      }
+
+      .labelDelItem:hover .labelDelIcon {
+        display   : inline-block;
+        top       : -8px;
+        right     : 6px;
+        transition: all 0.3s;
+      }
+
+      .upload_file_btn {
+        font-size: 14px;
+        color    : rgba(0, 0, 0, 0.45);
+      }
+
+      .filelist_wrapper {
+        // margin-left: -26px;
+        .file_item_wrapper {
+          display    : flex;
+          align-items: center;
+          cursor     : pointer;
+          margin-left: -22px;
+
+          .file_action {
+            // width: 16px;
+            font-size: 24px;
+            color: #1890ff;
+            margin-right: 8px;
+
+            i {
+              display: none;
+            }
+          }
+
+          .file_item {
+            flex           : 1;
+            display        : flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size  : 14px;
+            color      : rgba(0, 0, 0, 0.65);
+            line-height    : 38px;
+            // height         : 38px;
+            // padding-left: 28px;
+            margin-left: 20px;
+            padding: 8px 12px;
+
+            .file_title {
+              max-width           : 400px;
+              display         : inline-flex;
+              align-items     : center;
+              text-overflow   : ellipsis;
+              -o-text-overflow: ellipsis;
+              white-space     : nowrap;
+              overflow        : hidden;
+            }
+            .file_name {
+              line-height: 1;
+              margin-bottom: 10px;
+            }
+            .file_info {
+              // text-align: right;
+              margin-right: 12px;
+              line-height: 1;
+              font-size: 12px;
+              color: rgba(0, 0, 0, 0.45);
+            }
+            .breadNav {
+              display: none;
+              // margin-left: 16px;
+              margin-right: 12px;
+              // display: block;
+              .Breadcrumb {
+                max-width: 330px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1;
+                :global {
+                  .ant-breadcrumb-link {
+                    font-size: 12px;
+                  }
+                }
+                .breadItem {
+                  color: rgba(0, 0, 0, 0.45);
+                }
+              }
+            }
+          }
+        }
+
+        .file_item_wrapper:hover {
+          .file_action {
+            i {
+              display: inline;
+            }
+
+          }
+          .breadNav {
+            display: block;
+          }
+          .file_info {
+            display: none;
+          }
+        }
+
+      }
+
+      .descriptionContent {
+        padding     : 8px 0px;
+        margin-right: 12px;
+        color       : rgba(0, 0, 0, 0.65);
+
+        p {
+          color        : rgba(0, 0, 0, 0.65);
+          word-break   : break-all;
+          line-height  : 22px;
+          margin-bottom: 0px;
+        }
+      }
+      .add_sub_btn, .add_sub_upload {
+        // color: #1890ff;
+        // margin-right: 120px;
+        // position: relative;
+        padding: 0px 2px;
+        display: inline-block;
+        &:hover {
+          background: rgba(0, 0, 0, 0.04);
+          cursor: pointer;
+          border-radius: 4px;
+        }
+      }
+      .add_sub_upload {
+        color: rgba(0, 0, 0, 0.45);
+        min-width: 110px;
+        text-align: center;
+        box-sizing: border-box;
+        margin-right: 46px;
+      }
+      .normal_label {
+        min-width       : 48px;
+        // max-width: 172px;
+        height          : 24px;
+        border-radius   : 4px;
+        display         : inline-block;
+        color           : rgba(0, 0, 0, 0.65);
+        text-align      : center;
+        line-height     : 22px;
+        margin-right    : 12px;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        vertical-align  : middle;
+        padding         : 2px 12px;
+        box-sizing      : border-box;
+        margin-top      : -1px;
+      }
+      .lcb_circle {
+        display: inline-block;
+        width:6px;
+        height:6px;
+        background:rgba(255,156,75,1);
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      .des_filelist_wrapper {
+        // width:320px;
+        margin-top: 12px;
+        height:60px;
+        background:rgba(0,0,0,0.04);
+        border-radius:4px;
+        padding: 12px;
+        box-sizing: border-box;
+        .des_filelist_item {
+          display: flex;
+          align-items: center;
+          .dec_file_icon {
+            color: #6294FF;
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+          }
+          .dec_file_name {
+            height: 12px;
+            font-size: 14px;
+            font-family: PingFangSC-Medium,PingFang SC;
+            font-weight: 500;
+            color: rgba(0,0,0,0.65);
+            line-height: 12px;
+            margin-bottom: 10px;
+          }
+          .dec_file_creater {
+            height:12px;
+            font-size:12px;
+            font-family:PingFangSC-Regular,PingFang SC;
+            font-weight:400;
+            color:rgba(0,0,0,0.45);
+            line-height:12px;
+          }
+          .dec_more_icon {
+            font-size: 16px;
+            &:hover {
+              color: #1890FF;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .showDelColor {
+    background: rgba(144, 19, 254, 0.15);
+  }
+
+  /* 各种不同字段部分 E */
+
+}
+
+.dynamic_comment {
+  width          : 40px;
+  height         : 40px;
+  background     : rgba(255, 255, 255, 1);
+  box-shadow     : 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  border-radius  : 20px;
+  position       : absolute;
+  right          : -20px;
+  bottom         : 40px;
+  z-index        : 1;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  cursor         : pointer;
+
+  >span {
+    font-size: 20px;
+    color    : rgba(0, 0, 0, 0.45);
+  }
+}
+
+.dynamic_comment:hover>span {
+  color: #40A9FF;
+}
+
+/* 内容区的容器样式 E */

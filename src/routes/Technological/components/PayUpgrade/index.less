@@ -1,0 +1,90 @@
+.infoTitle {
+    height       : 22px;
+    font-size    : 16px;
+    font-weight  : 600;
+    color        : rgba(0, 0, 0, 0.85);
+    line-height  : 22px;
+    margin-bottom: 24px;
+}
+
+.infoBox {
+    width        : 839px;
+    background   : rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    border       : 1px solid rgba(0, 0, 0, 0.09);
+    margin-bottom: 24px;
+}
+
+.organizationInfoWrapper {
+    display: flex;
+
+    .organizationInfo {
+        width: 600px;
+        padding: 40px;
+        .organizationInfoRow {
+            display: flex;
+            line-height: 30px;
+            .leftInfo {
+                width      : 60px;
+                height     : 22px;
+                font-size  : 14px;
+                color      : rgba(0, 0, 0, 0.65);
+            }
+
+            .centerInfo {
+                margin-left: 12px;
+                width: 400px;
+            }
+
+            .rightInfo {
+                margin-left: 12px;
+                width: 60px;
+            }
+        }
+    }
+
+    .upgradeBtnWrapper {
+        height     : 136px;
+        display    : flex;
+        align-items: center;
+    }
+}
+
+.featureList {
+    display  : flex;
+    flex-wrap: wrap;
+    padding  : 0px 40px 40px 40px;
+
+    .item {
+        width       : 120px;
+        height      : 48px;
+        margin-top  : 40px;
+        margin-right: 198px;
+        display     : flex;
+
+        .iconWrapper {
+            width        : 48px;
+            height       : 48px;
+            background   : linear-gradient(360deg, rgba(109, 193, 253, 1) 0%, rgba(101, 211, 242, 1) 100%);
+            border-radius: 8px;
+            text-align: center;
+            line-height: 48px;
+            i{
+                color:#ffffff;
+                font-size: 24px;
+            }
+        }
+
+        .itemTitle {
+            height     : 48px;
+            font-size  : 14px;
+            color      : rgba(0, 0, 0, 0.65);
+            line-height: 48px;
+            margin-left: 12px;
+        }
+    }
+
+    .item:nth-child(3n) {
+        margin-right: 0px;
+    }
+}

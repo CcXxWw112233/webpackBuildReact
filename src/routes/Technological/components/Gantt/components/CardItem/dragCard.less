@@ -1,0 +1,70 @@
+.drag_out {
+    position       : absolute;
+    height         : 36px;
+    top            : 0;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    border         : 2px solid #5087FF;
+    border-radius  : 36px;
+}
+
+.drag_area {
+    background      : rgba(167, 176, 192, 0.5);
+    color           : #ffffff;
+    width           : 24px;
+    height          : 24px;
+    position        : absolute;
+    // top          : 6px;
+    border-radius   : 24px;
+    text-align      : center;
+    line-height     : 24px;
+}
+
+.drag_left {
+    left: -27px;
+}
+
+.drag_right {
+    right: -27px;
+}
+
+.drag_area:hover {
+    background-color: #96D8FF;
+}
+
+.backMask {
+    height       : 32px;
+    width        : 32px;
+    background   : #ffffff;
+    position     : absolute;
+    right        : -32px;
+    top          : -3px;
+    border-radius: 0 24px 24px 0;
+    // z-index   : 1;
+}
+
+.group_childs_wrapper {
+    background-color: #ffffff;
+    // height          : 200px;
+    overflow-y      : scroll;
+    position        : relative;
+    padding-bottom  : 20px;
+
+    .empty_out {
+        text-align     : center;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        margin-top     : 58px;
+
+        .empty {
+            height     : 64px;
+            color      : #788991;
+            font-size  : 64px;
+            line-height: 64px;
+        }
+    }
+
+}

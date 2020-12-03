@@ -1,0 +1,24 @@
+.ChooseColor{
+  width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  .color_flexBox{
+    padding: 4px;
+    // flex: 1;
+  }
+
+  .color_item{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    // margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 99px;
+    &.activeColor{
+      border-color: #4170E8;
+    }
+  }
+}

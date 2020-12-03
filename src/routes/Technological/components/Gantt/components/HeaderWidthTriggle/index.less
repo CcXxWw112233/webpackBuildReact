@@ -1,0 +1,52 @@
+.main {
+    height          : 100%;
+    width           : 20px;
+    // background-color: red;
+    position        : absolute;
+    right           : -10px;
+    top             : 0;
+    z-index         : 6;
+
+    .line {
+        background-color   : #1890ff;
+        width              : 2px;
+        height             : 100%;
+        margin-left        : 10px;
+        // display         : none;
+    }
+
+    .handle_shake {
+        height                : 40px;
+        width                 : 10px;
+        border-radius         : 10px;
+        background-color      : #1890ff;
+        position              : absolute;
+        top                   : 20px;
+        right                 : 4px !important;
+        transform             : translate(0px, 0px) !important;
+        z-index               : 2;
+        display               : flex;
+        justify-content       : center;
+        align-items           : center;
+        // display            : none;
+        cursor                : pointer;
+
+        >div {
+            height          : 30px;
+            width           : 1px;
+            background-color: rgba(255, 255, 255, .45);
+            margin-right    : 1px;
+        }
+    }
+
+}
+
+.main:hover {
+    .handle_shake {
+        display: flex;
+    }
+
+    .line {
+        display: block;
+    }
+}
