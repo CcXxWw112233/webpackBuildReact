@@ -6,13 +6,10 @@ for (let i = 0; i < 100000; i++) {
   }
   girl_friends.push(info)
 }
-function userInfo(state = {}) {
+function girlFriends(state = {}) {
   return {
-    name: 'cxw',
     girl_friends,
   }
 }
 
-export default {
-  userInfo,
-}
+export { girlFriends }
