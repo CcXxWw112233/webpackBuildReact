@@ -48,51 +48,45 @@ import PropTypes from 'prop-types'
 //     );
 // }
 
-
 function HookTest() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         console.log(`You clicked ${count} times`);
-    //     }, 3000);
-    // });
-    // useEffect(() => {
-    //     const id = setInterval(() => {
-    //         setCount(count => count + 1);
-    //     }, 1000);
-    //     return () => clearInterval(id);
-    // }, [count]);
+  // useEffect(() => {
+  //     setTimeout(() => {
+  //         console.log(`You clicked ${count} times`);
+  //     }, 3000);
+  // });
+  // useEffect(() => {
+  //     const id = setInterval(() => {
+  //         setCount(count => count + 1);
+  //     }, 1000);
+  //     return () => clearInterval(id);
+  // }, [count]);
 
-    // useEffect(() => {
-    //     const id = setInterval(() => {
-    //         console.log(count);
-    //     }, 1000);
-    //     return () => clearInterval(id);
-    // }, []);
+  // useEffect(() => {
+  //     const id = setInterval(() => {
+  //         console.log(count);
+  //     }, 1000);
+  //     return () => clearInterval(id);
+  // }, []);
 
-    const countRef = useRef();
-    countRef.current = count;
-    useEffect(() => {
-        const id = setInterval(() => {
-            console.log(countRef.current);
-        }, 1000);
-        return () => clearInterval(id);
-    }, []);
+  const countRef = useRef()
+  countRef.current = count
+  useEffect(() => {
+    const id = setInterval(() => {
+      // console.log(countRef.current);
+    }, 1000)
+    return () => clearInterval(id)
+  }, [])
 
-    return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count => count + 1)}>
-                Click me
-            </button>
-        </div>
-    );
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount((count) => count + 1)}>Click me</button>
+    </div>
+  )
 }
 
-HookTest.propTypes = {
-
-}
+HookTest.propTypes = {}
 
 export default HookTest
-
