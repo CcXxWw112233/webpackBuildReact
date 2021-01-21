@@ -8,19 +8,23 @@
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --config config/webpack.prod.js",
-    "lint": "eslint --ext .js ./src --fix",
-    "prettier": "prettier --write src/**/*.js",
-    "precommit": "pretty-quick --staged"
+    "lintfix": "eslint --fix --ext .js src",
+    "lint": "eslint --ext  .js src",
+    "lint-staged": "lint-staged"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "npm run lint"
-    ]
-  },
+  "browserslist": [
+    "defaults"
+  ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,tsx,ts,md,json}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "author": "a",
   "license": "ISC",

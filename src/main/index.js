@@ -4,13 +4,13 @@ import App from './app.js'
 import { Provider } from 'react-redux'
 import store from './store/store'
 
-const render = Component => {
-    ReactDOM.render(
-        <Provider store={store}>
-            <App />
-        </Provider>,
-        document.getElementById('root'),
-    )
+const render = (Component) => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root')
+  )
 }
 
 render()

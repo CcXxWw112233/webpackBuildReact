@@ -1,15 +1,15 @@
-import React, { Component, Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-import { hot } from 'react-hot-loader/root';
-import NotFound from '../page/NotFound';
-import styles from './index.less';
+import React, { Component, Suspense, lazy } from 'react'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import { hot } from 'react-hot-loader/root'
+import NotFound from '../page/NotFound'
+import styles from './index.less'
 // import Home from '../page/Home'
 // import About from '../page/About'
 // import Topics from '../page/Topics'
 
-const Home = lazy(() => import('../page/Home'));
-const About = lazy(() => import('../page/About'));
-const Topics = lazy(() => import('../page/Topics'));
+const Home = lazy(() => import('../page/Home'))
+const About = lazy(() => import('../page/About'))
+const Topics = lazy(() => import('../page/Topics'))
 
 // const Topics = React.lazy(async () => {
 //     const com = await import("../page/Topics");
@@ -44,8 +44,8 @@ class App extends Component {
           </Suspense>
         </div>
       </BrowserRouter>
-    );
+    )
   }
 }
 
-export default hot(App);
+export default hot(App)
