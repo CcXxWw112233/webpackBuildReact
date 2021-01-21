@@ -4,7 +4,7 @@ import { List } from 'react-virtualized'
 import { connect } from 'react-redux'
 
 let a = 'a'
-let ba = 's'
+let ba = 'sza'
 // a
 // dasd
 @connect()
